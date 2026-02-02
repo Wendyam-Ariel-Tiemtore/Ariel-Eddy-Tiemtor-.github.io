@@ -6,42 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ariel Eddy TIEMTORE | Data Scientist/Analyst Statisticien-Démographe & IA</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     
-    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Iconify -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- HEADER -->
     <header id="header">
       <div id="particles-js">
         <nav id="nav" data-aos="fade-in">
           <div class="container nav-container">
-             <li><a href="#projects" class="link"><i class="fas fa-code"></i> Projets</a></li>
-             <li><a href="#experience" class="link"><i class="fas fa-briefcase"></i> Expérience</a></li>
-             <li><a href="#skills" class="link"><i class="fas fa-tools"></i> Compétences</a></li>
-             <li><a href="#education" class="link"><i class="fas fa-user-graduate"></i> Formation</a></li>
-             <li><a href="cv_ariel.pdf" class="btn btn-blue" target="_blank"><i class="fas fa-download"></i> CV</a></li>
-             <li><a href="Rapport_de_stage_M1_TIEMTORE.pdf" class="link" target="_blank" title="Rapport Master 1"><i class="fas fa-book"></i> M1</a></li>
-             <li><a href="Rapport_de_stage_L3_TIEMTORE.pdf" class="link" target="_blank" title="Rapport Licence 3"><i class="fas fa-book"></i> L3</a></li>
-             <li><a href="#contact" class="link"><i class="fas fa-envelope"></i> Contact</a></li>
+            <ul class="hide-for-mobile nav-links flex">
               <li><a href="#projects" class="link"><i class="fas fa-code"></i> Projets</a></li>
               <li><a href="#experience" class="link"><i class="fas fa-briefcase"></i> Expérience</a></li>
               <li><a href="#skills" class="link"><i class="fas fa-tools"></i> Compétences</a></li>
               <li><a href="#education" class="link"><i class="fas fa-user-graduate"></i> Formation</a></li>
-              <li><a href="cv_ariel.pdf" class="link" target="_blank"><i class="fas fa-file"></i> CV</a></li>
+              
+              <li><a href="cv_ariel.pdf" class="btn btn-blue" target="_blank"><i class="fas fa-download"></i> CV</a></li>
+              
+              <li><a href="Rapport_de_stage_M1_TIEMTORE.pdf" class="link" target="_blank" title="Rapport Master 1"><i class="fas fa-book"></i> M1</a></li>
+              <li><a href="Rapport_de_stage_L3_TIEMTORE.pdf" class="link" target="_blank" title="Rapport Licence 3"><i class="fas fa-book"></i> L3</a></li>
+              
               <li><a href="#contact" class="link"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
           </div>
@@ -51,7 +44,6 @@
           <img src="img/photo_cv_ariel.jpeg" alt="Ariel Eddy"> 
         </div>
 
-        <!-- HERO -->
         <div class="hero">
           <div data-aos="fade-up">
             <h1 class="h1">
@@ -64,17 +56,16 @@
             </p>
             <div class="hero-btns">
               <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Mes Projets</a>
-              <a href="https://github.com/YOUR_GITHUB" class="btn-blue-outline mx-1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline mx-1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- SOCIALS -->
         <div class="socials" data-aos="fade-in"> 
           <ul>
             <li class="bg-blue"><a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank"><span class="socials-text">LinkedIn</span> <i class="fab fa-linkedin fa-2x"></i></a></li>
-            <li class="bg-dark-grey"><a href="https://github.com/YOUR_GITHUB" target="_blank"><span class="socials-text">GitHub</span><i class="fab fa-github fa-2x"></i></a></li>
-            <li class="bg-white"><a class="text-dark-grey" href="mailto:wendyamtiemtore@gmail.comr"><span class="socials-text">Email</span><i class="fas fa-envelope fa-2x"></i></a></li>
+            <li class="bg-dark-grey"><a href="https://github.com/wendyam-ariel-tiemtore" target="_blank"><span class="socials-text">GitHub</span><i class="fab fa-github fa-2x"></i></a></li>
+            <li class="bg-white"><a class="text-dark-grey" href="mailto:wendyamtiemtore@gmail.com"><span class="socials-text">Email</span><i class="fas fa-envelope fa-2x"></i></a></li>
           </ul>
         </div>
       </div>
@@ -86,12 +77,10 @@
       </div>
     </header>
 
-    <!-- PROJECTS -->
     <section id="projects" class="projects">
       <div class="container">
         <h2 class="main-font">Projets Data Science &<span class="text-blue main-font"> IA</span></h2>
 
-        <!-- Projet 1 -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/federated-learning.png" alt="Federated Learning">
@@ -112,12 +101,11 @@
               <li>✓ <strong>VFL:</strong> Split Learning hôpital-assureur par embeddings</li>
             </ul>
             <div class="project-links">
-              <a href="federated-learning.ipynb" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 2 -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/nlp-llm.png" alt="NLP">
@@ -137,12 +125,11 @@
               <li>✓ <strong>Analyse:</strong> Trade-off performance/coût</li>
             </ul>
             <div class="project-links">
-              <a href="nlp-llm.ipynb" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 3 -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/survival.png" alt="Survival">
@@ -162,12 +149,11 @@
               <li>✓ <strong>Métriques:</strong> C-Index, calibration</li>
             </ul>
             <div class="project-links">
-              <a href="survival.ipynb" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 4 -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/trading.png" alt="Trading">
@@ -187,12 +173,11 @@
               <li>✓ <strong>Features:</strong> 80+ indicateurs techniques</li>
             </ul>
             <div class="project-links">
-              <a href="trading.ipynb" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 5 -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/drone.png" alt="Drone">
@@ -212,7 +197,7 @@
               <li>✓ <strong>Résultat:</strong> Compensation temps réel</li>
             </ul>
             <div class="project-links">
-              <a href="drone.ipynb" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
             </div>
           </div>
         </div>
@@ -220,7 +205,6 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience" class="experience">
       <div class="seperator-skew-top">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +262,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="skills">
       <div class="seperator-skew-top">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +316,6 @@
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education" class="education">
       <div class="container">
         <h2 class="main-font" data-aos="fade-in">Ma <span class="text-blue main-font">Formation</span></h2>
@@ -367,7 +349,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="container">
         <h2 class="section-title main-font" data-aos="fade-in">Me <span class="text-blue main-font">Contacter</span></h2>
@@ -381,7 +362,7 @@
           <div class="card" data-aos="fade-in" data-aos-delay="100">
             <i class="fab fa-github"></i>
             <h3>GitHub</h3>
-            <a href="https://github.com/YOUR_GITHUB" class="text-blue" target="_blank">YOUR_GITHUB</a>
+            <a href="https://github.com/wendyam-ariel-tiemtore" class="text-blue" target="_blank">wendyam-ariel-tiemtore</a>
           </div>
           <div class="card" data-aos="fade-in" data-aos-delay="200">
             <i class="fab fa-linkedin"></i>
@@ -445,7 +426,7 @@
           </div>
 
           <div class="footer-icon-links">
-            <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://github.com/wendyam-ariel-tiemtore" target="_blank"><i class="fab fa-github fa-2x"></i></a>
             <a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
             <a href="mailto:wendyamtiemtore@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
           </div>
