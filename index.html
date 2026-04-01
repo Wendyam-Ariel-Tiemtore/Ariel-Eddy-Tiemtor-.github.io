@@ -44,4 +44,331 @@
           <img src="img/photo_cv_ariel_1.jpg" alt="Ariel Eddy" style="width: 220px; max-width: 100%; height: auto; object-fit: cover; border-radius: 20px; border: 4px solid #1e88e5; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"> 
         </div>
 
-        <div class
+        <div class="hero">
+          <div data-aos="fade-up">
+            <h1 class="h1">
+              Bonjour, je suis <span class="main-font text-blue">Ariel Eddy</span>
+            </h1>
+            <p class="student" id="student">
+              Data Scientist/Analyst & Statisticien en M2 MIASHS à <a href="https://www.univ-lyon2.fr/" class="blue-link-underline" target="_blank">@Université Lyon 2</a>
+              <br>IA de Confiance | Machine Learning | Privacy-Preserving AI | Statistiques Avancées
+              <br><span class="main-font text-blue"> </span>
+            </p>
+            <div class="hero-btns">
+              <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Mes Projets</a>
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline mx-1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="socials" data-aos="fade-in"> 
+          <ul>
+            <li class="bg-blue"><a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank"><span class="socials-text">LinkedIn</span> <i class="fab fa-linkedin fa-2x"></i></a></li>
+            <li class="bg-dark-grey"><a href="https://github.com/wendyam-ariel-tiemtore" target="_blank"><span class="socials-text">GitHub</span><i class="fab fa-github fa-2x"></i></a></li>
+            <li class="bg-white"><a class="text-dark-grey" href="mailto:wendyamtiemtore@gmail.com"><span class="socials-text">Email</span><i class="fas fa-envelope fa-2x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="seperator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </header>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="main-font">Projets Data Science &<span class="text-blue main-font"> IA</span></h2>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/federated-learning.png" alt="Federated Learning">
+          </div>
+          <div class="project-right">
+            <h3>🔐 Apprentissage Fédéré Sécurisé (Privacy-Preserving AI)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scikitlearn"></span></li>
+            </ul>
+            <p>Système d'IA décentralisé pour le diagnostic du cancer du sein simulant la collaboration entre hôpitaux sans échange de données brutes.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>SCAFFOLD:</strong> Correction du Client Drift (92% → 94% accuracy)</li>
+              <li>✓ <strong>Differential Privacy:</strong> Protection des données médicales via bruit gaussien</li>
+              <li>✓ <strong>Fairness:</strong> Analyse et mitigation des biais algorithmiques</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/robust_ml.png" alt="Robust Machine Learning">
+          </div>
+          <div class="project-right">
+            <h3>🛡️ Robust Machine Learning (MoM & Adversarial Training)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+            </ul>
+            <p>Implémentation d'estimateurs robustes et défense de réseaux de neurones contre les attaques adversariales (MNIST).</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Statistique Robuste :</strong> Estimateur Median of Means (MoM) pour contrer les valeurs aberrantes (outliers)</li>
+              <li>✓ <strong>Attaques :</strong> Création d'attaques FGSM (Fast Gradient Sign Method) et PGD-40 (Projected Gradient Descent)</li>
+              <li>✓ <strong>Défense :</strong> Adversarial Training PGD permettant de gagner +65 points de robustesse</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/IA XAI Vision (Grad-CAM).png" alt="Grad-CAM XAI">
+          </div>
+          <div class="project-right">
+            <h3>🖼️ XAI Vision : Grad-CAM sur ResNet50</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:numpy"></span></li>
+            </ul>
+            <p>Visualisation et interprétabilité des décisions d'un CNN profond via les cartes d'activation de classe.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Algorithmique :</strong> Extraction du gradient des activations pour générer des heatmaps explicatives</li>
+              <li>✓ <strong>Diagnostic :</strong> Localisation des zones discriminantes (museau, pelage) ayant influencé le modèle</li>
+              <li>✓ <strong>Analyse multi-couches :</strong> Comparaison de l'évolution de la granularité sémantique entre les couches du ResNet50</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/03_BERT_ClimateQA.ipynb.png" alt="NLP BERT XAI">
+          </div>
+          <div class="project-right">
+            <h3>💬 XAI NLP : Integrated Gradients sur DistilBERT</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="simple-icons:huggingface"></span></li>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+            </ul>
+            <p>Interprétation de modèles de langage massifs (LLM) appliqués à une tâche de Question-Answering sur le climat.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Integrated Gradients :</strong> Attribution de pertinence à chaque token via l'approximation d'intégrales</li>
+              <li>✓ <strong>Analyse d'Attention :</strong> Démonstration de l'influence des tokens de la question sur la recherche dans le contexte</li>
+              <li>✓ <strong>Validation :</strong> Vérification de la propriété de complétude (delta < 0.05)</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/IA XAI Santé (DiCE Contrefactuels).png" alt="SHAP and DiCE XAI">
+          </div>
+          <div class="project-right">
+            <h3>⚕️ XAI Santé : SHAP & Contrefactuels (DiCE)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:xgboost"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas"></span></li>
+            </ul>
+            <p>Explicabilité de modèles de Machine Learning tabulaires pour la prédiction de survie (Titanic) et le diagnostic de maladies cardiaques.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Théorie des Jeux (SHAP) :</strong> Quantification de l'impact marginal de chaque variable clinique (Sexe, Classe, Âge)</li>
+              <li>✓ <strong>DiCE (Contrefactuels) :</strong> Génération de recommandations actionnables pour modifier le diagnostic d'un patient</li>
+              <li>✓ <strong>Fiabilité Clinique :</strong> Distinction entre "pourquoi cette prédiction" et "comment changer la situation"</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/02_GNN_LRP_Graphs.png" alt="GNN LRP">
+          </div>
+          <div class="project-right">
+            <h3>🕸️ XAI Graphes : Layer-wise Relevance Propagation (GNN)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+            </ul>
+            <p>Adaptation de la méthode de propagation de la pertinence (LRP) aux Graph Neural Networks sur des réseaux sociaux (Karate Club).</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Décomposition par Walks :</strong> Identification des "chemins de messagerie" les plus influents dans le graphe</li>
+              <li>✓ <strong>GNN-LRP :</strong> Extraction d'une explication structurelle topologique sans dépendre uniquement des features</li>
+              <li>✓ <strong>Réseaux Denses :</strong> Utilisation de LRP-ε et LRP-γ pour le diagnostic du cancer du sein (FC Networks)</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/Problèmes Inverses (TwIST).png" alt="TwIST Inverse Problems">
+          </div>
+          <div class="project-right">
+            <h3>🔬 Problèmes Inverses : Algorithme TwIST (Restauration d'images)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scipy"></span></li>
+            </ul>
+            <p>Résolution de problèmes inverses mal posés (déconvolution d'images bruitées) via des méthodes d'optimisation avancées.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Modélisation Mathématique :</strong> Minimisation de fonctionnelles pénalisées (Forward-Backward)</li>
+              <li>✓ <strong>TwIST :</strong> Implémentation du Two-Step Iterative Shrinkage/Thresholding pour accélérer drastiquement la convergence</li>
+              <li>✓ <strong>DeepInverse :</strong> Intégration algorithmique pour la restauration d'images floues soumises à un bruit gaussien</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/trading_vix75.png" alt="Trading Algorithmique">
+          </div>
+          <div class="project-right">
+            <h3>💹 Trading Algorithmique Multi-Modal & IA</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas"></span></li>
+              <li><span class="iconify" data-icon="logos:tensorflow"></span></li>
+            </ul>
+            <p>Robot de trading avancé combinant analyse technique multi-timeframes, Deep Learning sur graphes et gestion du risque Wall Street.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Deep Learning:</strong> Graph Attention Networks (GAT) pour l'analyse de marché</li>
+              <li>✓ <strong>Meta-Modèle:</strong> Stacking (XGBoost, GBR, Régression Linéaire)</li>
+              <li>✓ <strong>Fiabilité:</strong> Backtesting financier et intégration API Deriv/MT5</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/Démographie & Santé Publique.png" alt="Statistiques de Santé">
+          </div>
+          <div class="project-right">
+            <h3>🌍 Démographie, Épidémiologie & Santé Publique</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><i class="fas fa-chart-bar fa-2x" style="color: #1e88e5;"></i> <span style="font-size:12px;">Stata</span></li>
+              <li><i class="fas fa-chart-pie fa-2x" style="color: #cc0000;"></i> <span style="font-size:12px;">SPSS</span></li>
+              <li><span class="iconify" data-icon="logos:r-lang"></span></li>
+            </ul>
+            <p>Traitement de bases de données massives (EDS Burkina Faso / Mali) pour l'analyse des comportements de santé et de la mortalité.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Statistiques avancées:</strong> Analyse Multi-niveaux, Régression Logistique Multinomiale</li>
+              <li>✓ <strong>Démographie:</strong> Calcul de l'Indice Synthétique de Fécondité, quotients de mortalité (Coale et Demeny)</li>
+              <li>✓ <strong>Méthodologie:</strong> Plans de sondage complexes (pondérations, effets de grappe), Suivi & Évaluation (M&E)</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/bayesian_inference.png" alt="Statistiques Bayesiennes">
+          </div>
+          <div class="project-right">
+            <h3>🎲 Statistiques Bayésiennes & Inférence MCMC</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scipy"></span></li>
+            </ul>
+            <p>Quantification de l'incertitude et modélisation de la fiabilité (durée de vie) par approche probabiliste.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Algorithmique:</strong> Implémentation de l'algorithme Metropolis-Hastings (MCMC) "from scratch"</li>
+              <li>✓ <strong>Modélisation:</strong> Loi de Weibull et modélisation prédictive avec la librairie PyMC3</li>
+              <li>✓ <strong>Validation:</strong> Calcul des intervalles de crédibilité à 95% et analyse de convergence des chaînes de Markov</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="experience" class="experience">
+      </section>
+
+    <section id="skills" class="skills">
+      </section>
+
+    <section id="education" class="education">
+      </section>
+
+    <section id="contact" class="contact">
+      </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div>
+            <p class="student main-font text-blue">Data Scientist & Analyst - M2 MIASHS</p>
+            <p class="student main-font">
+              🎯 Recherche de CDI / CDD / Alternance (Dès Septembre 2026)<br>
+              📊 Data Science | ML | Statistiques Publiques | IA
+            </p>
+            <p class="student main-font" style="text-align: center; margin-top: 10px;">
+              💡 Une opportunité ou un conseil ? Contactez-moi !
+            </p>
+          </div>
+
+          <div class="footer-icon-links">
+            <a href="https://github.com/wendyam-ariel-tiemtore" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="mailto:wendyamtiemtore@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="text-center p-3">
+          © 2026 - Ariel Eddy TIEMTORE
+        </div>
+      </div>
+    </footer>
+
+    <a id="backToTopBtn" class="btn-blue">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', './particles.json', function(){
+        console.log("particles.json loaded...")
+      })
+    </script>
+    <script defer src="js/app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+  </body>
+</html>
