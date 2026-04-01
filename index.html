@@ -107,22 +107,20 @@
 
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
-            <img src="img/trading_vix75.png" alt="Trading Algorithmique">
+            <img src="img/robust_ml.png" alt="Robust Machine Learning">
           </div>
           <div class="project-right">
-            <h3>💹 Trading Algorithmique Multi-Modal & IA (Indice VIX75)</h3>
+            <h3>🛡️ Robust Machine Learning (MoM & Adversarial Training)</h3>
             <ul class="tech-stack-list">
               <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
               <li><span class="iconify" data-icon="logos:python"></span></li>
-              <li><span class="iconify" data-icon="simple-icons:pandas"></span></li>
-              <li><span class="iconify" data-icon="logos:tensorflow"></span></li>
             </ul>
-            <p>Robot de trading avancé combinant analyse technique multi-timeframes, Deep Learning sur graphes et gestion du risque.</p>
+            <p>Implémentation d'estimateurs robustes et défense de réseaux de neurones contre les attaques adversariales (MNIST).</p>
             <ul class="project-highlights">
-              <li>✓ <strong>Deep Learning:</strong> Graph Attention Networks (GAT) pour l'analyse de marché</li>
-              <li>✓ <strong>Meta-Modèle:</strong> Stacking (Random Forest, GBR, Régression Linéaire)</li>
-              <li>✓ <strong>Intégration API:</strong> Flux de données réels via Binance et CoinGecko</li>
-              <li>✓ <strong>Fiabilité:</strong> Backtesting financier (Sharpe, Drawdown) et Prédiction Conforme</li>
+              <li>✓ <strong>Statistique Robuste :</strong> Estimateur Median of Means (MoM) pour contrer les valeurs aberrantes (outliers)</li>
+              <li>✓ <strong>Attaques :</strong> Création d'attaques FGSM (Fast Gradient Sign Method) et PGD-40 (Projected Gradient Descent)</li>
+              <li>✓ <strong>Défense :</strong> Adversarial Training PGD permettant de gagner +65 points de robustesse</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
@@ -132,20 +130,137 @@
 
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
-            <img src="img/computer_vision.png" alt="Deep Learning Vision">
+            <img src="img/gradcam.png" alt="Grad-CAM XAI">
           </div>
           <div class="project-right">
-            <h3>👁️ Deep Learning & Computer Vision (CNN vs Scattering)</h3>
+            <h3>🖼️ XAI Vision : Grad-CAM sur ResNet50</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:numpy"></span></li>
+            </ul>
+            <p>Visualisation et interprétabilité des décisions d'un CNN profond via les cartes d'activation de classe.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Algorithmique :</strong> Extraction du gradient des activations pour générer des heatmaps explicatives</li>
+              <li>✓ <strong>Diagnostic :</strong> Localisation des zones discriminantes (museau, pelage) ayant influencé le modèle</li>
+              <li>✓ <strong>Analyse multi-couches :</strong> Comparaison de l'évolution de la granularité sémantique entre les couches du ResNet50</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/bert_ig.png" alt="NLP BERT XAI">
+          </div>
+          <div class="project-right">
+            <h3>💬 XAI NLP : Integrated Gradients sur DistilBERT</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="simple-icons:huggingface"></span></li>
+              <li><span class="iconify" data-icon="logos:pytorch"></span></li>
+            </ul>
+            <p>Interprétation de modèles de langage massifs (LLM) appliqués à une tâche de Question-Answering sur le climat.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Integrated Gradients :</strong> Attribution de pertinence à chaque token via l'approximation d'intégrales</li>
+              <li>✓ <strong>Analyse d'Attention :</strong> Démonstration de l'influence des tokens de la question sur la recherche dans le contexte</li>
+              <li>✓ <strong>Validation :</strong> Vérification de la propriété de complétude (delta < 0.05)</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/shap_dice.png" alt="SHAP and DiCE XAI">
+          </div>
+          <div class="project-right">
+            <h3>⚕️ XAI Santé : SHAP & Contrefactuels (DiCE)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:xgboost"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas"></span></li>
+            </ul>
+            <p>Explicabilité de modèles de Machine Learning tabulaires pour la prédiction de survie (Titanic) et le diagnostic de maladies cardiaques.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Théorie des Jeux (SHAP) :</strong> Quantification de l'impact marginal de chaque variable clinique (Sexe, Classe, Âge)</li>
+              <li>✓ <strong>DiCE (Contrefactuels) :</strong> Génération de recommandations actionnables pour modifier le diagnostic d'un patient</li>
+              <li>✓ <strong>Fiabilité Clinique :</strong> Distinction entre "pourquoi cette prédiction" et "comment changer la situation"</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/gnn_lrp.png" alt="GNN LRP">
+          </div>
+          <div class="project-right">
+            <h3>🕸️ XAI Graphes : Layer-wise Relevance Propagation (GNN)</h3>
             <ul class="tech-stack-list">
               <p class="text-grey"><b>Technologies: </b></p>
               <li><span class="iconify" data-icon="logos:pytorch"></span></li>
               <li><span class="iconify" data-icon="logos:python"></span></li>
             </ul>
-            <p>Analyse comparative d'architectures neuronales complexes pour la classification d'images (CIFAR-10) avec garanties statistiques.</p>
+            <p>Adaptation de la méthode de propagation de la pertinence (LRP) aux Graph Neural Networks sur des réseaux sociaux (Karate Club).</p>
             <ul class="project-highlights">
-              <li>✓ <strong>Architectures:</strong> Réseaux de Neurones Convolutifs (CNN) vs Transformée de Scattering (Kymatio)</li>
-              <li>✓ <strong>Prédiction Conforme:</strong> Implémentation de la régression quantile conforme (SCP CV+)</li>
-              <li>✓ <strong>Analyse:</strong> Comparaison des performances, courbes d'apprentissage et intervalles de prédiction</li>
+              <li>✓ <strong>Décomposition par Walks :</strong> Identification des "chemins de messagerie" les plus influents dans le graphe</li>
+              <li>✓ <strong>GNN-LRP :</strong> Extraction d'une explication structurelle topologique sans dépendre uniquement des features</li>
+              <li>✓ <strong>Réseaux Denses :</strong> Utilisation de LRP-ε et LRP-γ pour le diagnostic du cancer du sein (FC Networks)</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/twist_inverse.png" alt="TwIST Inverse Problems">
+          </div>
+          <div class="project-right">
+            <h3>🔬 Problèmes Inverses : Algorithme TwIST (Restauration d'images)</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:scipy"></span></li>
+            </ul>
+            <p>Résolution de problèmes inverses mal posés (déconvolution d'images bruitées) via des méthodes d'optimisation avancées.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Modélisation Mathématique :</strong> Minimisation de fonctionnelles pénalisées (Forward-Backward)</li>
+              <li>✓ <strong>TwIST :</strong> Implémentation du Two-Step Iterative Shrinkage/Thresholding pour accélérer drastiquement la convergence</li>
+              <li>✓ <strong>DeepInverse :</strong> Intégration algorithmique pour la restauration d'images floues soumises à un bruit gaussien</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row" data-aos="fade-up">
+          <div class="project-left">
+            <img src="img/trading_vix75.png" alt="Trading Algorithmique">
+          </div>
+          <div class="project-right">
+            <h3>💹 Trading Algorithmique Multi-Modal & IA</h3>
+            <ul class="tech-stack-list">
+              <p class="text-grey"><b>Technologies: </b></p>
+              <li><span class="iconify" data-icon="logos:python"></span></li>
+              <li><span class="iconify" data-icon="simple-icons:pandas"></span></li>
+              <li><span class="iconify" data-icon="logos:tensorflow"></span></li>
+            </ul>
+            <p>Robot de trading avancé combinant analyse technique multi-timeframes, Deep Learning sur graphes et gestion du risque Wall Street.</p>
+            <ul class="project-highlights">
+              <li>✓ <strong>Deep Learning:</strong> Graph Attention Networks (GAT) pour l'analyse de marché</li>
+              <li>✓ <strong>Meta-Modèle:</strong> Stacking (XGBoost, GBR, Régression Linéaire)</li>
+              <li>✓ <strong>Fiabilité:</strong> Backtesting financier et intégration API Deriv/MT5</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
@@ -176,7 +291,7 @@
             </div>
           </div>
         </div>
-
+        
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
             <img src="img/bayesian_inference.png" alt="Statistiques Bayesiennes">
@@ -193,76 +308,6 @@
               <li>✓ <strong>Algorithmique:</strong> Implémentation de l'algorithme Metropolis-Hastings (MCMC) "from scratch"</li>
               <li>✓ <strong>Modélisation:</strong> Loi de Weibull et modélisation prédictive avec la librairie PyMC3</li>
               <li>✓ <strong>Validation:</strong> Calcul des intervalles de crédibilité à 95% et analyse de convergence des chaînes de Markov</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/manifold_learning.png" alt="Manifold Learning">
-          </div>
-          <div class="project-right">
-            <h3>🌌 Manifold Learning & Machine Learning Non Supervisé</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies: </b></p>
-              <li><span class="iconify" data-icon="logos:python"></span></li>
-              <li><span class="iconify" data-icon="simple-icons:scikitlearn"></span></li>
-              <li><span class="iconify" data-icon="logos:r-lang"></span></li>
-            </ul>
-            <p>Mise en œuvre mathématique et algorithmique de méthodes avancées pour la visualisation et le clustering de données complexes de grande dimension.</p>
-            <ul class="project-highlights">
-              <li>✓ <strong>Réduction de dimension:</strong> t-SNE, Isomap, Spectral Embedding, MDS, LTSA</li>
-              <li>✓ <strong>Clustering:</strong> K-Médoïdes (implémentation R), K-Means, ACP probabiliste</li>
-              <li>✓ <strong>Théorie:</strong> Dérivation de l'algorithme EM et architecture d'Auto-encodeurs</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/nlp-llm.png" alt="NLP">
-          </div>
-          <div class="project-right">
-            <h3>🤖 Traitement du Langage Naturel (NLP)</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies: </b></p>
-              <li><span class="iconify" data-icon="logos:python"></span></li>
-              <li><span class="iconify" data-icon="simple-icons:huggingface"></span></li>
-            </ul>
-            <p>Conception de pipelines d'analyse textuelle et comparaison de techniques de tokenisation.</p>
-            <ul class="project-highlights">
-              <li>✓ <strong>Développement:</strong> Création d'un tokenizer BPE (Byte-Pair Encoding) "from scratch"</li>
-              <li>✓ <strong>Benchmarking:</strong> Comparaison des performances avec NLTK et SpaCy</li>
-              <li>✓ <strong>LLM:</strong> Études sur les modèles de langage et l'analyse sémantique</li>
-            </ul>
-            <div class="project-links">
-              <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/signal_processing.png" alt="Signal Processing">
-          </div>
-          <div class="project-right">
-            <h3>📡 Traitement du Signal & Ondelettes</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies: </b></p>
-              <li><span class="iconify" data-icon="logos:python"></span></li>
-              <li><span class="iconify" data-icon="simple-icons:numpy"></span></li>
-            </ul>
-            <p>Analyse de signaux et d'images par décomposition mathématique fréquentielle.</p>
-            <ul class="project-highlights">
-              <li>✓ <strong>Algorithmique:</strong> Utilisation de la Transformée en Ondelettes Rapide (FWT) avec la librairie PyWavelet</li>
-              <li>✓ <strong>Cas d'usage:</strong> Compression mathématique et débruitage avancé d'images</li>
-              <li>✓ <strong>Analyse Spectrale:</strong> Traitement du signal appliqué (Transformée de Fourier FFT)</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/wendyam-ariel-tiemtore" class="btn-blue-outline btn-small" target="_blank"><i class="fab fa-github"></i> Code</a>
