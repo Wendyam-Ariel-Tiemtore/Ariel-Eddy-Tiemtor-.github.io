@@ -3,30 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ariel Eddy TIEMTORE | Data scientist, IA de confiance et statistique</title>
-  <meta name="description" content="Portfolio d'Ariel Eddy TIEMTORE, data scientist et statisticien-démographe : IA explicable, apprentissage robuste et fédéré, modélisation statistique. Data Manager en alternance au BRGM." />
+  <title>Ariel Eddy TIEMTORE | Chaque point a une histoire</title>
+  <meta name="description" content="Le portfolio-histoire d'Ariel Eddy TIEMTORE, data scientist et statisticien-démographe : 1 600 points de données racontent son parcours, de la démographie au Burkina Faso à l'IA de confiance et aux risques naturels au BRGM." />
   <meta name="author" content="Ariel Eddy TIEMTORE" />
-  <meta name="theme-color" content="#142033" />
+  <meta name="theme-color" content="#0E1236" />
   <link rel="canonical" href="https://wendyam-ariel-tiemtore.github.io/Ariel-Eddy-Tiemtor-.github.io/" />
 
-  <!-- Aperçu du lien sur LinkedIn, WhatsApp, Slack… -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="Ariel Eddy TIEMTORE | Data scientist, IA de confiance" />
-  <meta property="og:description" content="IA explicable, apprentissage robuste et fédéré, statistique et démographie. Projets, parcours et CV." />
+  <meta property="og:title" content="Ariel Eddy TIEMTORE | Chaque point a une histoire" />
+  <meta property="og:description" content="Un portfolio qui se regarde comme un film : démographie, machine learning, IA explicable et risques naturels, racontés par des points de données." />
   <meta property="og:url" content="https://wendyam-ariel-tiemtore.github.io/Ariel-Eddy-Tiemtor-.github.io/" />
   <meta property="og:image" content="https://wendyam-ariel-tiemtore.github.io/Ariel-Eddy-Tiemtor-.github.io/img/web/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142033'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23fff'%3EAE%3C/text%3E%3Crect x='12' y='49' width='40' height='4' rx='2' fill='%23C8264A'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E1236'/%3E%3Ccircle cx='20' cy='40' r='5' fill='%23F2B544'/%3E%3Ccircle cx='32' cy='26' r='5' fill='%23FF7096'/%3E%3Ccircle cx='45' cy='34' r='5' fill='%233CC8B4'/%3E%3Ccircle cx='38' cy='48' r='3' fill='%23F4EEE2'/%3E%3C/svg%3E" />
 
   <script>document.documentElement.classList.add("js");</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..700&family=Public+Sans:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" />
 
   <script type="application/ld+json">
   {
@@ -43,726 +42,806 @@
       { "@type": "CollegeOrUniversity", "name": "Université Lumière Lyon 2" },
       { "@type": "CollegeOrUniversity", "name": "Université Joseph Ki-Zerbo" }
     ],
-    "knowsAbout": ["IA explicable", "IA de confiance", "Machine learning", "Apprentissage fédéré", "Statistique bayésienne", "Démographie"],
-    "sameAs": [
-      "https://linkedin.com/in/ariel-eddy-tiemtore",
-      "https://github.com/wendyam-ariel-tiemtore"
-    ]
+    "knowsAbout": ["IA explicable", "IA de confiance", "Machine learning", "Apprentissage fédéré", "Statistique bayésienne", "Démographie", "Gestion de données géospatiales"],
+    "sameAs": ["https://linkedin.com/in/ariel-eddy-tiemtore", "https://github.com/wendyam-ariel-tiemtore"]
   }
   </script>
 
   <style>
-    /* ---------- Tokens ---------- */
+    @property --tint { syntax: "<color>"; inherits: true; initial-value: #B590FF; }
+
     :root {
-      --paper: #F5F7FA;
+      /* Nuit : l'histoire */
+      --night: #0E1236;
+      --night-2: #171C4D;
+      --star: #F4EEE2;
+      --mist: #AEB3D6;
+      --line: rgba(244, 238, 226, .14);
+
+      /* Une couleur par chapitre, reprise dans les projets */
+      --gold: #F2B544;   /* démographie, statistique */
+      --teal: #3CC8B4;   /* machine learning */
+      --rose: #FF7096;   /* IA explicable */
+      --sky: #82B4FF;    /* confidentialité, robustesse */
+      --grape: #B590FF;  /* coopératives viticoles */
+      --clay: #E8975F;   /* argiles, BRGM */
+
+      /* Jour : le dossier */
+      --paper: #F1F3FA;
       --surface: #FFFFFF;
-      --ink: #142033;
-      --ink-2: #33405A;
-      --muted: #5B6676;
-      --rule: #DCE2EA;
-      --blue: #1D5FA8;
-      --blue-deep: #164A84;
-      --blue-tint: #E8F0FA;
-      --crimson: #C8264A;
-      --green: #2F7D5B;
-      --ochre: #9A6400;
+      --ink: #141943;
+      --ink-2: #3B4273;
+      --muted: #5D6488;
+      --rule: #DADEEE;
+      --gold-d: #8A5E00;
+      --teal-d: #0B7468;
+      --rose-d: #BC2550;
+      --sky-d: #2A5DBE;
+      --grape-d: #6A3DC9;
+      --clay-d: #A2512A;
 
-      --serif: "Literata", Georgia, "Times New Roman", serif;
-      --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
 
-      --step--1: 0.875rem;
-      --step-0: 1.0625rem;
-      --step-1: 1.25rem;
-      --step-2: 1.6rem;
-      --step-3: clamp(1.9rem, 1.5rem + 1.6vw, 2.5rem);
-      --step-4: clamp(2rem, 1.25rem + 3.1vw, 3.35rem);
-
-      --wrap: 72rem;
-      --gutter: clamp(1rem, 4vw, 2.5rem);
+      --wrap: 74rem;
+      --gutter: clamp(1rem, 4vw, 2.75rem);
       --nav-h: 4rem;
+      --tint: var(--grape);
     }
 
-    /* ---------- Base ---------- */
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 1rem); -webkit-text-size-adjust: 100%; }
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--nav-h) + 1rem); }
     body {
       margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: var(--step-0);
-      line-height: 1.6;
-      text-rendering: optimizeLegibility;
+      background: var(--night);
+      color: var(--star);
+      font-family: var(--display);
+      font-optical-sizing: auto;
+      font-size: 1.0625rem;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
+      transition: --tint 1.4s ease;
     }
     img { display: block; max-width: 100%; height: auto; }
-    a { color: var(--blue); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
-    a:hover { color: var(--blue-deep); text-decoration-thickness: 2px; }
-    :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 3px; }
-    h1, h2, h3, h4 { margin: 0; font-weight: 600; }
+    a { color: inherit; text-underline-offset: .18em; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    h1, h2, h3, h4 { margin: 0; font-weight: 700; }
     p, ul, ol, dl, figure { margin: 0; }
     ul, ol { padding: 0; list-style: none; }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--star); outline-offset: 3px; border-radius: 4px; }
     .wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
     .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .icon { width: 1.1em; height: 1.1em; flex: none; fill: currentColor; }
+    .skip-link { position: absolute; left: 1rem; top: -3rem; z-index: 100; padding: .6rem 1rem; background: var(--star); color: var(--night); border-radius: 6px; }
+    .skip-link:focus { top: 1rem; }
 
-    .skip-link { position: absolute; left: 1rem; top: -3rem; z-index: 100; padding: .6rem 1rem; background: var(--ink); color: #fff; border-radius: 4px; }
-    .skip-link:focus { top: 1rem; color: #fff; }
-
-    /* ---------- Buttons ---------- */
-    .btn {
-      display: inline-flex; align-items: center; gap: .55rem;
-      padding: .72rem 1.15rem; border-radius: 6px;
-      font: 600 var(--step--1)/1.2 var(--sans); text-decoration: none;
-      border: 1.5px solid transparent; transition: background-color .15s, color .15s, border-color .15s;
+    /* ---------- Scène : canvas et halo ---------- */
+    .aura {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(60vmax 45vmax at 78% 38%, color-mix(in srgb, var(--tint) 22%, transparent), transparent 70%),
+        radial-gradient(50vmax 40vmax at 8% 105%, rgba(60, 200, 180, .08), transparent 70%);
+      transition: opacity .6s;
     }
-    .btn-primary { background: var(--blue); color: #fff; }
-    .btn-primary:hover { background: var(--blue-deep); color: #fff; }
-    .btn-ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
-    .btn-ghost:hover { background: var(--ink); color: #fff; }
+    #stage { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; transition: opacity .6s; }
+    body.dawn .aura, body.dawn #stage { opacity: 0; }
 
     /* ---------- Navigation ---------- */
-    .site-nav {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(245, 247, 250, .9);
-      -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
-      border-bottom: 1px solid transparent; transition: border-color .2s;
-    }
-    .site-nav.is-scrolled { border-bottom-color: var(--rule); }
+    .site-nav { position: fixed; inset: 0 0 auto 0; z-index: 60; transition: background-color .3s, color .3s, box-shadow .3s; }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: var(--nav-h); }
-    .brand { font: 600 1.05rem/1 var(--serif); color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
-    .brand:hover { color: var(--ink); }
-    .nav-menu { display: flex; align-items: center; gap: 1.6rem; }
-    .nav-menu a:not(.btn) { color: var(--ink-2); font-size: var(--step--1); font-weight: 500; text-decoration: none; padding-block: .3rem; border-bottom: 2px solid transparent; }
-    .nav-menu a:not(.btn):hover { color: var(--ink); }
-    .nav-menu a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--crimson); }
-    .nav-menu .btn { padding: .5rem .9rem; }
+    .brand { font-weight: 700; font-variation-settings: "wdth" 88; text-decoration: none; letter-spacing: -.005em; font-size: 1.05rem; }
+    .nav-menu { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-menu a { font-size: .92rem; font-weight: 500; text-decoration: none; opacity: .85; }
+    .nav-menu a:hover { opacity: 1; text-decoration: underline; }
+    .nav-menu .nav-cv { opacity: 1; padding: .45rem .85rem; border: 1.5px solid currentColor; border-radius: 999px; display: inline-flex; gap: .45rem; align-items: center; }
+    .nav-menu .nav-cv:hover { text-decoration: none; background: var(--star); color: var(--night); border-color: var(--star); }
+    body.day .site-nav { background: rgba(241, 243, 250, .92); color: var(--ink); box-shadow: 0 1px 0 var(--rule); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+    body.day .nav-menu .nav-cv:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    body.day :focus-visible { outline-color: var(--ink); }
     .nav-toggle { display: none; }
-
-    @media (max-width: 52rem) {
+    @media (max-width: 60rem) {
       .nav-toggle {
-        display: inline-flex; align-items: center; gap: .45rem; padding: .5rem .75rem;
-        background: none; border: 1.5px solid var(--rule); border-radius: 6px;
-        font: 600 var(--step--1) var(--sans); color: var(--ink); cursor: pointer;
+        display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .8rem; cursor: pointer;
+        background: transparent; border: 1.5px solid currentColor; border-radius: 999px; font-weight: 600; font-size: .92rem;
       }
-      .nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 2px; position: relative; transition: transform .2s, background-color .2s; }
-      .nav-toggle .bars::before, .nav-toggle .bars::after { content: ""; position: absolute; left: 0; }
-      .nav-toggle .bars::before { top: -5px; } .nav-toggle .bars::after { top: 5px; }
-      .nav-toggle[aria-expanded="true"] .bars { background: transparent; }
-      .nav-toggle[aria-expanded="true"] .bars::before { transform: translateY(5px) rotate(45deg); }
-      .nav-toggle[aria-expanded="true"] .bars::after { transform: translateY(-5px) rotate(-45deg); }
       .nav-menu {
-        position: absolute; inset: var(--nav-h) 0 auto 0;
-        flex-direction: column; align-items: stretch; gap: 0;
-        padding: .5rem var(--gutter) 1.25rem; background: var(--paper); border-bottom: 1px solid var(--rule);
-        box-shadow: 0 12px 24px -16px rgba(20, 32, 51, .35);
+        position: absolute; inset: var(--nav-h) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
+        padding: .5rem var(--gutter) 1.25rem; background: var(--night-2); color: var(--star); border-bottom: 1px solid var(--line);
       }
+      body.day .nav-menu { background: var(--paper); color: var(--ink); border-bottom-color: var(--rule); }
       .js .nav-menu { display: none; }
       .js .nav-menu.is-open { display: flex; }
-      .nav-menu a:not(.btn) { padding: .8rem 0; font-size: var(--step-0); border-bottom: 1px solid var(--rule); }
-      .nav-menu a[aria-current="true"] { border-bottom-color: var(--rule); box-shadow: inset 3px 0 0 var(--crimson); padding-left: .75rem; }
-      .nav-menu .btn { margin-top: 1rem; justify-content: center; padding: .8rem 1rem; }
+      .nav-menu a { padding: .8rem 0; font-size: 1.05rem; border-bottom: 1px solid var(--line); opacity: 1; }
+      body.day .nav-menu a { border-bottom-color: var(--rule); }
+      .nav-menu .nav-cv { margin-top: 1rem; justify-content: center; border-radius: 999px; }
     }
 
-    /* ---------- Hero ---------- */
-    .hero { padding: clamp(2.5rem, 6vw, 5.5rem) 0 clamp(3rem, 7vw, 6rem); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 21rem); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
-    .hero-name { font: 600 var(--step-2)/1.15 var(--serif); letter-spacing: -.01em; }
-    .hero-role { margin-top: .35rem; color: var(--muted); font-size: var(--step-0); }
-
-    .attr {
-      margin-top: clamp(1.5rem, 3vw, 2.25rem);
-      font: 500 var(--step-4)/1.24 var(--serif);
-      font-optical-sizing: auto;
-      letter-spacing: -.018em;
-      max-width: 17em;
-      text-wrap: balance;
+    /* ---------- Histoire ---------- */
+    .story { position: relative; z-index: 1; }
+    .scene { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding: calc(var(--nav-h) + 3vh) 0 12vh; }
+    .scene > .wrap { display: flex; }
+    .card {
+      width: min(31rem, 100%);
+      padding: clamp(1.3rem, 2.6vw, 2.1rem);
+      background: rgba(14, 18, 54, .62);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px);
     }
-    .tok {
-      position: relative;
-      padding: 0 .06em; margin: 0 -.03em;
-      background-image: linear-gradient(var(--h), var(--h));
-      background-repeat: no-repeat;
-      background-position: 0 62%;
-      background-size: 100% .86em;
-      -webkit-box-decoration-break: clone; box-decoration-break: clone;
-      transition: background-size .6s cubic-bezier(.2, .7, .2, 1);
+    .chap-mark { display: flex; align-items: baseline; gap: .7rem; color: var(--c, var(--mist)); }
+    .chap-num {
+      font-size: 2.6rem; line-height: 1; font-weight: 800; font-variation-settings: "wdth" 75;
+      color: transparent; -webkit-text-stroke: 1.5px var(--c, var(--mist));
     }
-    .js .attr:not(.is-lit) .tok { background-size: 0% .86em; }
-    .tok::after {
-      content: attr(data-score);
-      position: absolute; left: 50%; bottom: calc(100% + .35rem); transform: translateX(-50%);
-      padding: .2rem .45rem; border-radius: 4px; background: var(--ink); color: #fff;
-      font: 600 .8rem/1.2 var(--sans); letter-spacing: 0; white-space: nowrap; font-variant-numeric: tabular-nums;
-      opacity: 0; pointer-events: none; transition: opacity .12s;
+    .chap-where { font-size: .95rem; font-weight: 600; }
+    .card h2 {
+      margin-top: .55rem;
+      font-size: clamp(1.75rem, 1.2rem + 1.9vw, 2.6rem); line-height: 1.04; font-weight: 800;
+      font-variation-settings: "wdth" 82; letter-spacing: -.012em; text-wrap: balance;
     }
-    .tok:hover::after { opacity: 1; }
-
-    .attr-legend { display: flex; align-items: center; gap: .75rem; margin-top: 1rem; color: var(--muted); font-size: var(--step--1); max-width: 36rem; }
-    .attr-scale { flex: none; display: grid; grid-template-columns: auto 4.5rem auto; align-items: center; gap: .35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-    .attr-scale i { height: .5rem; border-radius: 1rem; background: linear-gradient(90deg, rgba(29,95,168,.55), rgba(255,255,255,1) 45%, rgba(200,38,74,.55)); border: 1px solid var(--rule); }
-
-    .hero-now { margin-top: clamp(1.5rem, 3vw, 2rem); max-width: 38rem; color: var(--ink-2); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
-    .hero-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin-top: 1.4rem; font-size: var(--step--1); }
-    .hero-links a { display: inline-flex; align-items: center; gap: .45rem; color: var(--ink-2); text-decoration: none; font-weight: 500; }
-    .hero-links a:hover { color: var(--blue); text-decoration: underline; }
-
-    .hero-photo { position: relative; margin-top: .5rem; }
-    .hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 8px; background: var(--rule); }
-    .hero-photo::before {
-      content: ""; position: absolute; inset: 1rem -1rem -1rem 1rem; z-index: -1;
-      border: 1.5px solid var(--rule); border-radius: 10px;
+    .story-text { margin-top: 1rem; font-family: var(--serif); font-size: 1.17rem; line-height: 1.55; color: #E6E2EE; }
+    .story-text + .story-text { margin-top: .7rem; }
+    .story-text b { font-family: var(--display); font-size: .95em; font-weight: 600; color: var(--star); }
+    .viz-note { margin-top: 1.1rem; display: flex; gap: .6rem; align-items: flex-start; font-size: .9rem; color: var(--mist); }
+    .viz-note::before { content: ""; flex: none; width: .6rem; height: .6rem; margin-top: .42rem; border-radius: 50%; background: var(--c, var(--mist)); box-shadow: 0 0 12px var(--c, var(--mist)); }
+    .act {
+      margin-top: 1.2rem; display: inline-flex; align-items: center; gap: .55rem; cursor: pointer;
+      padding: .62rem 1.05rem; border-radius: 999px; border: 1.5px solid var(--c, var(--star));
+      background: transparent; color: var(--star); font-weight: 600; font-size: .95rem;
+      transition: background-color .2s, color .2s;
     }
+    .act:hover { background: var(--c, var(--star)); color: var(--night); }
+    .act svg { width: 1em; height: 1em; fill: currentColor; }
 
-    @media (max-width: 52rem) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-photo { order: -1; width: min(11rem, 45vw); margin: 0 0 .5rem; }
-      .hero-photo::before { inset: .6rem -.6rem -.6rem .6rem; }
-      .attr-legend { align-items: flex-start; flex-direction: column; gap: .4rem; }
+    .c-gold { --c: var(--gold); } .c-teal { --c: var(--teal); } .c-rose { --c: var(--rose); }
+    .c-sky { --c: var(--sky); } .c-grape { --c: var(--grape); } .c-clay { --c: var(--clay); }
+
+    /* Ouverture */
+    .hero-card { width: min(36rem, 100%); }
+    .hero-who { font-size: 1rem; color: var(--mist); font-weight: 500; }
+    .hero-who strong { color: var(--star); font-weight: 700; }
+    .hero h1 {
+      margin-top: .9rem;
+      font-size: clamp(2.7rem, 1.4rem + 5.4vw, 5.6rem); line-height: .94; font-weight: 800;
+      font-variation-settings: "wdth" 78; letter-spacing: -.02em; text-wrap: balance;
     }
-
-    /* ---------- Sections ---------- */
-    .section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; border-top: 1px solid var(--rule); }
-    .section-alt { background: var(--surface); }
-    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 1rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
-    .section-head h2 { font: 600 var(--step-3)/1.1 var(--serif); letter-spacing: -.015em; }
-    .section-lede { grid-column: 1; max-width: 40rem; margin-top: .6rem; color: var(--muted); }
-    .section-head .aside-link { grid-column: 2; grid-row: 1 / span 2; align-self: end; display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; font-size: var(--step--1); }
-    @media (max-width: 40rem) {
-      .section-head { grid-template-columns: 1fr; }
-      .section-head .aside-link { grid-column: 1; grid-row: auto; }
+    .hero .story-text { font-size: 1.3rem; font-style: italic; color: var(--star); max-width: 28rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.8rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .6rem; padding: .8rem 1.25rem; border-radius: 999px;
+      font-weight: 700; font-size: 1rem; text-decoration: none; cursor: pointer; border: 1.5px solid transparent;
+      transition: transform .2s, background-color .2s, color .2s;
     }
+    .btn svg { width: 1em; height: 1em; fill: currentColor; }
+    .btn-play { background: var(--star); color: var(--night); }
+    .btn-play:hover { transform: translateY(-1px); background: #fff; }
+    .btn-play small { font-weight: 500; opacity: .7; font-size: .85rem; }
+    .btn-ghost { border-color: var(--line); color: var(--star); background: rgba(14, 18, 54, .4); }
+    .btn-ghost:hover { border-color: var(--star); }
+    .hero-hint { margin-top: 1.4rem; font-size: .9rem; color: var(--mist); }
+    .hero-hint kbd { font-family: inherit; font-size: .82rem; padding: .05rem .4rem; border: 1px solid var(--line); border-radius: 4px; }
 
-    /* ---------- Projects ---------- */
+    /* Épilogue */
+    .epilogue .card h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.2rem); }
+    .epilogue-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+
+    /* Rail de lecture */
+    .rail {
+      position: fixed; z-index: 55; left: 50%; bottom: 1.1rem; transform: translateX(-50%);
+      display: flex; align-items: center; gap: .9rem; padding: .45rem .6rem .45rem .45rem;
+      background: rgba(14, 18, 54, .78); border: 1px solid var(--line); border-radius: 999px;
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+      transition: opacity .4s, transform .4s;
+    }
+    body.dawn .rail { opacity: 0; pointer-events: none; transform: translate(-50%, 1rem); }
+    .rail-play {
+      display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+      height: 2.3rem; padding: 0 .95rem 0 .8rem; border-radius: 999px; border: 0; cursor: pointer;
+      background: var(--star); color: var(--night); font-weight: 700; font-size: .88rem;
+    }
+    .rail-play svg { width: .95rem; height: .95rem; fill: currentColor; }
+    .rail-play .i-pause { display: none; }
+    .is-playing .rail-play .i-pause { display: block; }
+    .is-playing .rail-play .i-play, .rail-play .lbl-pause, .is-playing .rail-play .lbl-play { display: none; }
+    .is-playing .rail-play .lbl-pause { display: inline; }
+    .rail-dots { display: flex; align-items: center; gap: .15rem; }
+    .rail-dot { position: relative; width: 1.6rem; height: 2rem; border: 0; background: none; cursor: pointer; padding: 0; }
+    .rail-dot::before {
+      content: ""; position: absolute; left: 50%; top: 50%; width: .55rem; height: .55rem; transform: translate(-50%, -50%);
+      border-radius: 50%; border: 1.5px solid var(--c, var(--mist)); transition: background-color .3s, transform .3s;
+    }
+    .rail-dot[aria-current="step"]::before { background: var(--c, var(--star)); transform: translate(-50%, -50%) scale(1.35); box-shadow: 0 0 10px var(--c, var(--star)); }
+    .rail-dot .tip {
+      position: absolute; bottom: calc(100% + .5rem); left: 50%; transform: translateX(-50%);
+      padding: .25rem .55rem; border-radius: 6px; background: var(--star); color: var(--night);
+      font-size: .78rem; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .15s;
+    }
+    .rail-dot:hover .tip, .rail-dot:focus-visible .tip { opacity: 1; }
+    .rail-bar { position: absolute; left: 1.2rem; right: 1.2rem; bottom: 0; height: 2px; border-radius: 2px; overflow: hidden; }
+    .rail-bar i { display: block; height: 100%; width: 0; background: var(--star); opacity: .8; }
+
+    .viz-shield { display: none; }
+    @media (max-width: 60rem) {
+      /* Sur téléphone : le graphique reste en haut, le texte défile dessous */
+      .viz-shield {
+        display: block; position: fixed; left: 0; right: 0; top: 0; height: 51svh; z-index: 2; pointer-events: none;
+        background:
+          radial-gradient(90vw 32svh at 60% 26svh, color-mix(in srgb, var(--tint) 20%, transparent), transparent 75%),
+          linear-gradient(to bottom, var(--night) 0, var(--night) 86%, rgba(14, 18, 54, 0));
+        transition: opacity .6s;
+      }
+      body.dawn .viz-shield { opacity: 0; }
+      #stage { z-index: 3; }
+      .scene, .scene.hero { align-items: flex-start; padding-top: 50svh; padding-bottom: 6.5rem; }
+      .card { background: rgba(23, 28, 77, .55); -webkit-backdrop-filter: none; backdrop-filter: none; }
+      .story-text { font-size: 1.08rem; }
+      .hero .story-text { font-size: 1.15rem; }
+      .rail { left: .75rem; right: .75rem; transform: none; justify-content: space-between; bottom: .75rem; }
+      body.dawn .rail { transform: translateY(1rem); }
+      .rail-dot { width: 1.25rem; }
+      .rail-dot .tip { display: none; }
+    }
+    @media (max-width: 24rem) { .rail-play .lbl { display: none; } .rail-play { padding: 0 .8rem; } }
+
+    /* ---------- Dossier (le jour se lève) ---------- */
+    .dossier { position: relative; z-index: 2; background: var(--paper); color: var(--ink); }
+    .dossier::before {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 38vh; pointer-events: none;
+      background: linear-gradient(to bottom, rgba(241, 243, 250, 0), rgba(242, 181, 68, .10) 55%, var(--paper));
+    }
+    .dossier a { color: var(--sky-d); }
+    .dossier :focus-visible { outline-color: var(--ink); }
+    .section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
+    .section + .section { border-top: 1px solid var(--rule); }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: .9rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+    .section-head h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem); line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; letter-spacing: -.015em; }
+    .section-lede { grid-column: 1; max-width: 40rem; color: var(--muted); font-family: var(--serif); font-size: 1.15rem; }
+    .section-head .aside-link { grid-column: 2; grid-row: 1 / span 2; align-self: end; display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; font-size: .95rem; }
+    @media (max-width: 40rem) { .section-head { grid-template-columns: 1fr; } .section-head .aside-link { grid-column: 1; grid-row: auto; } }
+
     .filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2.25rem; }
     .filter {
-      display: inline-flex; align-items: center; gap: .45rem;
-      padding: .45rem .85rem; border: 1.5px solid var(--rule); border-radius: 2rem;
-      background: var(--surface); color: var(--ink-2); cursor: pointer;
-      font: 500 var(--step--1)/1.2 var(--sans);
-      transition: border-color .15s, background-color .15s, color .15s;
+      display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .9rem; cursor: pointer;
+      border: 1.5px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink-2); font-weight: 500; font-size: .9rem;
     }
     .filter:hover { border-color: var(--ink-2); }
     .filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
-    .filter .n { font-variant-numeric: tabular-nums; opacity: .7; }
-    .filter .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--c, var(--muted)); }
+    .filter .n { opacity: .65; font-variant-numeric: tabular-nums; }
+    .filter .dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--c); }
 
     .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem); }
     @media (max-width: 52rem) { .projects { grid-template-columns: 1fr; } }
     .project { display: flex; flex-direction: column; }
     .project[hidden] { display: none; }
-    .project-media { overflow: hidden; border-radius: 6px; border: 1px solid var(--rule); background: var(--surface); }
-    .project-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 0; }
-    .project-theme { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem; font-size: var(--step--1); font-weight: 600; color: var(--c); }
-    .project-theme::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: currentColor; }
-    .project h3 { margin-top: .35rem; font: 600 var(--step-1)/1.3 var(--serif); letter-spacing: -.005em; }
-    .project-desc { margin-top: .5rem; color: var(--ink-2); max-width: 36rem; }
-    .project-result {
-      margin-top: .9rem; padding: .55rem .8rem; border-left: 3px solid var(--crimson);
-      background: #FBEFF2; border-radius: 0 4px 4px 0; font-size: var(--step--1); color: var(--ink);
-    }
-    .project-result strong { font-variant-numeric: tabular-nums; }
-    .project-points { margin-top: .9rem; display: grid; gap: .4rem; font-size: var(--step--1); color: var(--ink-2); }
-    .project-points li { position: relative; padding-left: 1.05rem; }
-    .project-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .4rem; height: 1.5px; background: var(--muted); }
-    .project-points b { color: var(--ink); font-weight: 600; }
+    .project-media { overflow: hidden; border-radius: 14px; border: 1px solid var(--rule); background: var(--surface); }
+    .project-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 0; transition: transform .5s; }
+    .project:hover .project-media img { transform: scale(1.025); }
+    .project-theme { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem; font-size: .9rem; font-weight: 600; color: var(--c); }
+    .project-theme::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: currentColor; }
+    .project h3 { margin-top: .3rem; font-size: 1.4rem; line-height: 1.15; font-weight: 700; font-variation-settings: "wdth" 88; }
+    .project-desc { margin-top: .5rem; color: var(--ink-2); font-family: var(--serif); font-size: 1.1rem; max-width: 36rem; }
+    .project-result { margin-top: .9rem; padding: .55rem .85rem; border-left: 3px solid var(--c); background: var(--surface); border-radius: 0 8px 8px 0; font-size: .95rem; }
+    .project-points { margin-top: .9rem; display: grid; gap: .4rem; font-size: .95rem; color: var(--ink-2); }
+    .project-points li, .tl-points li { position: relative; padding-left: 1.05rem; }
+    .project-points li::before, .tl-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .45rem; height: .45rem; border-radius: 50%; border: 1.5px solid var(--muted); }
+    .project-points b, .tl-points b { color: var(--ink); font-weight: 600; }
     .project-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem; margin-top: auto; padding-top: 1.1rem; }
-    .project-foot a { display: inline-flex; align-items: center; gap: .4rem; font-size: var(--step--1); font-weight: 600; }
-
+    .project-foot a { display: inline-flex; align-items: center; gap: .4rem; font-size: .95rem; font-weight: 600; }
     .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .chips li {
-      padding: .18rem .55rem; border-radius: 4px; background: var(--blue-tint); color: var(--blue-deep);
-      font-size: .8rem; font-weight: 500; line-height: 1.5; white-space: nowrap;
-    }
+    .chips li { padding: .16rem .6rem; border-radius: 999px; background: #E3E7F5; color: var(--ink-2); font-size: .82rem; font-weight: 500; white-space: nowrap; }
+    .t-xai { --c: var(--rose-d); } .t-robust { --c: var(--sky-d); } .t-stats { --c: var(--gold-d); } .t-optim { --c: var(--teal-d); }
 
-    .t-xai { --c: var(--crimson); }
-    .t-robust { --c: var(--blue); }
-    .t-stats { --c: var(--green); }
-    .t-optim { --c: var(--ochre); }
-
-    /* ---------- Timeline ---------- */
     .path-cols { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(2.5rem, 6vw, 5rem); }
     @media (max-width: 52rem) { .path-cols { grid-template-columns: 1fr; } }
-    .col-title { font: 600 var(--step-1)/1.2 var(--sans); margin-bottom: 1.5rem; color: var(--ink); }
+    .col-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
     .timeline { position: relative; display: grid; gap: 2.25rem; }
-    .timeline::before { content: ""; position: absolute; left: .3rem; top: .5rem; bottom: .5rem; width: 1.5px; background: var(--rule); }
+    .timeline::before { content: ""; position: absolute; left: .32rem; top: .5rem; bottom: .5rem; width: 2px; background: var(--rule); }
     .tl-item { position: relative; padding-left: 1.9rem; }
-    .tl-item::before {
-      content: ""; position: absolute; left: 0; top: .42rem; width: .75rem; height: .75rem; border-radius: 50%;
-      background: var(--surface); border: 2px solid var(--muted);
-    }
-    .tl-item.is-current::before { background: var(--crimson); border-color: var(--crimson); box-shadow: 0 0 0 4px #FBE3E9; }
-    .tl-date { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
-    .badge { padding: .05rem .5rem; border-radius: 2rem; background: #FBE3E9; color: #9E1736; font-size: .78rem; font-weight: 600; }
-    .tl-item h4 { margin-top: .3rem; font: 600 var(--step-1)/1.3 var(--serif); }
+    .tl-item::before { content: ""; position: absolute; left: 0; top: .4rem; width: .8rem; height: .8rem; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); }
+    .tl-item.is-current::before { background: var(--clay-d); border-color: var(--clay-d); box-shadow: 0 0 0 4px rgba(232, 151, 95, .3); }
+    .tl-date { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .badge { padding: .05rem .55rem; border-radius: 999px; background: #F9E3D4; color: #7E3A16; font-size: .78rem; font-weight: 700; }
+    .tl-item h4 { margin-top: .3rem; font-size: 1.2rem; line-height: 1.25; font-weight: 700; }
     .tl-org { margin-top: .2rem; color: var(--ink-2); font-weight: 500; }
-    .tl-points { margin-top: .75rem; display: grid; gap: .45rem; color: var(--ink-2); font-size: var(--step--1); }
-    .tl-points li { position: relative; padding-left: 1.05rem; }
-    .tl-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .4rem; height: 1.5px; background: var(--muted); }
-    .tl-points b { color: var(--ink); font-weight: 600; }
-    .tl-note { margin-top: .5rem; color: var(--muted); font-size: var(--step--1); }
-    .tl-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: .75rem; font-size: var(--step--1); font-weight: 600; }
+    .tl-points { margin-top: .75rem; display: grid; gap: .45rem; color: var(--ink-2); font-size: .95rem; }
+    .tl-note { margin-top: .5rem; color: var(--muted); font-size: .9rem; }
+    .tl-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: .75rem; font-size: .95rem; font-weight: 600; }
 
-    /* ---------- Skills ---------- */
     .skills { border-top: 1px solid var(--rule); }
     .skill-row { display: grid; grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr); gap: .75rem 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
-    .skill-row dt { font: 600 var(--step-0)/1.35 var(--serif); }
+    .skill-row dt { font-size: 1.1rem; font-weight: 700; }
     .skill-row dd { margin: 0; }
-    .skill-row .chips li { font-size: .86rem; padding: .25rem .65rem; background: var(--surface); color: var(--ink-2); border: 1px solid var(--rule); }
+    .skill-row .chips li { font-size: .88rem; padding: .25rem .7rem; background: var(--surface); border: 1px solid var(--rule); }
     @media (max-width: 40rem) { .skill-row { grid-template-columns: 1fr; } }
 
-    /* ---------- Contact ---------- */
-    .contact { background: var(--ink); color: #DCE3EE; border-top: 0; }
+    .contact { position: relative; z-index: 2; background: var(--night); color: #DCE0F2; }
     .contact a { color: #fff; }
+    body .contact :focus-visible { outline-color: #fff; }
     .contact-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
     @media (max-width: 52rem) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact h2 { font: 600 var(--step-3)/1.1 var(--serif); color: #fff; letter-spacing: -.015em; }
-    .contact-intro { margin-top: .9rem; max-width: 34rem; }
-    .contact-email {
-      display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.6rem;
-      font: 500 clamp(1.15rem, 1rem + 1.1vw, 1.65rem)/1.3 var(--serif); text-decoration-color: rgba(255,255,255,.4); word-break: break-all;
-    }
-    .contact-email:hover { color: #fff; text-decoration-color: var(--crimson); }
+    .contact h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem); line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; color: #fff; }
+    .contact-intro { margin-top: .9rem; max-width: 34rem; font-family: var(--serif); font-size: 1.2rem; }
+    .contact-email { display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.6rem; font-size: clamp(1.2rem, 1rem + 1.2vw, 1.75rem); font-weight: 600; word-break: break-all; }
     .contact-links { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin-top: 1.4rem; }
-    .contact-links a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; font-size: var(--step--1); text-decoration: none; }
+    .contact-links a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; text-decoration: none; }
     .contact-links a:hover { text-decoration: underline; }
-    .docs h3 { font: 600 var(--step-0) var(--sans); color: #fff; margin-bottom: .75rem; }
-    .docs ul { border-top: 1px solid rgba(255,255,255,.18); }
-    .docs li { border-bottom: 1px solid rgba(255,255,255,.18); }
+    .docs h3 { font-size: 1.05rem; color: #fff; margin-bottom: .75rem; }
+    .docs ul { border-top: 1px solid var(--line); }
+    .docs li { border-bottom: 1px solid var(--line); }
     .docs a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; text-decoration: none; }
     .docs a span { display: block; }
-    .docs a small { display: block; color: #A9B4C6; font-size: .82rem; margin-top: .1rem; }
+    .docs a small { display: block; color: var(--mist); font-size: .85rem; margin-top: .1rem; }
     .docs a:hover span:first-child { text-decoration: underline; }
-    .contact :focus-visible { outline-color: #fff; }
-
-    .site-foot { background: var(--ink); color: #A9B4C6; font-size: .85rem; border-top: 1px solid rgba(255,255,255,.12); }
+    .site-foot { position: relative; z-index: 2; background: var(--night); color: var(--mist); font-size: .88rem; border-top: 1px solid var(--line); }
     .site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding: 1.4rem 0; }
-    .site-foot a { color: #DCE3EE; }
+    .site-foot a { color: var(--star); }
 
-    /* ---------- Motion & print ---------- */
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; animation: none !important; }
-    }
-    @media print {
-      .site-nav, .filters, .hero-actions, .skip-link { display: none !important; }
-      .section, .contact { padding: 1.5rem 0; background: none; color: #000; }
-      .contact a, .contact h2, .docs h3 { color: #000; }
+      body, .aura, #stage, .rail { transition: none !important; }
+      .project-media img { transition: none; }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <a class="skip-link" href="#projets">Aller directement aux projets</a>
 
-  <!-- Icônes réutilisées -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="i-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></symbol>
-    <symbol id="i-linkedin" viewBox="0 0 16 16"><path d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15Zm4.94 12.24V6.17H2.54v7.22h2.4Zm-1.2-8.2c.84 0 1.36-.56 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01Zm4.92 8.2V9.36c0-.22.02-.43.08-.59.18-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.02h-.02l.02-.02V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4Z"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 16 16"><path d="M1.5 3h13A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-7A1.5 1.5 0 0 1 1.5 3Zm.2 1.5L8 8.6l6.3-4.1H1.7Zm12.8 1.3L8.4 9.8a.75.75 0 0 1-.8 0L1.5 5.8v5.7h13V5.8Z"/></symbol>
-    <symbol id="i-download" viewBox="0 0 16 16"><path d="M8.75 1v7.19l2.22-2.22 1.06 1.06L8 11.06 3.97 7.03l1.06-1.06 2.22 2.22V1h1.5ZM2 12.5h12V14H2v-1.5Z"/></symbol>
-    <symbol id="i-file" viewBox="0 0 16 16"><path d="M3.5 0h6.06L14 4.44V14.5A1.5 1.5 0 0 1 12.5 16h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0Zm0 1.5v13h9V5.5H9V1.5H3.5Zm7 .56V4h1.94L10.5 2.06ZM5 8h6v1.5H5V8Zm0 3h6v1.5H5V11Z"/></symbol>
-    <symbol id="i-code" viewBox="0 0 16 16"><path d="m5.03 3.97 1.06 1.06L3.12 8l2.97 2.97-1.06 1.06L1 8l4.03-4.03Zm5.94 0L15 8l-4.03 4.03-1.06-1.06L12.88 8 9.91 5.03l1.06-1.06Z"/></symbol>
+    <symbol id="i-github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></symbol>
+    <symbol id="i-linkedin" viewbox="0 0 16 16"><path d="M0 1.15C0 .52.53 0 1.18 0h13.64C15.47 0 16 .52 16 1.15v13.7c0 .63-.53 1.15-1.18 1.15H1.18C.53 16 0 15.48 0 14.85V1.15Zm4.94 12.24V6.17H2.54v7.22h2.4Zm-1.2-8.2c.84 0 1.36-.56 1.36-1.25-.02-.71-.52-1.25-1.34-1.25-.82 0-1.36.54-1.36 1.25 0 .7.52 1.25 1.33 1.25h.01Zm4.92 8.2V9.36c0-.22.02-.43.08-.59.18-.43.57-.88 1.23-.88.87 0 1.22.66 1.22 1.63v3.87h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.02h-.02l.02-.02V6.17h-2.4c.03.68 0 7.22 0 7.22h2.4Z"></path></symbol>
+    <symbol id="i-mail" viewbox="0 0 16 16"><path d="M1.5 3h13A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5v-7A1.5 1.5 0 0 1 1.5 3Zm.2 1.5L8 8.6l6.3-4.1H1.7Zm12.8 1.3L8.4 9.8a.75.75 0 0 1-.8 0L1.5 5.8v5.7h13V5.8Z"></path></symbol>
+    <symbol id="i-download" viewbox="0 0 16 16"><path d="M8.75 1v7.19l2.22-2.22 1.06 1.06L8 11.06 3.97 7.03l1.06-1.06 2.22 2.22V1h1.5ZM2 12.5h12V14H2v-1.5Z"></path></symbol>
+    <symbol id="i-file" viewbox="0 0 16 16"><path d="M3.5 0h6.06L14 4.44V14.5A1.5 1.5 0 0 1 12.5 16h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0Zm0 1.5v13h9V5.5H9V1.5H3.5Zm7 .56V4h1.94L10.5 2.06ZM5 8h6v1.5H5V8Zm0 3h6v1.5H5V11Z"></path></symbol>
+    <symbol id="i-code" viewbox="0 0 16 16"><path d="m5.03 3.97 1.06 1.06L3.12 8l2.97 2.97-1.06 1.06L1 8l4.03-4.03Zm5.94 0L15 8l-4.03 4.03-1.06-1.06L12.88 8 9.91 5.03l1.06-1.06Z"></path></symbol>
+    <symbol id="i-play" viewBox="0 0 16 16"><path d="M4 2.5v11a.5.5 0 0 0 .77.42l8.5-5.5a.5.5 0 0 0 0-.84l-8.5-5.5A.5.5 0 0 0 4 2.5Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 16 16"><path d="M4 2h3v12H4V2Zm5 0h3v12H9V2Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 16 16"><path d="M8 0l1.6 5.2L15 7l-5.4 1.8L8 14 6.4 8.8 1 7l5.4-1.8L8 0Z"/></symbol>
   </svg>
+
+  <div class="aura" aria-hidden="true"></div>
+  <div class="viz-shield" aria-hidden="true"></div>
+  <canvas id="stage" aria-hidden="true"></canvas>
 
   <header class="site-nav" id="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">Ariel Eddy TIEMTORE</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-        <span class="bars" aria-hidden="true"></span> Menu
-      </button>
+      <a class="brand" href="#prologue">Ariel Eddy TIEMTORE</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
       <nav aria-label="Navigation principale">
         <div class="nav-menu" id="nav-menu">
+          <a href="#prologue">L’histoire</a>
           <a href="#projets">Projets</a>
           <a href="#parcours">Parcours</a>
-          <a href="#competences">Compétences</a>
           <a href="#contact">Contact</a>
-          <a class="btn btn-primary" href="cv_Ariel_data.pdf" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV (PDF)
-          </a>
+          <a href="classique.html">Version classique</a>
+          <a class="nav-cv" href="cv_Ariel_data.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="contenu">
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <h1 class="hero-name">Ariel Eddy TIEMTORE</h1>
-          <p class="hero-role">Data scientist et statisticien-démographe</p>
+  <main>
+    <div class="story" id="histoire">
 
-          <p class="attr" id="attr">
-            <span class="visually-hidden">Je rends les modèles statistiques et d’IA lisibles, robustes et dignes de confiance.</span>
-            <span aria-hidden="true"><span class="tok" style="--h:rgba(200,38,74,0.01)" data-score="+0,04">Je</span> <span class="tok" style="--h:rgba(200,38,74,0.07)" data-score="+0,22">rends</span> <span class="tok" style="--h:rgba(29,95,168,0.06)" data-score="−0,14">les</span> <span class="tok" style="--h:rgba(200,38,74,0.20)" data-score="+0,48">modèles</span> <span class="tok" style="--h:rgba(200,38,74,0.16)" data-score="+0,40">statistiques</span> <span class="tok" style="--h:rgba(200,38,74,0.01)" data-score="+0,02">et</span> <span class="tok" style="--h:rgba(200,38,74,0.26)" data-score="+0,58">d’IA</span> <span class="tok" style="--h:rgba(200,38,74,0.47)" data-score="+0,92">lisibles,</span> <span class="tok" style="--h:rgba(200,38,74,0.38)" data-score="+0,78">robustes</span> <span class="tok" style="--h:rgba(200,38,74,0.01)" data-score="+0,03">et</span> <span class="tok" style="--h:rgba(200,38,74,0.19)" data-score="+0,46">dignes</span> <span class="tok" style="--h:rgba(29,95,168,0.05)" data-score="−0,10">de</span> <span class="tok" style="--h:rgba(200,38,74,0.44)" data-score="+0,88">confiance.</span></span>
-          </p>
-          <div class="attr-legend">
-            <span class="attr-scale" aria-hidden="true">− <i></i> +</span>
-            <span>Chaque mot est surligné selon son poids dans la phrase, à la manière des Integrated Gradients que j’utilise pour expliquer des modèles de langage.</span>
-          </div>
-
-          <p class="hero-now">
-            Aujourd’hui Data Manager en alternance au <a href="https://www.brgm.fr/" target="_blank" rel="noopener">BRGM</a>, dans l’unité Risques sismiques et volcaniques, et en Mastère Spécialisé science des données responsable à <a href="https://www.grenoble-em.com/" target="_blank" rel="noopener">Grenoble EM</a>. Avant cela : statistique et démographie à Ouagadougou, puis data science et IA à l’Université Lyon 2.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projets">Voir les projets</a>
-            <a class="btn btn-ghost" href="cv_Ariel_data.pdf" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> Télécharger le CV
-            </a>
-          </div>
-          <ul class="hero-links">
-            <li><a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn</a></li>
-            <li><a href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></li>
-            <li><a href="mailto:wendyamtiemtore@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> wendyamtiemtore@gmail.com</a></li>
-          </ul>
-        </div>
-
-        <figure class="hero-photo">
-          <img src="img/web/portrait.webp" data-fallback="img/photo_cv_ariel.jpeg" onerror="this.onerror=null;this.src=this.dataset.fallback"
-               alt="Portrait d'Ariel Eddy TIEMTORE" width="720" height="801" fetchpriority="high" />
-        </figure>
-      </div>
-    </section>
-
-    <!-- ================= PROJETS ================= -->
-    <section class="section section-alt" id="projets" aria-labelledby="projets-titre">
-      <div class="wrap">
-        <header class="section-head">
-          <h2 id="projets-titre">Projets</h2>
-          <p class="section-lede">Dix projets en IA explicable, apprentissage robuste et confidentiel, et modélisation statistique.</p>
-          <a class="aside-link" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener">
-            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Tout le code sur GitHub
-          </a>
-        </header>
-
-        <div class="filters" role="group" aria-label="Filtrer les projets par thème">
-          <button class="filter" type="button" data-filter="all" aria-pressed="true">Tous <span class="n">10</span></button>
-          <button class="filter t-xai" type="button" data-filter="xai" aria-pressed="false"><span class="dot" aria-hidden="true"></span>IA explicable <span class="n">4</span></button>
-          <button class="filter t-robust" type="button" data-filter="robust" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Robustesse et confidentialité <span class="n">2</span></button>
-          <button class="filter t-stats" type="button" data-filter="stats" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Statistique et démographie <span class="n">2</span></button>
-          <button class="filter t-optim" type="button" data-filter="optim" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Optimisation et finance <span class="n">2</span></button>
-        </div>
-
-        <!--
-          Pour ajouter un lien vers le code d'un projet, copiez le bloc <a> du projet
-          « Apprentissage fédéré sécurisé » dans le <div class="project-foot"> voulu
-          et remplacez l'adresse par celle du dépôt ou du notebook.
-        -->
-        <div class="projects" id="project-list">
-
-          <article class="project t-robust" data-theme="robust">
-            <figure class="project-media">
-              <img src="img/web/federated-learning.webp" data-fallback="img/federated-learning.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Schéma d'hôpitaux qui entraînent un modèle commun sans partager leurs données" width="1200" height="800" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Robustesse et confidentialité</p>
-            <h3>Apprentissage fédéré sécurisé</h3>
-            <p class="project-desc">Diagnostic du cancer du sein par plusieurs hôpitaux simulés qui entraînent un modèle commun sans jamais échanger leurs données brutes.</p>
-            <p class="project-result"><strong>92 % → 94 %</strong> d’accuracy en corrigeant le client drift avec SCAFFOLD</p>
-            <ul class="project-points">
-              <li><b>Differential privacy :</b> protection des données médicales par bruit gaussien</li>
-              <li><b>Fairness :</b> mesure et atténuation des biais algorithmiques</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>PyTorch</li><li>Scikit-learn</li></ul>
-              <a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/federated-learning.ipynb" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Ouvrir le notebook</a>
+      <!-- Ouverture -->
+      <section class="scene hero" id="prologue" data-scene="intro" data-tint="#B590FF" aria-labelledby="t-prologue">
+        <div class="wrap">
+          <div class="card hero-card">
+            <p class="hero-who"><strong>Ariel Eddy TIEMTORE</strong>, data scientist et statisticien-démographe</p>
+            <h1 id="t-prologue">Chaque point a une histoire.</h1>
+            <p class="story-text">Voici la mienne, racontée par 1 600 points de données qui changent de forme à chaque étape.</p>
+            <div class="hero-actions">
+              <button class="btn btn-play" type="button" data-play><svg aria-hidden="true"><use href="#i-play"/></svg> Regarder l’histoire <small>1 min</small></button>
+              <a class="btn btn-ghost" href="#ch-ouaga">Défiler à mon rythme</a>
             </div>
-          </article>
-
-          <article class="project t-robust" data-theme="robust">
-            <figure class="project-media">
-              <img src="img/web/robust-ml.webp" data-fallback="img/robust_ml.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Chiffre MNIST, perturbation adversariale et image perturbée" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Robustesse et confidentialité</p>
-            <h3>Machine learning robuste : Median of Means et entraînement adversarial</h3>
-            <p class="project-desc">Estimateurs résistants aux valeurs aberrantes et défense d’un réseau de neurones contre les attaques adversariales sur MNIST.</p>
-            <p class="project-result"><strong>+65 points</strong> de robustesse grâce à l’adversarial training PGD</p>
-            <ul class="project-points">
-              <li><b>Statistique robuste :</b> estimateur Median of Means (MoM) face aux outliers</li>
-              <li><b>Attaques :</b> FGSM et PGD-40 implémentées pour éprouver le modèle</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>PyTorch</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-xai" data-theme="xai">
-            <figure class="project-media">
-              <img src="img/web/xai-gradcam.webp" data-fallback="img/IA XAI Vision (Grad-CAM).png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Carte de chaleur Grad-CAM superposée à l'image d'entrée d'un ResNet50" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">IA explicable</p>
-            <h3>Grad-CAM sur ResNet50</h3>
-            <p class="project-desc">Rendre visibles les zones d’une image qui ont pesé dans la décision d’un réseau convolutif profond.</p>
-            <ul class="project-points">
-              <li><b>Algorithme :</b> cartes de chaleur calculées à partir du gradient des activations</li>
-              <li><b>Diagnostic :</b> localisation des zones de l’image qui ont le plus influencé le modèle</li>
-              <li><b>Analyse multi-couches :</b> granularité sémantique comparée d’une couche à l’autre</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>PyTorch</li><li>NumPy</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-xai" data-theme="xai">
-            <figure class="project-media">
-              <img src="img/web/xai-integrated-gradients.webp" data-fallback="img/03_BERT_ClimateQA.ipynb.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Attribution par token d'une réponse de DistilBERT sur une question climatique" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">IA explicable</p>
-            <h3>Integrated Gradients sur DistilBERT</h3>
-            <p class="project-desc">Expliquer, token par token, les réponses d’un modèle Transformer de question-réponse sur le climat.</p>
-            <p class="project-result"><strong>Complétude vérifiée</strong> : écart inférieur à 0,05</p>
-            <ul class="project-points">
-              <li><b>Attribution :</b> pertinence de chaque token par approximation de l’intégrale du gradient</li>
-              <li><b>Lecture du modèle :</b> influence des mots de la question sur la localisation de la réponse</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Hugging Face</li><li>PyTorch</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-xai" data-theme="xai">
-            <figure class="project-media">
-              <img src="img/web/xai-shap-dice.webp" data-fallback="img/IA XAI Santé (DiCE Contrefactuels).png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Graphique SHAP et tableau de contrefactuels DiCE" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">IA explicable</p>
-            <h3>SHAP et contrefactuels DiCE</h3>
-            <p class="project-desc">Expliquer des modèles tabulaires, survie sur le Titanic et risque de maladie cardiaque, puis proposer des leviers d’action concrets.</p>
-            <ul class="project-points">
-              <li><b>SHAP :</b> contribution de chaque variable à une prédiction (sexe, classe, âge, variables cliniques)</li>
-              <li><b>DiCE :</b> contrefactuels actionnables, ce qu’il faudrait changer pour modifier le diagnostic</li>
-              <li><b>Deux questions distinctes :</b> pourquoi cette prédiction, et comment changer la situation</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>XGBoost</li><li>pandas</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-xai" data-theme="xai">
-            <figure class="project-media">
-              <img src="img/web/xai-gnn-lrp.webp" data-fallback="img/02_GNN_LRP_Graphs.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Pertinence GNN-LRP sur les nœuds et arêtes du graphe Karate Club" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">IA explicable</p>
-            <h3>Layer-wise Relevance Propagation sur graphes</h3>
-            <p class="project-desc">Adapter la propagation de pertinence (LRP) aux Graph Neural Networks, testée sur le réseau social Karate Club.</p>
-            <ul class="project-points">
-              <li><b>Décomposition par walks :</b> chemins de messages les plus influents dans le graphe</li>
-              <li><b>GNN-LRP :</b> explication par la topologie, au-delà des seules variables</li>
-              <li><b>Réseaux denses :</b> LRP-ε et LRP-γ pour le diagnostic du cancer du sein</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>PyTorch</li><li>PyTorch Geometric</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-stats" data-theme="stats">
-            <figure class="project-media">
-              <img src="img/web/demographie-sante.webp" data-fallback="img/Démographie & Santé Publique.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Carte du Burkina Faso, pyramides des âges et indicateurs de fécondité et de mortalité" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Statistique et démographie</p>
-            <h3>Démographie, épidémiologie et santé publique</h3>
-            <p class="project-desc">Exploitation des Enquêtes démographiques et de santé (EDS) du Burkina Faso et du Mali pour analyser les comportements de santé et la mortalité.</p>
-            <ul class="project-points">
-              <li><b>Modélisation :</b> analyse multiniveau et régression logistique multinomiale</li>
-              <li><b>Démographie :</b> indice synthétique de fécondité, quotients de mortalité (tables types de Coale-Demeny)</li>
-              <li><b>Méthode :</b> plans de sondage complexes (pondérations, effets de grappe), suivi-évaluation</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Stata</li><li>SPSS</li><li>R</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-stats" data-theme="stats">
-            <figure class="project-media">
-              <img src="img/web/bayesian-mcmc.webp" data-fallback="img/bayesian_inference.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Trace d'une chaîne Metropolis-Hastings et loi a posteriori du paramètre de forme d'une loi de Weibull, sur données simulées" width="1200" height="675" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Statistique et démographie</p>
-            <h3>Statistique bayésienne et inférence MCMC</h3>
-            <p class="project-desc">Quantifier l’incertitude sur la durée de vie d’un système avec un modèle de Weibull.</p>
-            <ul class="project-points">
-              <li><b>Algorithme :</b> Metropolis-Hastings implémenté from scratch</li>
-              <li><b>Modèle :</b> loi de Weibull et prédiction avec PyMC3</li>
-              <li><b>Validation :</b> intervalles de crédibilité à 95 % et convergence des chaînes de Markov</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>SciPy</li><li>PyMC3</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-optim" data-theme="optim">
-            <figure class="project-media">
-              <img src="img/web/inverse-problems-twist.webp" data-fallback="img/Problèmes Inverses (TwIST).png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Image floue et bruitée, courbe de convergence et image restaurée par TwIST" width="1200" height="655" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Optimisation et finance</p>
-            <h3>Problèmes inverses : restauration d’images avec TwIST</h3>
-            <p class="project-desc">Déconvolution d’images floues et bruitées, un problème mal posé, par optimisation itérative.</p>
-            <ul class="project-points">
-              <li><b>Modèle :</b> minimisation de fonctionnelles pénalisées (forward-backward)</li>
-              <li><b>TwIST :</b> Two-step Iterative Shrinkage/Thresholding pour accélérer nettement la convergence</li>
-              <li><b>DeepInverse :</b> restauration d’images soumises à un bruit gaussien</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>SciPy</li><li>DeepInverse</li></ul>
-            </div>
-          </article>
-
-          <article class="project t-optim" data-theme="optim">
-            <figure class="project-media">
-              <img src="img/web/trading-pipeline.webp" data-fallback="img/trading_vix75.png" onerror="this.onerror=null;this.src=this.dataset.fallback"
-                   alt="Schéma du pipeline : données de marché, features, Graph Attention Network, stacking, gestion du risque, exécution" width="1200" height="675" loading="lazy" decoding="async" />
-            </figure>
-            <p class="project-theme">Optimisation et finance</p>
-            <h3>Trading algorithmique multi-modal</h3>
-            <p class="project-desc">Robot de trading qui combine analyse technique multi-timeframes, deep learning sur graphes et gestion du risque.</p>
-            <ul class="project-points">
-              <li><b>Deep learning :</b> Graph Attention Networks (GAT) pour l’analyse de marché</li>
-              <li><b>Méta-modèle :</b> stacking de XGBoost, gradient boosting et régression linéaire</li>
-              <li><b>Fiabilité :</b> backtesting financier et intégration des API Deriv et MT5</li>
-            </ul>
-            <div class="project-foot">
-              <ul class="chips"><li>Python</li><li>pandas</li><li>TensorFlow</li><li>XGBoost</li></ul>
-              <a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/trading.ipynb" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Ouvrir le notebook</a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PARCOURS ================= -->
-    <section class="section" id="parcours" aria-labelledby="parcours-titre">
-      <div class="wrap">
-        <header class="section-head">
-          <h2 id="parcours-titre">Parcours</h2>
-          <p class="section-lede">De la statistique sociale et de la démographie au Burkina Faso à la data science en France, avec toujours la même exigence de rigueur sur la donnée.</p>
-        </header>
-
-        <div class="path-cols">
-          <div>
-            <h3 class="col-title">Expérience</h3>
-            <ol class="timeline">
-              <li class="tl-item is-current">
-                <p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-10">oct. 2027</time></span> <span class="badge">En cours</span></p>
-                <h4>Data Manager en alternance</h4>
-                <p class="tl-org">BRGM, Bureau de recherches géologiques et minières, Orléans</p>
-                <ul class="tl-points">
-                  <li>Unité Risques sismiques et volcaniques de la Direction des risques (DRIS/RSV).</li>
-                  <li><b>Mission :</b> rendre la donnée géoscientifique accessible, fiable et documentée pour les géologues et les data scientists.</li>
-                  <li><b>Trois volets :</b> ingénierie de données (ETL), gouvernance et qualité de la donnée, géomatique (données spatiales, SIG).</li>
-                </ul>
-              </li>
-
-              <li class="tl-item">
-                <p class="tl-date"><span><time datetime="2026-03">Mars</time> – <time datetime="2026-07">juil. 2026</time></span></p>
-                <h4>Stagiaire de recherche en data science, projet INNOGOUV</h4>
-                <p class="tl-org">Laboratoire CERAG (Université Grenoble Alpes) et UMR MoISA (INRAE Montpellier)</p>
-                <ul class="tl-points">
-                  <li><b>Modélisation :</b> parcours de performance durable des coopératives viticoles françaises (Data Envelopment Analysis, profils latents).</li>
-                  <li><b>Data engineering :</b> construction d’une base unique à partir de 4 sources hétérogènes (enquête, comptes sociaux Diane, météo, douanes).</li>
-                  <li><b>Reproductibilité :</b> pipeline d’analyse complet implémenté deux fois, en Python et en Stata/Mata, pour garantir la robustesse des résultats.</li>
-                </ul>
-                <p class="tl-note">Stage de fin de Master 2 MIASHS.</p>
-              </li>
-
-              <li class="tl-item">
-                <p class="tl-date"><span><time datetime="2025-04">Avr.</time> – <time datetime="2025-07">juil. 2025</time></span></p>
-                <h4>Data analyst et modélisation statistique</h4>
-                <p class="tl-org">France Travail, Direction régionale Auvergne-Rhône-Alpes, Lyon</p>
-                <ul class="tl-points">
-                  <li><b>Pilotage :</b> tableaux de bord Power BI (DAX) conçus, automatisés et déployés en production pour le pilotage territorial.</li>
-                  <li><b>Segmentation :</b> 297 464 établissements classés (ACP, k-means, algorithme EM) pour cibler les stratégies de prospection.</li>
-                  <li><b>Cartographie :</b> cartes statistiques multi-indicateurs sous QGIS sur les dynamiques locales de l’emploi.</li>
-                </ul>
-                <a class="tl-link" href="Rapport_de_stage_M1_TIEMTORE.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Lire le rapport de stage (PDF)</a>
-              </li>
-
-              <li class="tl-item">
-                <p class="tl-date"><span><time datetime="2021-10">Oct. 2021</time> – <time datetime="2022-01">janv. 2022</time></span></p>
-                <h4>Analyste statistique, data management</h4>
-                <p class="tl-org">Unité de recherche clinique de Nanoro (IRSS), Burkina Faso</p>
-                <ul class="tl-points">
-                  <li><b>Qualité des données :</b> nettoyage et structuration de bases volumineuses pour en garantir l’intégrité.</li>
-                  <li><b>Analyse :</b> statistiques descriptives et rapports sous R, Stata et Excel.</li>
-                </ul>
-                <a class="tl-link" href="Rapport_de_stage_L3_TIEMTORE.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg> Lire le rapport de stage (PDF)</a>
-              </li>
-            </ol>
-          </div>
-
-          <div>
-            <h3 class="col-title">Formation</h3>
-            <ol class="timeline">
-              <li class="tl-item is-current">
-                <p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-12">déc. 2027</time></span> <span class="badge">En cours</span></p>
-                <h4>Mastère Spécialisé Manager Expert de Solutions Responsables en Science des Données</h4>
-                <p class="tl-org">Grenoble École de Management et Grenoble INP-Ensimag</p>
-                <p class="tl-note">En alternance. Titre RNCP de niveau 7.</p>
-              </li>
-              <li class="tl-item">
-                <p class="tl-date"><span>2024 – 2026</span></p>
-                <h4>Master MIASHS, data science et intelligence artificielle</h4>
-                <p class="tl-org">Université Lumière Lyon 2</p>
-              </li>
-              <li class="tl-item">
-                <p class="tl-date"><span>2022 – 2024</span></p>
-                <h4>Master recherche en démographie</h4>
-                <p class="tl-org">Université Joseph Ki-Zerbo, Ouagadougou</p>
-              </li>
-              <li class="tl-item">
-                <p class="tl-date"><span>2018 – 2021</span></p>
-                <h4>Licence en statistique sociale, mention Bien</h4>
-                <p class="tl-org">ISSP, Université Joseph Ki-Zerbo, Ouagadougou</p>
-              </li>
-            </ol>
+            <p class="hero-hint">Les points réagissent à votre souris. Un double-clic les fait exploser.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ================= COMPÉTENCES ================= -->
-    <section class="section section-alt" id="competences" aria-labelledby="competences-titre">
-      <div class="wrap">
-        <header class="section-head">
-          <h2 id="competences-titre">Compétences</h2>
-          <p class="section-lede">Les méthodes et outils utilisés dans les projets et les expériences ci-dessus.</p>
-        </header>
+      <!-- Chapitre 1 -->
+      <section class="scene c-gold" id="ch-ouaga" data-scene="pyramide" data-tint="#F2B544" aria-labelledby="t-ouaga">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">1</span><span class="chap-where">Ouagadougou et Nanoro, 2018 – 2024</span></p>
+            <h2 id="t-ouaga">Apprendre à compter les vivants</h2>
+            <p class="story-text">Tout commence au Burkina Faso : une licence de statistique sociale à l’ISSP, obtenue avec mention Bien, puis un master de démographie à l’Université Joseph Ki-Zerbo.</p>
+            <p class="story-text">J’apprends à faire parler les Enquêtes démographiques et de santé : fécondité, mortalité, plans de sondage complexes. À l’unité de recherche clinique de Nanoro, je nettoie et structure des bases de recherche.</p>
+            <p class="viz-note">Une population jeune dessine une pyramide (forme stylisée). Avec la transition démographique, elle devient une ruche.</p>
+            <button class="act" type="button" data-action="pyramide" data-alt="Revenir à la pyramide jeune"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Lancer la transition démographique</span></button>
+          </article>
+        </div>
+      </section>
 
-        <dl class="skills">
-          <div class="skill-row">
-            <dt>IA explicable et de confiance</dt>
-            <dd><ul class="chips"><li>SHAP</li><li>DiCE</li><li>Grad-CAM</li><li>Integrated Gradients</li><li>LRP et GNN-LRP</li><li>Differential privacy</li><li>Apprentissage fédéré (SCAFFOLD)</li><li>Fairness</li></ul></dd>
-          </div>
-          <div class="skill-row">
-            <dt>Machine learning et deep learning</dt>
-            <dd><ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Random Forest</li><li>Stacking</li><li>CNN</li><li>BiLSTM</li><li>Graph Attention Networks</li><li>VAE et auto-encodeurs</li><li>Attaques et défenses adversariales (FGSM, PGD)</li><li>Median of Means</li></ul></dd>
-          </div>
-          <div class="skill-row">
-            <dt>NLP et LLM</dt>
-            <dd><ul class="chips"><li>Hugging Face Transformers</li><li>Fine-tuning</li><li>RAG</li><li>Prompt engineering</li><li>Tokenisation BPE from scratch</li></ul></dd>
-          </div>
-          <div class="skill-row">
-            <dt>Statistique et démographie</dt>
-            <dd><ul class="chips"><li>Inférence bayésienne (MCMC, PyMC)</li><li>Data Envelopment Analysis</li><li>Profils latents</li><li>Prédiction conforme</li><li>t-SNE et Isomap</li><li>Régression logistique multinomiale</li><li>Analyse multiniveau</li><li>Plans de sondage complexes</li><li>Fécondité et mortalité</li><li>Suivi-évaluation</li></ul></dd>
-          </div>
-          <div class="skill-row">
-            <dt>Données, outils et gouvernance</dt>
-            <dd><ul class="chips"><li>Python (pandas, NumPy, SciPy)</li><li>SQL</li><li>R</li><li>Stata et Mata</li><li>SPSS</li><li>Power BI (DAX)</li><li>QGIS</li><li>Docker</li><li>Git</li><li>Pipelines ETL</li><li>RGPD et souveraineté des données</li></ul></dd>
-          </div>
-        </dl>
-      </div>
-    </section>
+      <!-- Chapitre 2 -->
+      <section class="scene c-teal" id="ch-lyon" data-scene="kmeans" data-tint="#3CC8B4" aria-labelledby="t-lyon">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">2</span><span class="chap-where">Lyon, 2024 – 2025</span></p>
+            <h2 id="t-lyon">Trouver l’ordre dans 297 464 établissements</h2>
+            <p class="story-text">Cap sur l’Université Lumière Lyon 2 et le master MIASHS : machine learning, deep learning, statistique computationnelle.</p>
+            <p class="story-text">Chez France Travail Auvergne-Rhône-Alpes, je segmente 297 464 établissements par ACP, k-means et algorithme EM, et je mets en production des tableaux de bord Power BI et des cartes QGIS de l’emploi.</p>
+            <p class="viz-note">Un k-means en direct : à chaque itération, les points rejoignent le centre le plus proche, puis les centres se déplacent.</p>
+            <button class="act" type="button" data-action="kmeans"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Relancer avec d’autres centres</span></button>
+          </article>
+        </div>
+      </section>
 
-    <!-- ================= CONTACT ================= -->
+      <!-- Chapitre 3 -->
+      <section class="scene c-rose" id="ch-xai" data-scene="reseau" data-tint="#FF7096" aria-labelledby="t-xai">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">3</span><span class="chap-where">Lyon, projets d’IA explicable</span></p>
+            <h2 id="t-xai">Ouvrir la boîte noire</h2>
+            <p class="story-text">Un modèle qui décide sans s’expliquer ne mérite pas la confiance. Alors je le fais parler.</p>
+            <p class="story-text">SHAP pour la contribution de chaque variable, DiCE pour des contrefactuels actionnables, Grad-CAM pour ce que regarde un réseau de vision, Integrated Gradients pour un Transformer, et LRP pour remonter la pertinence d’un réseau de graphes.</p>
+            <p class="viz-note">La pertinence part de la décision et redescend, couche après couche, jusqu’aux entrées qui l’ont provoquée.</p>
+            <button class="act" type="button" data-action="reseau"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Demander une explication</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 4 -->
+      <section class="scene c-sky" id="ch-federe" data-scene="federe" data-tint="#82B4FF" aria-labelledby="t-federe">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">4</span><span class="chap-where">Lyon, IA de confiance</span></p>
+            <h2 id="t-federe">Apprendre sans tout voir, tenir sous la pression</h2>
+            <p class="story-text">Quatre hôpitaux veulent un modèle commun pour le diagnostic du cancer du sein, sans partager les dossiers de leurs patientes. Seuls les paramètres voyagent, protégés par la differential privacy. Avec SCAFFOLD, l’accuracy passe de 92 % à 94 %.</p>
+            <p class="story-text">Et quand un attaquant perturbe les entrées, l’entraînement adversarial PGD fait gagner 65 points de robustesse.</p>
+            <p class="viz-note">Les données restent dans chaque hôpital ; seuls les petits paquets de paramètres circulent.</p>
+            <button class="act" type="button" data-action="federe"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Lancer une attaque</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 5 -->
+      <section class="scene c-grape" id="ch-innogouv" data-scene="frontiere" data-tint="#B590FF" aria-labelledby="t-innogouv">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">5</span><span class="chap-where">Grenoble et Montpellier, mars – juillet 2026</span></p>
+            <h2 id="t-innogouv">Mesurer ce que la comptabilité ne voit pas</h2>
+            <p class="story-text">Stage de recherche au CERAG et à l’UMR MoISA de l’INRAE, projet INNOGOUV. Je fusionne quatre sources hétérogènes pour 218 coopératives viticoles : enquête, comptes sociaux, météo et douanes.</p>
+            <p class="story-text">Puis j’estime leur efficience par Data Envelopment Analysis. Verdict : il n’existe pas un seul chemin vers la performance durable, mais quatre profils, chacun excellent sur une dimension différente. Tout le pipeline existe deux fois, en Python et en Stata/Mata, pour que les résultats tiennent.</p>
+            <p class="viz-note">Une frontière d’efficience enveloppe 218 coopératives. Survolez un point pour lire son score (positions illustratives).</p>
+            <button class="act" type="button" data-action="frontiere"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Rejouer la fusion des quatre sources</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 6 -->
+      <section class="scene c-clay" id="ch-brgm" data-scene="argile" data-tint="#E8975F" aria-labelledby="t-brgm">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">6</span><span class="chap-where">Orléans, depuis septembre 2026</span></p>
+            <h2 id="t-brgm">Écouter le sol sous les maisons</h2>
+            <p class="story-text">Data manager en alternance au BRGM, à la Direction des risques. Sur le projet CERES, je relie données d’assurance, bâtiments de l’IGN et OpenStreetMap en une base vérifiée, pour mieux comprendre la vulnérabilité du bâti au retrait-gonflement des argiles.</p>
+            <p class="story-text">Ma mission : automatiser ces chaînes de données en workflows sur la plateforme Vigirisks. En parallèle, Mastère Spécialisé en science des données responsable à Grenoble EM et Ensimag.</p>
+            <p class="viz-note">L’argile gonfle sous la pluie et se rétracte en sécheresse. Les maisons bougent avec elle, surtout près des arbres.</p>
+            <button class="act" type="button" data-action="argile" data-alt="Faire pleuvoir"><svg aria-hidden="true"><use href="#i-spark"/></svg><span>Provoquer une sécheresse</span></button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Épilogue -->
+      <section class="scene epilogue" id="ch-suite" data-scene="fin" data-tint="#F2B544" aria-labelledby="t-suite">
+        <div class="wrap">
+          <div class="card">
+            <p class="chap-mark c-gold"><span class="chap-num" aria-hidden="true">7</span><span class="chap-where">La suite</span></p>
+            <h2 id="t-suite">Le prochain chapitre s’écrit à plusieurs.</h2>
+            <p class="story-text">Je mets la donnée au service de décisions qui comptent : santé, territoires, risques naturels. Si votre équipe a un problème de ce genre, parlons-en.</p>
+            <div class="epilogue-actions">
+              <a class="btn btn-play" href="mailto:wendyamtiemtore@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg> M’écrire</a>
+              <a class="btn btn-ghost" href="#projets">Voir les projets en détail</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="rail" id="rail" role="group" aria-label="Lecture de l’histoire">
+      <button class="rail-play" type="button" data-play aria-label="Regarder l’histoire comme un film">
+        <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg><svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg><span class="lbl lbl-play">Lecture</span><span class="lbl lbl-pause">Pause</span>
+      </button>
+      <div class="rail-dots" id="rail-dots"></div>
+      <span class="rail-bar" aria-hidden="true"><i id="rail-progress"></i></span>
+    </div>
+
+    <!-- ================= LE DOSSIER ================= -->
+    <div class="dossier" id="dossier">
+      <section class="section" id="projets" aria-labelledby="projets-titre">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="projets-titre">Projets</h2>
+            <p class="section-lede">Le jour se lève sur le détail : dix projets en IA explicable, apprentissage robuste et confidentiel, statistique et optimisation.</p>
+            <a class="aside-link" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Tout le code sur GitHub</a>
+          </header>
+          <div aria-label="Filtrer les projets par thème" class="filters" role="group">
+<button aria-pressed="true" class="filter" data-filter="all" type="button">Tous <span class="n">10</span></button>
+<button aria-pressed="false" class="filter t-xai" data-filter="xai" type="button"><span aria-hidden="true" class="dot"></span>IA explicable <span class="n">4</span></button>
+<button aria-pressed="false" class="filter t-robust" data-filter="robust" type="button"><span aria-hidden="true" class="dot"></span>Robustesse et confidentialité <span class="n">2</span></button>
+<button aria-pressed="false" class="filter t-stats" data-filter="stats" type="button"><span aria-hidden="true" class="dot"></span>Statistique et démographie <span class="n">2</span></button>
+<button aria-pressed="false" class="filter t-optim" data-filter="optim" type="button"><span aria-hidden="true" class="dot"></span>Optimisation et finance <span class="n">2</span></button>
+</div>
+          <div class="projects" id="project-list">
+<article class="project t-robust" data-theme="robust">
+<figure class="project-media">
+<img alt="Schéma d'hôpitaux qui entraînent un modèle commun sans partager leurs données" data-fallback="img/federated-learning.png" decoding="async" height="800" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/federated-learning.webp" width="1200"/>
+</figure>
+<p class="project-theme">Robustesse et confidentialité</p>
+<h3>Apprentissage fédéré sécurisé</h3>
+<p class="project-desc">Diagnostic du cancer du sein par plusieurs hôpitaux simulés qui entraînent un modèle commun sans jamais échanger leurs données brutes.</p>
+<p class="project-result"><strong>92 % → 94 %</strong> d’accuracy en corrigeant le client drift avec SCAFFOLD</p>
+<ul class="project-points">
+<li><b>Differential privacy :</b> protection des données médicales par bruit gaussien</li>
+<li><b>Fairness :</b> mesure et atténuation des biais algorithmiques</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>PyTorch</li><li>Scikit-learn</li></ul>
+<a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/federated-learning.ipynb" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg> Ouvrir le notebook</a>
+</div>
+</article>
+<article class="project t-robust" data-theme="robust">
+<figure class="project-media">
+<img alt="Chiffre MNIST, perturbation adversariale et image perturbée" data-fallback="img/robust_ml.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/robust-ml.webp" width="1200"/>
+</figure>
+<p class="project-theme">Robustesse et confidentialité</p>
+<h3>Machine learning robuste : Median of Means et entraînement adversarial</h3>
+<p class="project-desc">Estimateurs résistants aux valeurs aberrantes et défense d’un réseau de neurones contre les attaques adversariales sur MNIST.</p>
+<p class="project-result"><strong>+65 points</strong> de robustesse grâce à l’adversarial training PGD</p>
+<ul class="project-points">
+<li><b>Statistique robuste :</b> estimateur Median of Means (MoM) face aux outliers</li>
+<li><b>Attaques :</b> FGSM et PGD-40 implémentées pour éprouver le modèle</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>PyTorch</li></ul>
+</div>
+</article>
+<article class="project t-xai" data-theme="xai">
+<figure class="project-media">
+<img alt="Carte de chaleur Grad-CAM superposée à l'image d'entrée d'un ResNet50" data-fallback="img/IA XAI Vision (Grad-CAM).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-gradcam.webp" width="1200"/>
+</figure>
+<p class="project-theme">IA explicable</p>
+<h3>Grad-CAM sur ResNet50</h3>
+<p class="project-desc">Rendre visibles les zones d’une image qui ont pesé dans la décision d’un réseau convolutif profond.</p>
+<ul class="project-points">
+<li><b>Algorithme :</b> cartes de chaleur calculées à partir du gradient des activations</li>
+<li><b>Diagnostic :</b> localisation des zones de l’image qui ont le plus influencé le modèle</li>
+<li><b>Analyse multi-couches :</b> granularité sémantique comparée d’une couche à l’autre</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>PyTorch</li><li>NumPy</li></ul>
+</div>
+</article>
+<article class="project t-xai" data-theme="xai">
+<figure class="project-media">
+<img alt="Attribution par token d'une réponse de DistilBERT sur une question climatique" data-fallback="img/03_BERT_ClimateQA.ipynb.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-integrated-gradients.webp" width="1200"/>
+</figure>
+<p class="project-theme">IA explicable</p>
+<h3>Integrated Gradients sur DistilBERT</h3>
+<p class="project-desc">Expliquer, token par token, les réponses d’un modèle Transformer de question-réponse sur le climat.</p>
+<p class="project-result"><strong>Complétude vérifiée</strong> : écart inférieur à 0,05</p>
+<ul class="project-points">
+<li><b>Attribution :</b> pertinence de chaque token par approximation de l’intégrale du gradient</li>
+<li><b>Lecture du modèle :</b> influence des mots de la question sur la localisation de la réponse</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Hugging Face</li><li>PyTorch</li></ul>
+</div>
+</article>
+<article class="project t-xai" data-theme="xai">
+<figure class="project-media">
+<img alt="Graphique SHAP et tableau de contrefactuels DiCE" data-fallback="img/IA XAI Santé (DiCE Contrefactuels).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-shap-dice.webp" width="1200"/>
+</figure>
+<p class="project-theme">IA explicable</p>
+<h3>SHAP et contrefactuels DiCE</h3>
+<p class="project-desc">Expliquer des modèles tabulaires, survie sur le Titanic et risque de maladie cardiaque, puis proposer des leviers d’action concrets.</p>
+<ul class="project-points">
+<li><b>SHAP :</b> contribution de chaque variable à une prédiction (sexe, classe, âge, variables cliniques)</li>
+<li><b>DiCE :</b> contrefactuels actionnables, ce qu’il faudrait changer pour modifier le diagnostic</li>
+<li><b>Deux questions distinctes :</b> pourquoi cette prédiction, et comment changer la situation</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>XGBoost</li><li>pandas</li></ul>
+</div>
+</article>
+<article class="project t-xai" data-theme="xai">
+<figure class="project-media">
+<img alt="Pertinence GNN-LRP sur les nœuds et arêtes du graphe Karate Club" data-fallback="img/02_GNN_LRP_Graphs.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-gnn-lrp.webp" width="1200"/>
+</figure>
+<p class="project-theme">IA explicable</p>
+<h3>Layer-wise Relevance Propagation sur graphes</h3>
+<p class="project-desc">Adapter la propagation de pertinence (LRP) aux Graph Neural Networks, testée sur le réseau social Karate Club.</p>
+<ul class="project-points">
+<li><b>Décomposition par walks :</b> chemins de messages les plus influents dans le graphe</li>
+<li><b>GNN-LRP :</b> explication par la topologie, au-delà des seules variables</li>
+<li><b>Réseaux denses :</b> LRP-ε et LRP-γ pour le diagnostic du cancer du sein</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>PyTorch</li><li>PyTorch Geometric</li></ul>
+</div>
+</article>
+<article class="project t-stats" data-theme="stats">
+<figure class="project-media">
+<img alt="Carte du Burkina Faso, pyramides des âges et indicateurs de fécondité et de mortalité" data-fallback="img/Démographie &amp; Santé Publique.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/demographie-sante.webp" width="1200"/>
+</figure>
+<p class="project-theme">Statistique et démographie</p>
+<h3>Démographie, épidémiologie et santé publique</h3>
+<p class="project-desc">Exploitation des Enquêtes démographiques et de santé (EDS) du Burkina Faso et du Mali pour analyser les comportements de santé et la mortalité.</p>
+<ul class="project-points">
+<li><b>Modélisation :</b> analyse multiniveau et régression logistique multinomiale</li>
+<li><b>Démographie :</b> indice synthétique de fécondité, quotients de mortalité (tables types de Coale-Demeny)</li>
+<li><b>Méthode :</b> plans de sondage complexes (pondérations, effets de grappe), suivi-évaluation</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Stata</li><li>SPSS</li><li>R</li></ul>
+</div>
+</article>
+<article class="project t-stats" data-theme="stats">
+<figure class="project-media">
+<img alt="Trace d'une chaîne Metropolis-Hastings et loi a posteriori du paramètre de forme d'une loi de Weibull, sur données simulées" data-fallback="img/bayesian_inference.png" decoding="async" height="675" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/bayesian-mcmc.webp" width="1200"/>
+</figure>
+<p class="project-theme">Statistique et démographie</p>
+<h3>Statistique bayésienne et inférence MCMC</h3>
+<p class="project-desc">Quantifier l’incertitude sur la durée de vie d’un système avec un modèle de Weibull.</p>
+<ul class="project-points">
+<li><b>Algorithme :</b> Metropolis-Hastings implémenté from scratch</li>
+<li><b>Modèle :</b> loi de Weibull et prédiction avec PyMC3</li>
+<li><b>Validation :</b> intervalles de crédibilité à 95 % et convergence des chaînes de Markov</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>SciPy</li><li>PyMC3</li></ul>
+</div>
+</article>
+<article class="project t-optim" data-theme="optim">
+<figure class="project-media">
+<img alt="Image floue et bruitée, courbe de convergence et image restaurée par TwIST" data-fallback="img/Problèmes Inverses (TwIST).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/inverse-problems-twist.webp" width="1200"/>
+</figure>
+<p class="project-theme">Optimisation et finance</p>
+<h3>Problèmes inverses : restauration d’images avec TwIST</h3>
+<p class="project-desc">Déconvolution d’images floues et bruitées, un problème mal posé, par optimisation itérative.</p>
+<ul class="project-points">
+<li><b>Modèle :</b> minimisation de fonctionnelles pénalisées (forward-backward)</li>
+<li><b>TwIST :</b> Two-step Iterative Shrinkage/Thresholding pour accélérer nettement la convergence</li>
+<li><b>DeepInverse :</b> restauration d’images soumises à un bruit gaussien</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>SciPy</li><li>DeepInverse</li></ul>
+</div>
+</article>
+<article class="project t-optim" data-theme="optim">
+<figure class="project-media">
+<img alt="Schéma du pipeline : données de marché, features, Graph Attention Network, stacking, gestion du risque, exécution" data-fallback="img/trading_vix75.png" decoding="async" height="675" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/trading-pipeline.webp" width="1200"/>
+</figure>
+<p class="project-theme">Optimisation et finance</p>
+<h3>Trading algorithmique multi-modal</h3>
+<p class="project-desc">Robot de trading qui combine analyse technique multi-timeframes, deep learning sur graphes et gestion du risque.</p>
+<ul class="project-points">
+<li><b>Deep learning :</b> Graph Attention Networks (GAT) pour l’analyse de marché</li>
+<li><b>Méta-modèle :</b> stacking de XGBoost, gradient boosting et régression linéaire</li>
+<li><b>Fiabilité :</b> backtesting financier et intégration des API Deriv et MT5</li>
+</ul>
+<div class="project-foot">
+<ul class="chips"><li>Python</li><li>pandas</li><li>TensorFlow</li><li>XGBoost</li></ul>
+<a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/trading.ipynb" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg> Ouvrir le notebook</a>
+</div>
+</article>
+</div>
+        </div>
+      </section>
+
+      <section class="section" id="parcours" aria-labelledby="parcours-titre">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="parcours-titre">Parcours</h2>
+            <p class="section-lede">De la statistique sociale et de la démographie au Burkina Faso à la data science en France, avec la même exigence de rigueur sur la donnée.</p>
+          </header>
+          <div class="path-cols">
+<div>
+<h3 class="col-title">Expérience</h3>
+<ol class="timeline">
+<li class="tl-item is-current">
+<p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-10">oct. 2027</time></span> <span class="badge">En cours</span></p>
+<h4>Data Manager en alternance</h4>
+<p class="tl-org">BRGM, Bureau de recherches géologiques et minières, Orléans</p>
+<ul class="tl-points"><li>Direction des risques, unité Risques sismiques et volcaniques (DRIS/RSV).</li><li><b>Projet CERES :</b> vulnérabilité du bâti au retrait-gonflement des argiles.</li><li><b>Données :</b> relier données d’assurance, bâtiments de l’IGN et OpenStreetMap en une base vérifiée et documentée.</li><li><b>Automatisation :</b> chaînes de traitement en workflows sur la plateforme Vigirisks (Python, PostgreSQL/PostGIS, Docker).</li></ul>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span><time datetime="2026-03">Mars</time> – <time datetime="2026-07">juil. 2026</time></span></p>
+<h4>Stagiaire de recherche en data science, projet INNOGOUV</h4>
+<p class="tl-org">Laboratoire CERAG (Université Grenoble Alpes) et UMR MoISA (INRAE Montpellier)</p>
+<ul class="tl-points">
+<li><b>Modélisation :</b> parcours de performance durable des coopératives viticoles françaises (Data Envelopment Analysis, profils latents).</li>
+<li><b>Data engineering :</b> construction d’une base unique à partir de 4 sources hétérogènes (enquête, comptes sociaux Diane, météo, douanes).</li>
+<li><b>Reproductibilité :</b> pipeline d’analyse complet implémenté deux fois, en Python et en Stata/Mata, pour garantir la robustesse des résultats.</li>
+</ul>
+<p class="tl-note">Stage de fin de Master 2 MIASHS.</p>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span><time datetime="2025-04">Avr.</time> – <time datetime="2025-07">juil. 2025</time></span></p>
+<h4>Data analyst et modélisation statistique</h4>
+<p class="tl-org">France Travail, Direction régionale Auvergne-Rhône-Alpes, Lyon</p>
+<ul class="tl-points">
+<li><b>Pilotage :</b> tableaux de bord Power BI (DAX) conçus, automatisés et déployés en production pour le pilotage territorial.</li>
+<li><b>Segmentation :</b> 297 464 établissements classés (ACP, k-means, algorithme EM) pour cibler les stratégies de prospection.</li>
+<li><b>Cartographie :</b> cartes statistiques multi-indicateurs sous QGIS sur les dynamiques locales de l’emploi.</li>
+</ul>
+<a class="tl-link" href="Rapport_de_stage_M1_TIEMTORE.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg> Lire le rapport de stage (PDF)</a>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span><time datetime="2021-10">Oct. 2021</time> – <time datetime="2022-01">janv. 2022</time></span></p>
+<h4>Analyste statistique, data management</h4>
+<p class="tl-org">Unité de recherche clinique de Nanoro (IRSS), Burkina Faso</p>
+<ul class="tl-points">
+<li><b>Qualité des données :</b> nettoyage et structuration de bases volumineuses pour en garantir l’intégrité.</li>
+<li><b>Analyse :</b> statistiques descriptives et rapports sous R, Stata et Excel.</li>
+</ul>
+<a class="tl-link" href="Rapport_de_stage_L3_TIEMTORE.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg> Lire le rapport de stage (PDF)</a>
+</li>
+</ol>
+</div>
+<div>
+<h3 class="col-title">Formation</h3>
+<ol class="timeline">
+<li class="tl-item is-current">
+<p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-12">déc. 2027</time></span> <span class="badge">En cours</span></p>
+<h4>Mastère Spécialisé Manager Expert de Solutions Responsables en Science des Données</h4>
+<p class="tl-org">Grenoble École de Management et Grenoble INP-Ensimag</p>
+<p class="tl-note">En alternance. Titre RNCP de niveau 7.</p>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span>2024 – 2026</span></p>
+<h4>Master MIASHS, data science et intelligence artificielle</h4>
+<p class="tl-org">Université Lumière Lyon 2</p>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span>2022 – 2024</span></p>
+<h4>Master recherche en démographie</h4>
+<p class="tl-org">Université Joseph Ki-Zerbo, Ouagadougou</p>
+</li>
+<li class="tl-item">
+<p class="tl-date"><span>2018 – 2021</span></p>
+<h4>Licence en statistique sociale, mention Bien</h4>
+<p class="tl-org">ISSP, Université Joseph Ki-Zerbo, Ouagadougou</p>
+</li>
+</ol>
+</div>
+</div>
+        </div>
+      </section>
+
+      <section class="section" id="competences" aria-labelledby="competences-titre">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="competences-titre">Compétences</h2>
+            <p class="section-lede">Les méthodes et outils utilisés dans l’histoire et dans les projets.</p>
+          </header>
+          <dl class="skills">
+<div class="skill-row">
+<dt>IA explicable et de confiance</dt>
+<dd><ul class="chips"><li>SHAP</li><li>DiCE</li><li>Grad-CAM</li><li>Integrated Gradients</li><li>LRP et GNN-LRP</li><li>Differential privacy</li><li>Apprentissage fédéré (SCAFFOLD)</li><li>Fairness</li></ul></dd>
+</div>
+<div class="skill-row">
+<dt>Machine learning et deep learning</dt>
+<dd><ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Random Forest</li><li>Stacking</li><li>CNN</li><li>BiLSTM</li><li>Graph Attention Networks</li><li>VAE et auto-encodeurs</li><li>Attaques et défenses adversariales (FGSM, PGD)</li><li>Median of Means</li></ul></dd>
+</div>
+<div class="skill-row">
+<dt>NLP et LLM</dt>
+<dd><ul class="chips"><li>Hugging Face Transformers</li><li>Fine-tuning</li><li>RAG</li><li>Prompt engineering</li><li>Tokenisation BPE from scratch</li></ul></dd>
+</div>
+<div class="skill-row">
+<dt>Statistique et démographie</dt>
+<dd><ul class="chips"><li>Inférence bayésienne (MCMC, PyMC)</li><li>Data Envelopment Analysis</li><li>Profils latents</li><li>Prédiction conforme</li><li>t-SNE et Isomap</li><li>Régression logistique multinomiale</li><li>Analyse multiniveau</li><li>Plans de sondage complexes</li><li>Fécondité et mortalité</li><li>Suivi-évaluation</li></ul></dd>
+</div>
+<div class="skill-row">
+<dt>Données, outils et gouvernance</dt>
+<dd><ul class="chips"><li>Python (pandas, NumPy, SciPy)</li><li>SQL, PostgreSQL et PostGIS</li><li>R</li><li>Stata et Mata</li><li>SPSS</li><li>Power BI (DAX)</li><li>QGIS</li><li>Docker</li><li>Git</li><li>Pipelines ETL</li><li>RGPD et souveraineté des données</li></ul></dd>
+</div>
+</dl>
+        </div>
+      </section>
+    </div>
+
     <section class="section contact" id="contact" aria-labelledby="contact-titre">
       <div class="wrap contact-grid">
         <div>
@@ -775,13 +854,13 @@
           </ul>
         </div>
         <div class="docs">
-          <h3>Documents</h3>
-          <ul>
-            <li><a href="cv_Ariel_data.pdf" target="_blank" rel="noopener"><span><span>CV</span><small>PDF, une page</small></span><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a></li>
-            <li><a href="Rapport_de_stage_M1_TIEMTORE.pdf" target="_blank" rel="noopener"><span><span>Rapport de stage de Master 1</span><small>France Travail, 2025</small></span><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></a></li>
-            <li><a href="Rapport_de_stage_L3_TIEMTORE.pdf" target="_blank" rel="noopener"><span><span>Rapport de stage de Licence</span><small>Unité de recherche clinique de Nanoro, 2022</small></span><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></a></li>
-          </ul>
-        </div>
+<h3>Documents</h3>
+<ul>
+<li><a href="cv_Ariel_data.pdf" rel="noopener" target="_blank"><span><span>CV</span><small>PDF, une page</small></span><svg aria-hidden="true" class="icon"><use href="#i-download"></use></svg></a></li>
+<li><a href="Rapport_de_stage_M1_TIEMTORE.pdf" rel="noopener" target="_blank"><span><span>Rapport de stage de Master 1</span><small>France Travail, 2025</small></span><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg></a></li>
+<li><a href="Rapport_de_stage_L3_TIEMTORE.pdf" rel="noopener" target="_blank"><span><span>Rapport de stage de Licence</span><small>Unité de recherche clinique de Nanoro, 2022</small></span><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg></a></li>
+</ul>
+</div>
       </div>
     </section>
   </main>
@@ -789,73 +868,831 @@
   <footer class="site-foot">
     <div class="wrap">
       <p>© <span id="year">2026</span> Ariel Eddy TIEMTORE</p>
-      <p><a href="#top">Revenir en haut de page</a></p>
+      <p><a href="classique.html">Version classique du site</a></p>
+      <p><a href="#prologue">Revoir l’histoire</a></p>
     </div>
   </footer>
 
   <script>
-    (function () {
-      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  (function () {
+    "use strict";
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var body = document.body;
+    var canvas = document.getElementById("stage");
+    var ctx = canvas.getContext("2d");
+    var W = 0, H = 0, DPR = 1;
+    var N = window.innerWidth < 960 ? 900 : 1600;
 
-      // Phrase d'attribution : les surlignages apparaissent mot après mot, une seule fois.
-      var attr = document.getElementById("attr");
-      if (attr) {
-        var toks = attr.querySelectorAll(".tok");
-        if (reduce) {
-          attr.classList.add("is-lit");
-        } else {
-          toks.forEach(function (t, i) { t.style.transitionDelay = (250 + i * 70) + "ms"; });
-          requestAnimationFrame(function () { requestAnimationFrame(function () { attr.classList.add("is-lit"); }); });
+    /* ---------- Outils ---------- */
+    function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    var R = rng(20261105);
+    function gauss(r) { r = r || Math.random; var u = 1 - r(), v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.2831853 * v); }
+    function hex(h) { var n = parseInt(h.slice(1), 16); return [n >> 16 & 255, n >> 8 & 255, n & 255]; }
+    function mix(a, b, t) { return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]; }
+    function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
+    function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+    var C = {
+      star: hex("#F4EEE2"), mist: hex("#AEB3D6"), gold: hex("#F2B544"), goldL: hex("#F8DDA0"),
+      teal: hex("#3CC8B4"), rose: hex("#FF7096"), sky: hex("#82B4FF"), grape: hex("#B590FF"),
+      clay: hex("#E8975F"), red: hex("#FF5A5F"), leaf: hex("#5FD39A")
+    };
+    var PALETTE = [C.teal, C.gold, C.rose, C.sky, C.grape];
+
+    /* ---------- Particules ---------- */
+    var px = new Float32Array(N), py = new Float32Array(N), vx = new Float32Array(N), vy = new Float32Array(N);
+    var tx = new Float32Array(N), ty = new Float32Array(N), bx = new Float32Array(N), by = new Float32Array(N);
+    var sz = new Float32Array(N), tsz = new Float32Array(N), al = new Float32Array(N), tal = new Float32Array(N);
+    var cr = new Float32Array(N), cg = new Float32Array(N), cb = new Float32Array(N);
+    var tr = new Float32Array(N), tg = new Float32Array(N), tb = new Float32Array(N);
+    var kk = new Float32Array(N), role = new Int16Array(N), pa = new Float32Array(N), pb = new Float32Array(N), pc = new Float32Array(N);
+    var colKey = new Int32Array(N), colStr = new Array(N);
+    var STAR = -1;
+    for (var i = 0; i < N; i++) {
+      kk[i] = .028 + R() * .04; px[i] = Math.random() * 1; py[i] = 0; colKey[i] = -1;
+      cr[i] = tr[i] = C.star[0]; cg[i] = tg[i] = C.star[1]; cb[i] = tb[i] = C.star[2];
+    }
+    function setT(i, x, y, col, s, a) {
+      tx[i] = bx[i] = x; ty[i] = by[i] = y; tr[i] = col[0]; tg[i] = col[1]; tb[i] = col[2]; tsz[i] = s; tal[i] = a;
+    }
+    function setCol(i, col) { tr[i] = col[0]; tg[i] = col[1]; tb[i] = col[2]; }
+    function makeStar(i) {
+      role[i] = STAR; pa[i] = Math.random() * 6.28; pb[i] = .14 + Math.random() * .32;
+      setT(i, Math.random() * W, Math.random() * (W < 960 ? H * .47 : H), Math.random() < .12 ? C.goldL : C.star, .55 + Math.random() * .8, pb[i]);
+    }
+    function starsFrom(start) { for (var i = start; i < N; i++) makeStar(i); }
+
+    function area() {
+      if (W < 960) return { x: W * .07, y: 64 + H * .045, w: W * .86, h: H * .345 };
+      var x = W * .46, card = scenes && scenes[currentIdx] && scenes[currentIdx].querySelector(".card");
+      if (card) x = Math.max(x, card.getBoundingClientRect().right + 56);
+      x = Math.min(x, W * .56);
+      return { x: x, y: H * .14, w: W * .955 - x, h: H * .72 };
+    }
+
+    /* ---------- Échantillonnage d'un texte en points ---------- */
+    function sampleText(text, a, max) {
+      var c = document.createElement("canvas"), w = Math.ceil(a.w), h = Math.ceil(a.h);
+      c.width = w; c.height = h;
+      var g = c.getContext("2d");
+      var fs = h * .62;
+      g.font = "800 " + fs + "px 'Bricolage Grotesque', 'Arial Black', sans-serif";
+      var tw = g.measureText(text).width;
+      if (tw > w * .96) { fs = fs * w * .96 / tw; g.font = "800 " + fs + "px 'Bricolage Grotesque', 'Arial Black', sans-serif"; }
+      g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = "#fff";
+      g.fillText(text, w / 2, h / 2);
+      var d = g.getImageData(0, 0, w, h).data, pts = [], filled = 0;
+      for (var k = 3; k < d.length; k += 16) if (d[k] > 128) filled++;
+      var step = Math.max(2, Math.sqrt(filled * 4 / max));
+      for (var y = 0; y < h; y += step) for (var x = 0; x < w; x += step) {
+        var xi = x | 0, yi = y | 0;
+        if (d[(yi * w + xi) * 4 + 3] > 128) pts.push([a.x + x + (Math.random() - .5) * step * .6, a.y + y + (Math.random() - .5) * step * .6]);
+      }
+      for (var j = pts.length - 1; j > 0; j--) { var r = Math.random() * (j + 1) | 0, t = pts[j]; pts[j] = pts[r]; pts[r] = t; }
+      return pts.slice(0, max);
+    }
+
+    /* =========================================================
+       Les scènes : chaque chapitre donne une forme aux points
+       ========================================================= */
+    var S = {};
+    var label = function (txt, x, y, opt) {
+      opt = opt || {};
+      ctx.font = (opt.weight || 600) + " " + (opt.size || 13) + "px 'Bricolage Grotesque', sans-serif";
+      ctx.textAlign = opt.align || "left"; ctx.textBaseline = opt.base || "alphabetic";
+      ctx.fillStyle = opt.color || "rgba(174,179,214,.95)";
+      ctx.fillText(txt, x, y);
+    };
+
+    /* Ouverture : le prénom */
+    S.intro = {
+      enter: function () {
+        var a = area(), pts = sampleText("ARIEL", a, Math.round(N * .68));
+        for (var i = 0; i < pts.length; i++) {
+          role[i] = 0;
+          var c = R() < .07 ? C.gold : R() < .05 ? C.rose : C.star;
+          setT(i, pts[i][0], pts[i][1], c, 1.35 + R() * .7, .82);
+          pa[i] = R() * 6.28;
         }
+        starsFrom(pts.length);
+      },
+      tick: function (t) {
+        for (var i = 0; i < N; i++) if (role[i] === 0) { tx[i] = bx[i] + Math.sin(t * .0011 + pa[i]) * 1.4; ty[i] = by[i] + Math.cos(t * .0013 + pa[i]) * 1.4; }
+      }
+    };
+
+    /* Chapitre 1 : pyramide des âges */
+    S.pyramide = {
+      aged: false, n: 0,
+      shape: function (aged) {
+        var s = [], b;
+        for (b = 0; b < 17; b++) {
+          if (!aged) s.push(b < 16 ? Math.exp(-.135 * b) : .07);
+          else s.push([.80, .83, .86, .9, .94, .97, .99, 1, .99, .97, .93, .87, .79, .68, .55, .4, .3][b]);
+        }
+        return s;
+      },
+      enter: function () {
+        this.aged = false;
+        var young = this.shape(false), tot = 0, b, i = 0, P = Math.round(N * .64);
+        for (b = 0; b < 17; b++) tot += young[b];
+        for (b = 0; b < 17 && i < P; b++) {
+          var cnt = Math.round(P * young[b] / tot);
+          for (var k = 0; k < cnt && i < P; k++, i++) {
+            role[i] = 1; pa[i] = b + R() * .78; pb[i] = R(); pc[i] = k % 2;
+          }
+        }
+        this.n = i;
+        this.layout();
+        starsFrom(i);
+      },
+      layout: function () {
+        var a = area(), sh = this.shape(this.aged), mx = Math.max.apply(null, sh);
+        var bandH = a.h * .84 / 17, cx = a.x + a.w / 2, half = a.w * (W < 960 ? .33 : .4), gap = 5;
+        this.geo = { a: a, bandH: bandH, cx: cx, half: half };
+        for (var i = 0; i < this.n; i++) {
+          var b = Math.floor(pa[i]), wv = half * sh[b] / mx, side = pc[i] ? 1 : -1;
+          var x = cx + side * (gap + pb[i] * wv);
+          var y = a.y + a.h * .9 - (pa[i] + .11) * bandH;
+          setT(i, x, y, pc[i] ? C.goldL : C.gold, 1.6, .9);
+        }
+      },
+      action: function () { this.aged = !this.aged; this.layout(); return this.aged; },
+      draw: function () {
+        var g = this.geo; if (!g) return;
+        ctx.strokeStyle = "rgba(244,238,226,.25)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(g.cx, g.a.y + g.a.h * .9); ctx.lineTo(g.cx, g.a.y + g.a.h * .9 - 17 * g.bandH); ctx.stroke();
+        var top = g.a.y + g.a.h * .9 - 17 * g.bandH - 12;
+        label("Hommes", g.cx - 14, top, { align: "right" });
+        label("Femmes", g.cx + 14, top, { align: "left" });
+        label("0 – 4 ans", g.a.x + g.a.w, g.a.y + g.a.h * .9 - .4 * g.bandH, { align: "right", size: 12, weight: 500 });
+        label("80 ans et +", g.a.x + g.a.w, g.a.y + g.a.h * .9 - 16.4 * g.bandH, { align: "right", size: 12, weight: 500 });
+        label(this.aged ? "Après la transition : une ruche" : "Population jeune : une pyramide", g.a.x, g.a.y + g.a.h * .98, { size: 13 });
+      },
+      demo: [[3200, "action"]]
+    };
+
+    /* Chapitre 2 : k-means en direct */
+    S.kmeans = {
+      K: 5,
+      enter: function () {
+        var P = Math.round(N * .6), r = rng(77), centers = [[.2, .28], [.7, .2], [.5, .6], [.17, .78], [.83, .74]];
+        this.P = P; this.dx = new Float32Array(P); this.dy = new Float32Array(P); this.as = new Int8Array(P).fill(-1);
+        for (var i = 0; i < P; i++) {
+          var c = centers[i % 5], ang = (i % 5) * 1.1, u = gauss(r) * .085, v = gauss(r) * .042;
+          this.dx[i] = clamp(c[0] + u * Math.cos(ang) - v * Math.sin(ang), .02, .98);
+          this.dy[i] = clamp(c[1] + u * Math.sin(ang) + v * Math.cos(ang), .02, .98);
+          role[i] = 2;
+        }
+        starsFrom(P);
+        this.place(); this.reset();
+      },
+      place: function () {
+        var a = area(); this.a = a;
+        for (var i = 0; i < this.P; i++) { setT(i, a.x + this.dx[i] * a.w, a.y + this.dy[i] * a.h, this.as[i] < 0 ? C.star : PALETTE[this.as[i]], 1.7, .85); }
+      },
+      reset: function () {
+        this.c = []; this.cd = [];
+        for (var k = 0; k < this.K; k++) {
+          var j = Math.floor(Math.random() * this.P);
+          var p = [this.dx[j], this.dy[j]]; this.c.push(p.slice()); this.cd.push(p.slice());
+        }
+        this.as.fill(-1); this.iter = 0; this.done = false; this.next = 900;
+        for (var i = 0; i < this.P; i++) setCol(i, C.star);
+      },
+      step: function () {
+        var changed = 0, i, k, sums = [];
+        for (k = 0; k < this.K; k++) sums.push([0, 0, 0]);
+        for (i = 0; i < this.P; i++) {
+          var best = 0, bd = 1e9;
+          for (k = 0; k < this.K; k++) { var ex = this.dx[i] - this.c[k][0], ey = this.dy[i] - this.c[k][1], d = ex * ex + ey * ey; if (d < bd) { bd = d; best = k; } }
+          if (this.as[i] !== best) { changed++; this.as[i] = best; setCol(i, PALETTE[best]); }
+          sums[best][0] += this.dx[i]; sums[best][1] += this.dy[i]; sums[best][2]++;
+        }
+        for (k = 0; k < this.K; k++) if (sums[k][2]) { this.c[k][0] = sums[k][0] / sums[k][2]; this.c[k][1] = sums[k][1] / sums[k][2]; }
+        this.iter++;
+        if (!changed) this.done = true;
+      },
+      tick: function (t) {
+        if (!this.done && t > this.next) { this.step(); this.next = t + 750; }
+        for (var k = 0; k < this.K; k++) { this.cd[k][0] += (this.c[k][0] - this.cd[k][0]) * .08; this.cd[k][1] += (this.c[k][1] - this.cd[k][1]) * .08; }
+      },
+      action: function () { this.reset(); this.next = sceneTime + 500; },
+      draw: function () {
+        var a = this.a; if (!a) return;
+        for (var k = 0; k < this.K; k++) {
+          var x = a.x + this.cd[k][0] * a.w, y = a.y + this.cd[k][1] * a.h, col = PALETTE[k];
+          ctx.strokeStyle = "rgb(" + col.join(",") + ")"; ctx.lineWidth = 2;
+          ctx.beginPath(); ctx.arc(x, y, 10, 0, 6.283); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(x - 16, y); ctx.lineTo(x + 16, y); ctx.moveTo(x, y - 16); ctx.lineTo(x, y + 16); ctx.stroke();
+        }
+        label(this.done ? "Convergence en " + this.iter + " itérations" : (this.iter ? "Itération " + this.iter : "Initialisation des centres"), a.x, a.y - 14);
+      },
+      demo: [[5600, "action"]]
+    };
+
+    /* Chapitre 3 : réseau de neurones et propagation de pertinence (LRP) */
+    S.reseau = {
+      enter: function () {
+        var r = rng(31), L = [5, 8, 8, 3], l, j, k;
+        this.L = L; this.W = []; this.act = [];
+        for (l = 0; l < L.length - 1; l++) { var m = []; for (j = 0; j < L[l]; j++) { var row = []; for (k = 0; k < L[l + 1]; k++) row.push(.05 + r() * r()); m.push(row); } this.W.push(m); }
+        var a0 = []; for (j = 0; j < L[0]; j++) a0.push(.25 + r() * .75);
+        this.act.push(a0);
+        for (l = 0; l < L.length - 1; l++) {
+          var nxt = [];
+          for (k = 0; k < L[l + 1]; k++) { var z = 0; for (j = 0; j < L[l]; j++) z += this.act[l][j] * this.W[l][j][k]; nxt.push(z); }
+          var mxn = Math.max.apply(null, nxt); this.act.push(nxt.map(function (v) { return v / mxn; }));
+        }
+        this.edges = []; this.nodes = [];
+        for (l = 0; l < L.length; l++) for (j = 0; j < L[l]; j++) this.nodes.push({ l: l, j: j, rel: 0 });
+        for (l = 0; l < L.length - 1; l++) for (j = 0; j < L[l]; j++) for (k = 0; k < L[l + 1]; k++) this.edges.push({ l: l, j: j, k: k, rel: 0 });
+        var perNode = W < 960 ? 9 : 13, nodePts = this.nodes.length * perNode;
+        var edgePts = Math.min(Math.round(N * .72) - nodePts, this.edges.length * (W < 960 ? 4 : 7));
+        var perEdge = Math.max(2, Math.floor(edgePts / this.edges.length)), i = 0, e, n;
+        for (n = 0; n < this.nodes.length; n++) for (var q = 0; q < perNode; q++, i++) { role[i] = 30; pa[i] = n; pb[i] = q / perNode; }
+        for (e = 0; e < this.edges.length; e++) for (var s = 0; s < perEdge; s++, i++) { role[i] = 31; pa[i] = e; pb[i] = (s + Math.random()) / perEdge; }
+        this.n = i; starsFrom(i);
+        this.layout(); this.pulseAt = 700; this.out = 0;
+      },
+      pos: function (l, j) {
+        var a = this.a, L = this.L, n = L[l];
+        var x = a.x + a.w * (.06 + .88 * l / (L.length - 1));
+        var spread = a.h * .82, gapY = spread / Math.max(1, 7);
+        var y = a.y + a.h / 2 + (j - (n - 1) / 2) * gapY;
+        return [x, y];
+      },
+      layout: function () {
+        this.a = area(); var rad = W < 960 ? 7 : 10, self = this;
+        this.edges.forEach(function (ed) { ed.p0 = self.pos(ed.l, ed.j); ed.p1 = self.pos(ed.l + 1, ed.k); });
+        for (var i = 0; i < this.n; i++) {
+          if (role[i] === 30) { var nd = this.nodes[pa[i]], p = this.pos(nd.l, nd.j), ang = pb[i] * 6.283; setT(i, p[0] + Math.cos(ang) * rad, p[1] + Math.sin(ang) * rad, C.star, 1.6, .85); }
+          else { var ed = this.edges[pa[i]], t = pb[i]; setT(i, ed.p0[0] + (ed.p1[0] - ed.p0[0]) * t, ed.p0[1] + (ed.p1[1] - ed.p0[1]) * t, C.mist, 1.05, .12); }
+        }
+      },
+      lrp: function (out) {
+        var L = this.L, Rl = [], l, j, k;
+        Rl[L.length - 1] = []; for (k = 0; k < L[L.length - 1]; k++) Rl[L.length - 1].push(k === out ? 1 : 0);
+        this.edgeRel = {};
+        for (l = L.length - 2; l >= 0; l--) {
+          Rl[l] = []; for (j = 0; j < L[l]; j++) Rl[l].push(0);
+          for (k = 0; k < L[l + 1]; k++) {
+            var z = 0; for (j = 0; j < L[l]; j++) z += this.act[l][j] * this.W[l][j][k];
+            for (j = 0; j < L[l]; j++) { var r = this.act[l][j] * this.W[l][j][k] / z * Rl[l + 1][k]; Rl[l][j] += r; this.edgeRel[l + "-" + j + "-" + k] = r; }
+          }
+        }
+        var self = this;
+        this.edges.forEach(function (e) { e.rel = self.edgeRel[e.l + "-" + e.j + "-" + e.k]; });
+        for (l = 0; l < L.length - 1; l++) {
+          var mxE = 0; this.edges.forEach(function (e) { if (e.l === l) mxE = Math.max(mxE, e.rel); });
+          this.edges.forEach(function (e) { if (e.l === l) e.n = e.rel / mxE; });
+        }
+        this.nodes.forEach(function (nd) { var arr = Rl[nd.l], m = Math.max.apply(null, arr); nd.rel = arr[nd.j] / m; });
+        this.Rin = Rl[0];
+      },
+      fire: function (t) { this.out = (this.out + 1 + Math.floor(Math.random() * 2)) % 3; this.lrp(this.out); this.fired = t; this.pulseAt = t + 6500; },
+      tick: function (t) {
+        if (t > this.pulseAt) this.fire(t);
+        if (this.fired == null) return;
+        var L = this.L, u0 = t - this.fired;
+        for (var i = 0; i < this.n; i++) {
+          var lev, rel, base;
+          if (role[i] === 30) { var nd = this.nodes[pa[i]]; lev = L.length - 1 - nd.l; rel = nd.rel; base = .85; }
+          else { var ed = this.edges[pa[i]]; lev = L.length - 1.5 - ed.l; rel = ed.n || 0; base = .2; }
+          var u = u0 - lev * 520, env = u < 0 ? 0 : Math.min(1, u / 260) * Math.exp(-u / (role[i] === 30 && lev === L.length - 1 ? 9000 : 3800));
+          var e = rel * env;
+          tr[i] = C.star[0] + (C.rose[0] - C.star[0]) * Math.min(1, e * 1.4);
+          tg[i] = C.star[1] + (C.rose[1] - C.star[1]) * Math.min(1, e * 1.4);
+          tb[i] = C.star[2] + (C.rose[2] - C.star[2]) * Math.min(1, e * 1.4);
+          if (role[i] === 31) {
+            var edg = this.edges[pa[i]], tt = ((pb[i] - t * .00035) % 1 + 1) % 1;
+            tx[i] = edg.p0[0] + (edg.p1[0] - edg.p0[0]) * tt; ty[i] = edg.p0[1] + (edg.p1[1] - edg.p0[1]) * tt;
+            tal[i] = .12 + .85 * e; tsz[i] = 1.05 + 1.4 * e;
+          } else { tsz[i] = 1.6 + 1.6 * e; }
+        }
+        this.u0 = u0;
+      },
+      action: function () { this.fire(sceneTime); },
+      draw: function () {
+        if (!this.a) return;
+        var u0 = this.fired == null ? -1 : this.u0, L = this.L;
+        ctx.lineWidth = 1;
+        for (var q = 0; q < this.edges.length; q++) {
+          var ed = this.edges[q], lev = L.length - 1.5 - ed.l, u = u0 - lev * 520;
+          var env = u0 < 0 || u < 0 ? 0 : Math.min(1, u / 260) * Math.exp(-u / 3800), e = (ed.n || 0) * env;
+          ctx.strokeStyle = e > .02 ? "rgba(255,112,150," + (.08 + .5 * e).toFixed(3) + ")" : "rgba(244,238,226,.06)";
+          ctx.beginPath(); ctx.moveTo(ed.p0[0], ed.p0[1]); ctx.lineTo(ed.p1[0], ed.p1[1]); ctx.stroke();
+        }
+        var p0 = this.pos(0, this.L[0] - 1), pl = this.pos(this.L.length - 1, this.L[this.L.length - 1] - 1), a = this.a;
+        label("Entrées", p0[0], a.y + a.h * .98, { align: "center" });
+        label("Décision", pl[0], a.y + a.h * .98, { align: "center" });
+        if (this.fired != null) {
+          var po = this.pos(this.L.length - 1, this.out);
+          label("classe expliquée", po[0] - 18, po[1] + 4, { align: "right", color: "rgba(255,112,150,.95)", size: 12 });
+          label("Pertinence remontée par LRP", a.x, a.y - 14);
+        }
+      },
+      demo: [[4200, "action"]]
+    };
+
+    /* Chapitre 4 : apprentissage fédéré et attaque adversariale */
+    S.federe = {
+      enter: function () {
+        var scale = N / 1600, i = 0, h, q;
+        this.ring = Math.round(34 * scale); this.data = Math.round(110 * scale); this.cross = Math.round(22 * scale);
+        this.model = Math.round(90 * scale); this.pk = Math.round(9 * scale) + 3;
+        for (h = 0; h < 4; h++) {
+          for (q = 0; q < this.ring; q++, i++) { role[i] = 40; pa[i] = h; pb[i] = q / this.ring; }
+          for (q = 0; q < this.data; q++, i++) { role[i] = 41; pa[i] = h; pb[i] = R(); pc[i] = R(); }
+          for (q = 0; q < this.cross; q++, i++) { role[i] = 42; pa[i] = h; pb[i] = q / this.cross; }
+          for (q = 0; q < this.pk; q++, i++) { role[i] = 44; pa[i] = h; pb[i] = q / this.pk; pc[i] = R(); }
+        }
+        for (q = 0; q < this.model; q++, i++) { role[i] = 43; pb[i] = q / this.model; pc[i] = R(); }
+        this.n = i; starsFrom(i); this.layout(); this.msg = null;
+      },
+      hosp: function (h) { var a = this.a; return [a.x + a.w * (h % 2 ? .82 : .18), a.y + a.h * (h < 2 ? .2 : .8)]; },
+      layout: function () {
+        var a = this.a = area(), r = Math.min(a.w, a.h) * .14; this.r = r;
+        this.cx = a.x + a.w / 2; this.cy = a.y + a.h / 2;
+        for (var i = 0; i < this.n; i++) {
+          var h = pa[i], c = this.hosp(h), ang;
+          if (role[i] === 40) { ang = pb[i] * 6.283; setT(i, c[0] + Math.cos(ang) * r, c[1] + Math.sin(ang) * r, C.star, 1.5, .8); }
+          else if (role[i] === 41) { ang = pb[i] * 6.283; var rr = Math.sqrt(pc[i]) * r * .85; setT(i, c[0] + Math.cos(ang) * rr, c[1] + Math.sin(ang) * rr, C.mist, 1.2, .5); }
+          else if (role[i] === 42) { var t = pb[i], arm = r * .42, x, y; if (t < .5) { x = c[0] - arm + t * 4 * arm; y = c[1]; } else { x = c[0]; y = c[1] - arm + (t - .5) * 4 * arm; } setT(i, x, y, C.rose, 1.9, .95); }
+          else if (role[i] === 43) { ang = pb[i] * 6.283; var rm = r * (.55 + .12 * (pc[i] > .5 ? 1 : 0)); setT(i, this.cx + Math.cos(ang) * rm, this.cy + Math.sin(ang) * rm, C.sky, 1.7, .9); }
+          else if (role[i] === 44) { setT(i, c[0], c[1], C.sky, 2.3, .95); }
+        }
+      },
+      tick: function (t) {
+        for (var i = 0; i < this.n; i++) {
+          if (role[i] === 44) {
+            var c = this.hosp(pa[i]), ph = (t * .00028 + pb[i] + pa[i] * .25) % 1, s = ease(ph < .5 ? ph * 2 : 2 - ph * 2) * .78;
+            var x = c[0] + (this.cx - c[0]) * s, y = c[1] + (this.cy - c[1]) * s;
+            tx[i] = x + gauss() * 2.2; ty[i] = y + gauss() * 2.2;
+          } else if (role[i] === 43) {
+            var ang = pb[i] * 6.283 + t * .0004 * (pc[i] > .5 ? 1 : -1), rm = this.r * (.55 + .12 * (pc[i] > .5 ? 1 : 0));
+            tx[i] = this.cx + Math.cos(ang) * rm; ty[i] = this.cy + Math.sin(ang) * rm;
+          }
+        }
+      },
+      action: function () {
+        for (var i = 0; i < this.n; i++) if (role[i] !== 44) { vx[i] += gauss() * 9; vy[i] += gauss() * 9; }
+        this.msg = sceneTime;
+      },
+      draw: function () {
+        if (!this.a) return;
+        var names = ["Hôpital A", "Hôpital B", "Hôpital C", "Hôpital D"];
+        for (var h = 0; h < 4; h++) { var c = this.hosp(h); label(names[h], c[0], c[1] + this.r + 20, { align: "center" }); }
+        label("Modèle commun", this.cx, this.cy + this.r * .72 + 20, { align: "center", color: "rgba(130,180,255,.95)" });
+        if (this.msg != null) {
+          var u = sceneTime - this.msg;
+          if (u < 1400) label("Attaque PGD : les entrées sont perturbées", this.a.x, this.a.y - 14, { color: "rgba(255,112,150,.95)" });
+          else if (u < 4200) label("Entraînement adversarial : le modèle tient", this.a.x, this.a.y - 14, { color: "rgba(130,180,255,.95)" });
+        }
+      },
+      demo: [[4300, "action"]]
+    };
+
+    /* Chapitre 5 : quatre sources, 218 coopératives et frontière d'efficience (DEA) */
+    S.frontiere = {
+      COOP: 218,
+      enter: function () {
+        var r = rng(218), P = this.COOP, i;
+        this.X = []; this.Y = [];
+        for (i = 0; i < P; i++) {
+          var x = .06 + .9 * Math.pow(r(), .85);
+          var f = .16 + .74 * (1 - Math.exp(-3.1 * x));
+          var th = i < 9 ? 1 : clamp(1 - Math.abs(gauss(r)) * .2, .38, .995);
+          this.X.push(x); this.Y.push(f * th);
+        }
+        this.hull();
+        var Q = Math.min(Math.round(N * .2), 340);
+        for (i = 0; i < P; i++) role[i] = 50;
+        for (i = P; i < P + Q; i++) { role[i] = 51; pb[i] = (i - P) / (Q - 1); }
+        this.n = P + Q; this.Q = Q; starsFrom(this.n);
+        this.start = sceneTime; this.merged = false; this.layout();
+      },
+      hull: function () {
+        var idx = this.X.map(function (_, i) { return i; }), X = this.X, Y = this.Y;
+        idx.sort(function (a, b) { return X[a] - X[b] || Y[a] - Y[b]; });
+        var up = [];
+        for (var q = 0; q < idx.length; q++) {
+          var p = idx[q];
+          while (up.length >= 2) {
+            var o = up[up.length - 2], a = up[up.length - 1];
+            if ((X[a] - X[o]) * (Y[p] - Y[o]) - (Y[a] - Y[o]) * (X[p] - X[o]) >= 0) up.pop(); else break;
+          }
+          up.push(p);
+        }
+        var top = 0; for (q = 0; q < up.length; q++) if (Y[up[q]] > Y[up[top]]) top = q;
+        this.front = up.slice(0, top + 1).map(function (p) { return [X[p], Y[p]]; });
+        var last = this.front[this.front.length - 1]; this.front.push([1, last[1]]);
+        var self = this;
+        this.eff = this.X.map(function (x, i) { return self.Y[i] / self.F(x); });
+      },
+      F: function (x) {
+        var f = this.front;
+        if (x <= f[0][0]) return f[0][1];
+        for (var q = 1; q < f.length; q++) if (x <= f[q][0]) { var t = (x - f[q - 1][0]) / (f[q][0] - f[q - 1][0]); return f[q - 1][1] + t * (f[q][1] - f[q - 1][1]); }
+        return f[f.length - 1][1];
+      },
+      map: function (x, y) { var g = this.g; return [g.x + x * g.w, g.y + g.h - y * g.h]; },
+      layout: function () {
+        var a = this.a = area();
+        this.g = { x: a.x + a.w * .08, y: a.y + a.h * .04, w: a.w * .9, h: a.h * .86 };
+        var src = [[.12, .12], [.88, .12], [.12, .88], [.88, .88]];
+        for (var i = 0; i < this.n; i++) {
+          if (!this.merged) {
+            var s = src[i % 4];
+            setT(i, a.x + s[0] * a.w + gauss() * a.w * .05, a.y + s[1] * a.h + gauss() * a.h * .05, [C.gold, C.teal, C.sky, C.rose][i % 4], 1.6, .85);
+          } else if (role[i] === 50) {
+            var e = this.eff[i], p = this.map(this.X[i], this.Y[i]), top = e > .985;
+            setT(i, p[0], p[1], top ? C.gold : mix(C.mist, C.grape, e), top ? 3.4 : 2.1, top ? 1 : .35 + .6 * e);
+          } else {
+            var u = pb[i], x = this.front[0][0] + u * (1 - this.front[0][0]), q = this.map(x, this.F(x));
+            setT(i, q[0], q[1], C.grape, 1.3, .7);
+          }
+        }
+      },
+      tick: function (t) { if (!this.merged && t - this.start > 1900) { this.merged = true; this.layout(); } },
+      action: function () { this.merged = false; this.start = sceneTime; this.layout(); },
+      draw: function () {
+        var a = this.a; if (!a) return;
+        if (!this.merged) {
+          var names = ["Enquête auprès des dirigeants", "Comptes sociaux", "Météo-France", "Déclarations en douane"], src = [[.12, .12], [.88, .12], [.12, .88], [.88, .88]];
+          for (var s = 0; s < 4; s++) label(names[s], a.x + src[s][0] * a.w, a.y + src[s][1] * a.h + a.h * .15, { align: "center" });
+          label("Fusion de quatre sources hétérogènes", a.x, a.y - 14);
+          return;
+        }
+        var g = this.g;
+        ctx.strokeStyle = "rgba(244,238,226,.3)"; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(g.x, g.y); ctx.lineTo(g.x, g.y + g.h); ctx.lineTo(g.x + g.w, g.y + g.h); ctx.stroke();
+        label("Ressources mobilisées", g.x + g.w, g.y + g.h + 20, { align: "right" });
+        ctx.save(); ctx.translate(g.x - 10, g.y); ctx.rotate(-Math.PI / 2); label("Performance durable", 0, 0, { align: "right" }); ctx.restore();
+        ctx.strokeStyle = "rgba(181,144,255,.55)"; ctx.lineWidth = 1.5; ctx.beginPath();
+        for (var q = 0; q < this.front.length; q++) { var p = this.map(this.front[q][0], this.front[q][1]); q ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); }
+        ctx.stroke();
+        var lp = this.map(.3, this.F(.3));
+        ctx.font = "600 13px 'Bricolage Grotesque', sans-serif";
+        if (lp[0] - 6 - ctx.measureText("Frontière d’efficience").width > g.x + 24) label("Frontière d’efficience", lp[0] - 6, lp[1] - 14, { align: "right", color: "rgba(181,144,255,1)" });
+        label("218 coopératives viticoles", a.x, a.y - 14);
+        if (pointer.on) {
+          var best = -1, bd = 196;
+          for (var i = 0; i < this.COOP; i++) { var dx = px[i] - pointer.x, dy = py[i] - pointer.y, d = dx * dx + dy * dy; if (d < bd) { bd = d; best = i; } }
+          if (best >= 0) {
+            var txt = "Efficience " + this.eff[best].toFixed(2).replace(".", ",");
+            ctx.font = "600 13px 'Bricolage Grotesque', sans-serif"; var tw = ctx.measureText(txt).width;
+            ctx.fillStyle = "rgba(244,238,226,.96)"; ctx.fillRect(px[best] + 10, py[best] - 30, tw + 16, 24);
+            label(txt, px[best] + 18, py[best] - 13, { color: "#0E1236" });
+            ctx.strokeStyle = "#F4EEE2"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(px[best], py[best], 7, 0, 6.283); ctx.stroke();
+          }
+        }
+      },
+      demo: [[4800, "action"]]
+    };
+
+    /* Chapitre 6 : argiles, maisons et arbre */
+    S.argile = {
+      enter: function () {
+        var scale = N / 1600, i = 0, q, h;
+        this.soil = Math.round(560 * scale); this.house = Math.round(64 * scale); this.trunk = Math.round(14 * scale); this.crown = Math.round(70 * scale); this.rain = Math.round(110 * scale);
+        for (q = 0; q < this.soil; q++, i++) { role[i] = 60; pb[i] = R(); pc[i] = q % 4 === 0 ? 0 : Math.pow(R(), .8); }
+        this.hx = [.08, .27, .46, .66, .93];
+        for (h = 0; h < 5; h++) for (q = 0; q < this.house; q++, i++) { role[i] = 61; pa[i] = h; pb[i] = q / this.house; }
+        for (q = 0; q < this.trunk; q++, i++) { role[i] = 62; pb[i] = q / this.trunk; }
+        for (q = 0; q < this.crown; q++, i++) { role[i] = 63; pb[i] = R() * 6.283; pc[i] = Math.sqrt(R()); }
+        for (q = 0; q < this.rain; q++, i++) { role[i] = 64; pb[i] = R(); pc[i] = R(); }
+        this.n = i; starsFrom(i);
+        this.hum = .55; this.mode = null; this.treeX = .795;
+        this.cracks = [.2, .42, .62, .8];
+        this.a = area(); this.tick(sceneTime, 0);
+        for (var j = 0; j < this.n; j++) { bx[j] = tx[j]; by[j] = ty[j]; }
+      },
+      surf: function (u, D) {
+        var a = this.a, y0 = a.y + a.h * .6, amp = a.h * .05;
+        var n = Math.sin(u * 9.1) * .5 + Math.sin(u * 23.7 + 1.3) * .3;
+        var tree = Math.exp(-Math.pow((u - this.treeX) / .09, 2));
+        return y0 - (1 - D) * amp * (.7 + .12 * n) + D * amp * (.5 + .12 * n + 1.9 * tree);
+      },
+      outline: function (t, w, hgt, roof) {
+        var dw = w * .13, dh = hgt * .55;
+        var segs = [[-w / 2, 0, w / 2, 0], [w / 2, 0, w / 2, -hgt], [w / 2, -hgt, 0, -hgt - roof], [0, -hgt - roof, -w / 2, -hgt], [-w / 2, -hgt, -w / 2, 0],
+                    [-dw, 0, -dw, -dh], [-dw, -dh, dw, -dh], [dw, -dh, dw, 0]];
+        var lens = [], tot = 0, k;
+        for (k = 0; k < segs.length; k++) { lens.push(Math.hypot(segs[k][2] - segs[k][0], segs[k][3] - segs[k][1])); tot += lens[k]; }
+        var d = t * tot;
+        for (k = 0; k < segs.length; k++) { if (d <= lens[k]) { var f = d / lens[k], s = segs[k]; return [s[0] + (s[2] - s[0]) * f, s[1] + (s[3] - s[1]) * f]; } d -= lens[k]; }
+        return [segs[0][0], segs[0][1]];
+      },
+      tick: function (t, dt) {
+        var a = this.a; if (!a) return;
+        var target = this.mode === "dry" ? 0 : this.mode === "wet" ? 1 : .5 + .45 * Math.sin(t * 2 * Math.PI / 11000);
+        this.hum += (target - this.hum) * Math.min(1, (dt || 16) * .0022);
+        var D = 1 - this.hum, bottom = a.y + a.h * .99, i, self = this;
+        var hw = a.w * .12, hh = a.h * .12, roof = a.h * .075;
+        this.tilt = [];
+        for (var h = 0; h < 5; h++) {
+          var u = this.hx[h];
+          var slope = (this.surf(u + .06, D) - this.surf(u - .06, D)) - (this.surf(u + .06, 0) - this.surf(u - .06, 0));
+          this.tilt.push(Math.atan2(slope, hw) * .3);
+        }
+        for (i = 0; i < this.n; i++) {
+          var r = role[i];
+          if (r === 60) {
+            var u0 = pb[i], s = this.surf(u0, D), x = a.x + u0 * a.w, y = s + 4 + pc[i] * (bottom - s - 4);
+            for (var c = 0; c < this.cracks.length; c++) {
+              var cxu = this.cracks[c], dist = u0 - cxu, depth = Math.max(0, 1 - pc[i] * 1.6);
+              if (Math.abs(dist) < .035) x += Math.sign(dist || 1) * D * depth * a.w * .012;
+            }
+            tx[i] = x; ty[i] = y;
+            tr[i] = C.clay[0] * (.75 + .25 * this.hum); tg[i] = C.clay[1] * (.7 + .3 * this.hum); tb[i] = C.clay[2] * (.65 + .35 * this.hum);
+            tsz[i] = 1.6; tal[i] = .5 + .3 * (1 - pc[i]);
+          } else if (r === 61) {
+            var hh0 = pa[i], uh = this.hx[hh0], base = this.surf(uh, D), p = this.outline(pb[i], hw, hh, roof), ang2 = this.tilt[hh0];
+            var cs = Math.cos(ang2), sn = Math.sin(ang2);
+            tx[i] = a.x + uh * a.w + p[0] * cs - p[1] * sn; ty[i] = base + p[0] * sn + p[1] * cs;
+            var vul = clamp(Math.abs(ang2) * 7, 0, 1) * D, col = mix(C.star, C.red, vul);
+            tr[i] = col[0]; tg[i] = col[1]; tb[i] = col[2]; tsz[i] = 1.8; tal[i] = .95;
+          } else if (r === 62) {
+            var ut = this.treeX, bt = this.surf(ut, D);
+            tx[i] = a.x + ut * a.w; ty[i] = bt - pb[i] * a.h * .2; setCol(i, C.clay); tsz[i] = 2; tal[i] = .9;
+          } else if (r === 63) {
+            var ut2 = this.treeX, bt2 = this.surf(ut2, D), rad = a.h * .078, sway = Math.sin(t * .0012) * 3;
+            tx[i] = a.x + ut2 * a.w + Math.cos(pb[i]) * pc[i] * rad + sway; ty[i] = bt2 - a.h * .22 - Math.sin(pb[i]) * pc[i] * rad * .8;
+            var lc = mix(C.leaf, C.gold, D * .8); tr[i] = lc[0]; tg[i] = lc[1]; tb[i] = lc[2]; tsz[i] = 1.9; tal[i] = .85;
+          } else if (r === 64) {
+            var fall = (pc[i] + t * .00055) % 1, ur = pb[i];
+            tx[i] = px[i] = a.x + ur * a.w; ty[i] = a.y - a.h * .05 + fall * (this.surf(ur, D) - a.y + a.h * .05);
+            py[i] = ty[i]; vx[i] = vy[i] = 0;
+            setCol(i, C.sky); tsz[i] = 1.4; tal[i] = Math.max(0, (this.hum - .55) * 2) * .8;
+          }
+        }
+      },
+      action: function () { this.mode = this.mode === "dry" ? "wet" : "dry"; return this.mode === "dry"; },
+      draw: function () {
+        var a = this.a; if (!a) return;
+        var gx = a.x, gy = a.y - 22, gw = Math.min(160, a.w * .4);
+        label("Humidité du sol", gx, gy);
+        ctx.fillStyle = "rgba(244,238,226,.15)"; ctx.fillRect(gx + 118, gy - 9, gw, 6);
+        ctx.fillStyle = "rgba(130,180,255,.95)"; ctx.fillRect(gx + 118, gy - 9, gw * this.hum, 6);
+        var D = 1 - this.hum;
+        var sx = W < 960 ? a.x : a.x + a.w, sy = W < 960 ? gy + 20 : gy, al2 = W < 960 ? "left" : "right";
+        if (this.hum > .66) label("Pluie : l’argile gonfle", sx, sy, { align: al2, color: "rgba(130,180,255,.95)" });
+        else if (D > .66) label(W < 960 ? "Sécheresse : le sol se fissure" : "Sécheresse : le sol se rétracte et se fissure", sx, sy, { align: al2, color: "rgba(255,90,95,.95)" });
+        if (D > .5) { var ux = a.x + (this.treeX) * a.w; label("Les racines assèchent le sol", ux, this.surf(this.treeX, D) - a.h * .36, { align: "center", size: 12, color: "rgba(244,238,226,.85)" }); }
+      },
+      demo: [[2400, "action"], [6400, "action"]]
+    };
+
+    /* Épilogue : une enveloppe */
+    S.fin = {
+      enter: function () {
+        var a = area(), w = Math.min(a.w * .62, a.h * 1.1), h = w * .62, x0 = a.x + (a.w - w) / 2, y0 = a.y + (a.h - h) / 2;
+        var segs = [[x0, y0, x0 + w, y0], [x0 + w, y0, x0 + w, y0 + h], [x0 + w, y0 + h, x0, y0 + h], [x0, y0 + h, x0, y0], [x0, y0, x0 + w / 2, y0 + h * .56], [x0 + w / 2, y0 + h * .56, x0 + w, y0]];
+        var P = Math.round(N * .42), tot = 0, lens = segs.map(function (s) { var l = Math.hypot(s[2] - s[0], s[3] - s[1]); tot += l; return l; });
+        for (var i = 0; i < P; i++) {
+          var d = (i / P) * tot, k = 0; while (d > lens[k]) { d -= lens[k]; k++; }
+          var s = segs[k], f = d / lens[k];
+          role[i] = 70; pa[i] = R() * 6.28;
+          setT(i, s[0] + (s[2] - s[0]) * f + gauss() * .8, s[1] + (s[3] - s[1]) * f + gauss() * .8, k > 3 ? C.gold : C.star, 1.6, .9);
+        }
+        var M = Math.round(N * .12);
+        for (var j = P; j < P + M; j++) { role[j] = 71; pa[j] = R() * 6.283; pb[j] = .55 + R() * .25; pc[j] = .4 + R(); setT(j, x0 + w / 2, y0 + h / 2, R() < .5 ? C.gold : C.rose, 1.4, .7); }
+        this.c = [x0 + w / 2, y0 + h / 2, w]; this.n = P + M; starsFrom(P + M);
+      },
+      tick: function (t) {
+        for (var i = 0; i < this.n; i++) if (role[i] === 71) {
+          var ang = pa[i] + t * .0003 * pc[i], r = this.c[2] * pb[i];
+          tx[i] = this.c[0] + Math.cos(ang) * r; ty[i] = this.c[1] + Math.sin(ang) * r * .55;
+        } else { tx[i] = bx[i] + Math.sin(t * .0012 + pa[i]) * 1.2; }
+      }
+    };
+
+    /* =========================================================
+       Moteur : physique, dessin, souris
+       ========================================================= */
+    var cur = null, curName = "", sceneTime = 0, last = 0, rafId = 0, running = false, storyOn = true;
+    var pointer = { x: -999, y: -999, on: false };
+
+    function resize() {
+      DPR = Math.min(2, window.devicePixelRatio || 1);
+      W = window.innerWidth; H = window.innerHeight;
+      canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      if (cur) { cur.enter(); }
+    }
+
+    function go(name) {
+      if (name === curName || !S[name]) return;
+      curName = name; cur = S[name]; sceneTime = 0;
+      var b = actionBtns[name];
+      if (b) b.querySelector("span").textContent = b._base;
+      cur.enter();
+      demoQueue = playing && cur.demo ? cur.demo.slice() : [];
+      if (reduce) for (var i = 0; i < N; i++) { px[i] = tx[i]; py[i] = ty[i]; vx[i] = vy[i] = 0; }
+    }
+
+    function frame(now) {
+      rafId = 0;
+      if (!running) return;
+      var dt = last ? Math.min(48, now - last) : 16; last = now;
+      sceneTime += dt;
+      if (demoQueue.length && sceneTime > demoQueue[0][0]) { demoQueue.shift(); runAction(curName); }
+      if (cur && cur.tick) cur.tick(sceneTime, dt);
+
+      var damp = .8, rad = W < 960 ? 60 : 95, rad2 = rad * rad, i;
+      for (i = 0; i < N; i++) {
+        if (role[i] === STAR) { tal[i] = pb[i] * (.55 + .45 * Math.sin(now * .0016 + pa[i])); }
+        if (reduce) { px[i] = tx[i]; py[i] = ty[i]; }
+        else {
+          vx[i] = (vx[i] + (tx[i] - px[i]) * kk[i]) * damp;
+          vy[i] = (vy[i] + (ty[i] - py[i]) * kk[i]) * damp;
+          if (pointer.on) {
+            var dx = px[i] - pointer.x, dy = py[i] - pointer.y, d2 = dx * dx + dy * dy;
+            if (d2 < rad2 && d2 > .01) { var d = Math.sqrt(d2), f = (1 - d / rad) * 2.2; vx[i] += dx / d * f; vy[i] += dy / d * f; }
+          }
+          px[i] += vx[i]; py[i] += vy[i];
+        }
+        cr[i] += (tr[i] - cr[i]) * .09; cg[i] += (tg[i] - cg[i]) * .09; cb[i] += (tb[i] - cb[i]) * .09;
+        sz[i] += (tsz[i] - sz[i]) * .1; al[i] += (tal[i] - al[i]) * .1;
       }
 
-      // Menu mobile
-      var toggle = document.querySelector(".nav-toggle");
-      var menu = document.getElementById("nav-menu");
-      function closeMenu() { menu.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false"); }
-      toggle.addEventListener("click", function () {
-        var open = menu.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-      menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
-
-      // Bordure de la barre de navigation après défilement
-      var nav = document.getElementById("nav");
-      function onScroll() { nav.classList.toggle("is-scrolled", window.scrollY > 8); }
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-
-      // Section active dans le menu
-      var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]'));
-      if ("IntersectionObserver" in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) {
-            if (!en.isIntersecting) return;
-            links.forEach(function (a) {
-              if (a.getAttribute("href") === "#" + en.target.id) a.setAttribute("aria-current", "true");
-              else a.removeAttribute("aria-current");
-            });
-          });
-        }, { rootMargin: "-45% 0px -50% 0px" });
-        ["top", "projets", "parcours", "competences", "contact"].forEach(function (id) {
-          var el = document.getElementById(id); if (el) io.observe(el);
-        });
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.fillStyle = reduce ? "rgba(0,0,0,1)" : "rgba(0,0,0,.34)";
+      ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "source-over";
+      for (i = 0; i < N; i++) {
+        var a = al[i]; if (a < .02) continue;
+        var key = (cr[i] | 0) << 16 | (cg[i] | 0) << 8 | (cb[i] | 0);
+        if (key !== colKey[i]) { colKey[i] = key; colStr[i] = "rgb(" + (cr[i] | 0) + "," + (cg[i] | 0) + "," + (cb[i] | 0) + ")"; }
+        ctx.globalAlpha = a; ctx.fillStyle = colStr[i];
+        var s = sz[i];
+        if (s < 1.3) ctx.fillRect(px[i] - s / 2, py[i] - s / 2, s, s);
+        else { ctx.beginPath(); ctx.arc(px[i], py[i], s, 0, 6.2832); ctx.fill(); }
       }
+      ctx.globalAlpha = 1;
+      if (cur && cur.draw) cur.draw();
+      rafId = requestAnimationFrame(frame);
+    }
+    function start() { if (running) return; running = true; last = 0; rafId = requestAnimationFrame(frame); }
+    function stop() { running = false; if (rafId) cancelAnimationFrame(rafId); rafId = 0; }
 
-      // Filtres de projets
-      var buttons = document.querySelectorAll(".filter");
-      var projects = document.querySelectorAll("#project-list .project");
-      buttons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          var f = btn.getAttribute("data-filter");
-          buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
-          projects.forEach(function (p) { p.hidden = f !== "all" && p.getAttribute("data-theme") !== f; });
+    /* ---------- Interactions ---------- */
+    window.addEventListener("pointermove", function (e) { if (e.pointerType === "touch") return; pointer.x = e.clientX; pointer.y = e.clientY; pointer.on = true; }, { passive: true });
+    document.addEventListener("mouseout", function (e) { if (!e.relatedTarget) pointer.on = false; });
+    window.addEventListener("blur", function () { pointer.on = false; });
+    document.getElementById("histoire").addEventListener("dblclick", function (e) {
+      if (e.target.closest("button, a")) return;
+      if (window.getSelection) window.getSelection().removeAllRanges();
+      for (var i = 0; i < N; i++) {
+        var dx = px[i] - e.clientX, dy = py[i] - e.clientY, d = Math.sqrt(dx * dx + dy * dy) + 1, f = 14 + Math.random() * 22;
+        vx[i] += dx / d * f; vy[i] += dy / d * f;
+      }
+    });
+
+    var actionBtns = {};
+    document.querySelectorAll("[data-action]").forEach(function (b) {
+      var name = b.getAttribute("data-action"); actionBtns[name] = b;
+      var span = b.querySelector("span"); b._base = span.textContent;
+      b.addEventListener("click", function () { if (curName !== name) go(name); runAction(name); });
+    });
+    function runAction(name) {
+      var sc = S[name]; if (!sc || !sc.action) return;
+      var state = sc.action();
+      var b = actionBtns[name];
+      if (b && b.hasAttribute("data-alt")) b.querySelector("span").textContent = state ? b.getAttribute("data-alt") : b._base;
+    }
+
+    /* ---------- Scènes pilotées par le défilement ---------- */
+    var scenes = Array.prototype.slice.call(document.querySelectorAll(".scene"));
+    var dotsBox = document.getElementById("rail-dots");
+    var names = ["Ouverture", "Ouagadougou", "Lyon", "La boîte noire", "Les hôpitaux", "Les coopératives", "Le BRGM", "La suite"];
+    var colors = ["#B590FF", "#F2B544", "#3CC8B4", "#FF7096", "#82B4FF", "#B590FF", "#E8975F", "#F2B544"];
+    var dots = scenes.map(function (sc, k) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "rail-dot"; b.style.setProperty("--c", colors[k]);
+      b.setAttribute("aria-label", "Aller à : " + names[k]);
+      b.innerHTML = '<span class="tip">' + names[k] + "</span>";
+      b.addEventListener("click", function () { stopPlay(); scrollToScene(k); });
+      dotsBox.appendChild(b); return b;
+    });
+    function activate(k) {
+      currentIdx = k;
+      if (!W) return;
+      var sc = scenes[k];
+      go(sc.getAttribute("data-scene"));
+      body.style.setProperty("--tint", sc.getAttribute("data-tint"));
+      dots.forEach(function (d, j) { if (j === k) d.setAttribute("aria-current", "step"); else d.removeAttribute("aria-current"); });
+      currentIdx = k;
+    }
+    var currentIdx = 0;
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) activate(scenes.indexOf(en.target)); });
+      }, { rootMargin: "-50% 0px -50% 0px" });
+      scenes.forEach(function (s) { io.observe(s); });
+
+      var dossier = document.getElementById("dossier");
+      var io2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          var dawn = en.isIntersecting || en.boundingClientRect.top < 0;
+          body.classList.toggle("dawn", dawn);
+          storyOn = !dawn;
+          if (dawn) stop(); else if (!document.hidden) start();
         });
-      });
+      }, { rootMargin: "0px 0px -12% 0px" });
+      io2.observe(dossier);
+      var navTick = 0;
+      var checkNav = function () { navTick = 0; body.classList.toggle("day", dossier.getBoundingClientRect().top <= 64 + window.innerHeight * .15); };
+      window.addEventListener("scroll", function () { if (!navTick) navTick = requestAnimationFrame(checkNav); }, { passive: true });
+      checkNav();
+    }
+    document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (storyOn) start(); });
 
-      document.getElementById("year").textContent = new Date().getFullYear();
-    })();
+    function scrollToScene(k) {
+      var el = scenes[k];
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: reduce ? "auto" : "smooth" });
+    }
+
+    /* ---------- Mode film ---------- */
+    var playing = false, playTimer = 0, demoQueue = [], playStart = 0, playTotal = 0, playIdx = 0, progressRaf = 0;
+    var durations = [4200, 8800, 8800, 8800, 8800, 8800, 9600, 4800];
+    var progressEl = document.getElementById("rail-progress");
+    function playFrom(k) {
+      playing = true; body.classList.add("is-playing"); playIdx = k;
+      playTotal = durations.slice(k).reduce(function (s, v) { return s + v; }, 0); playStart = performance.now();
+      document.querySelectorAll("[data-play]").forEach(function (b) { b.setAttribute("aria-pressed", "true"); });
+      stepPlay();
+      tickProgress();
+    }
+    function stepPlay() {
+      if (!playing) return;
+      if (playIdx >= scenes.length) { stopPlay(); document.getElementById("projets").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); return; }
+      var k = playIdx;
+      if (currentIdx === k) { curName = ""; activate(k); }
+      else scrollToScene(k);
+      playTimer = setTimeout(function () { playIdx++; stepPlay(); }, durations[k]);
+    }
+    function tickProgress() {
+      if (!playing) return;
+      var p = Math.min(1, (performance.now() - playStart) / playTotal);
+      progressEl.style.width = (p * 100).toFixed(1) + "%";
+      progressRaf = requestAnimationFrame(tickProgress);
+    }
+    function stopPlay() {
+      if (!playing) return;
+      playing = false; clearTimeout(playTimer); cancelAnimationFrame(progressRaf); demoQueue = [];
+      body.classList.remove("is-playing"); progressEl.style.width = "0";
+      document.querySelectorAll("[data-play]").forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
+    }
+    document.querySelectorAll("[data-play]").forEach(function (b) {
+      b.setAttribute("aria-pressed", "false");
+      b.addEventListener("click", function (e) { e.stopPropagation(); if (playing) stopPlay(); else playFrom(currentIdx >= scenes.length - 1 ? 0 : currentIdx); });
+    });
+    ["wheel", "touchstart"].forEach(function (ev) { window.addEventListener(ev, function () { stopPlay(); }, { passive: true }); });
+    window.addEventListener("keydown", function (e) {
+      if (e.target.closest && e.target.closest("[data-play]") && (e.key === "Enter" || e.key === " ")) return;
+      stopPlay();
+    });
+
+    /* ---------- Menu mobile ---------- */
+    var toggle = document.querySelector(".nav-toggle"), menu = document.getElementById("nav-menu");
+    function closeMenu() { menu.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false"); }
+    toggle.addEventListener("click", function () { var open = menu.classList.toggle("is-open"); toggle.setAttribute("aria-expanded", open ? "true" : "false"); });
+    menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+
+    /* ---------- Filtres de projets ---------- */
+    var fbtns = document.querySelectorAll(".filter"), projects = document.querySelectorAll("#project-list .project");
+    fbtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var f = btn.getAttribute("data-filter");
+        fbtns.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+        projects.forEach(function (p) { p.hidden = f !== "all" && p.getAttribute("data-theme") !== f; });
+      });
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    /* ---------- Démarrage : big bang puis prénom ---------- */
+    function boot() {
+      resize();
+      for (var i = 0; i < N; i++) {
+        var ang = Math.random() * 6.283, sp = 2 + Math.random() * 14;
+        px[i] = W * .7; py[i] = H * .5; vx[i] = Math.cos(ang) * sp; vy[i] = Math.sin(ang) * sp; sz[i] = 1; al[i] = 0;
+      }
+      if (W < 960) { for (var j = 0; j < N; j++) { px[j] = W / 2; py[j] = H * .3; } }
+      activate(currentIdx);
+      start();
+    }
+    var rt = 0;
+    window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(resize, 150); });
+    var fontsReady = document.fonts && document.fonts.load ? Promise.race([document.fonts.load("800 80px 'Bricolage Grotesque'"), new Promise(function (r) { setTimeout(r, 1500); })]) : Promise.resolve();
+    fontsReady.then(boot, boot);
+
+    try {
+      console.log("%cChaque point a une histoire.", "font: 700 18px sans-serif; color: #B590FF");
+      console.log("Vous lisez le code ? On a sûrement des choses à se dire : wendyamtiemtore@gmail.com");
+    } catch (e) {}
+  })();
   </script>
 </body>
 </html>
