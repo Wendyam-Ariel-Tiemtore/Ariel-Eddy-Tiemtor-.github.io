@@ -125,7 +125,6 @@
       transition: opacity .6s;
     }
     #stage { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; transition: opacity .6s; }
-    body.dawn .aura, body.dawn #stage { opacity: 0; }
 
     /* ---------- Navigation ---------- */
     .site-nav { position: fixed; inset: 0 0 auto 0; z-index: 60; transition: background-color .3s, color .3s, box-shadow .3s; }
@@ -136,9 +135,6 @@
     .nav-menu a:hover { opacity: 1; text-decoration: underline; }
     .nav-menu .nav-cv { opacity: 1; padding: .45rem .85rem; border: 1.5px solid currentColor; border-radius: 999px; display: inline-flex; gap: .45rem; align-items: center; }
     .nav-menu .nav-cv:hover { text-decoration: none; background: var(--star); color: var(--night); border-color: var(--star); }
-    body.day .site-nav { background: rgba(241, 243, 250, .92); color: var(--ink); box-shadow: 0 1px 0 var(--rule); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
-    body.day .nav-menu .nav-cv:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-    body.day :focus-visible { outline-color: var(--ink); }
     .nav-toggle { display: none; }
     @media (max-width: 60rem) {
       .nav-toggle {
@@ -149,11 +145,9 @@
         position: absolute; inset: var(--nav-h) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
         padding: .5rem var(--gutter) 1.25rem; background: var(--night-2); color: var(--star); border-bottom: 1px solid var(--line);
       }
-      body.day .nav-menu { background: var(--paper); color: var(--ink); border-bottom-color: var(--rule); }
       .js .nav-menu { display: none; }
       .js .nav-menu.is-open { display: flex; }
       .nav-menu a { padding: .8rem 0; font-size: 1.05rem; border-bottom: 1px solid var(--line); opacity: 1; }
-      body.day .nav-menu a { border-bottom-color: var(--rule); }
       .nav-menu .nav-cv { margin-top: 1rem; justify-content: center; border-radius: 999px; }
     }
 
@@ -234,7 +228,6 @@
       -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
       transition: opacity .4s, transform .4s;
     }
-    body.dawn .rail { opacity: 0; pointer-events: none; transform: translate(-50%, 1rem); }
     .rail-play {
       display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
       height: 2.3rem; padding: 0 .95rem 0 .8rem; border-radius: 999px; border: 0; cursor: pointer;
@@ -271,121 +264,114 @@
           linear-gradient(to bottom, var(--night) 0, var(--night) 86%, rgba(14, 18, 54, 0));
         transition: opacity .6s;
       }
-      body.dawn .viz-shield { opacity: 0; }
       #stage { z-index: 3; }
       .scene, .scene.hero { align-items: flex-start; padding-top: 50svh; padding-bottom: 6.5rem; }
       .card { background: rgba(23, 28, 77, .55); -webkit-backdrop-filter: none; backdrop-filter: none; }
       .story-text { font-size: 1.08rem; }
       .hero .story-text { font-size: 1.15rem; }
       .rail { left: .75rem; right: .75rem; transform: none; justify-content: space-between; bottom: .75rem; }
-      body.dawn .rail { transform: translateY(1rem); }
       .rail-dot { width: 1.25rem; }
       .rail-dot .tip { display: none; }
     }
     @media (max-width: 24rem) { .rail-play .lbl { display: none; } .rail-play { padding: 0 .8rem; } }
 
-    /* ---------- Dossier (le jour se lève) ---------- */
-    .dossier { position: relative; z-index: 2; background: var(--paper); color: var(--ink); }
-    .dossier::before {
-      content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 38vh; pointer-events: none;
-      background: linear-gradient(to bottom, rgba(241, 243, 250, 0), rgba(242, 181, 68, .10) 55%, var(--paper));
-    }
-    .dossier a { color: var(--sky-d); }
-    .dossier :focus-visible { outline-color: var(--ink); }
-    .section { padding: clamp(3.5rem, 8vw, 6.5rem) 0; }
-    .section + .section { border-top: 1px solid var(--rule); }
-    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: .9rem 2rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
-    .section-head h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem); line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; letter-spacing: -.015em; }
-    .section-lede { grid-column: 1; max-width: 40rem; color: var(--muted); font-family: var(--serif); font-size: 1.15rem; }
-    .section-head .aside-link { grid-column: 2; grid-row: 1 / span 2; align-self: end; display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; font-size: .95rem; }
-    @media (max-width: 40rem) { .section-head { grid-template-columns: 1fr; } .section-head .aside-link { grid-column: 1; grid-row: auto; } }
-
-    .filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2.25rem; }
-    .filter {
-      display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .9rem; cursor: pointer;
-      border: 1.5px solid var(--rule); border-radius: 999px; background: var(--surface); color: var(--ink-2); font-weight: 500; font-size: .9rem;
-    }
-    .filter:hover { border-color: var(--ink-2); }
-    .filter[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
-    .filter .n { opacity: .65; font-variant-numeric: tabular-nums; }
-    .filter .dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--c); }
-
-    .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem); }
-    @media (max-width: 52rem) { .projects { grid-template-columns: 1fr; } }
-    .project { display: flex; flex-direction: column; }
-    .project[hidden] { display: none; }
-    .project-media { overflow: hidden; border-radius: 14px; border: 1px solid var(--rule); background: var(--surface); }
-    .project-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 0; transition: transform .5s; }
-    .project:hover .project-media img { transform: scale(1.025); }
-    .project-theme { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem; font-size: .9rem; font-weight: 600; color: var(--c); }
-    .project-theme::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: currentColor; }
-    .project h3 { margin-top: .3rem; font-size: 1.4rem; line-height: 1.15; font-weight: 700; font-variation-settings: "wdth" 88; }
-    .project-desc { margin-top: .5rem; color: var(--ink-2); font-family: var(--serif); font-size: 1.1rem; max-width: 36rem; }
-    .project-result { margin-top: .9rem; padding: .55rem .85rem; border-left: 3px solid var(--c); background: var(--surface); border-radius: 0 8px 8px 0; font-size: .95rem; }
-    .project-points { margin-top: .9rem; display: grid; gap: .4rem; font-size: .95rem; color: var(--ink-2); }
-    .project-points li, .tl-points li { position: relative; padding-left: 1.05rem; }
-    .project-points li::before, .tl-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .45rem; height: .45rem; border-radius: 50%; border: 1.5px solid var(--muted); }
-    .project-points b, .tl-points b { color: var(--ink); font-weight: 600; }
-    .project-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem; margin-top: auto; padding-top: 1.1rem; }
-    .project-foot a { display: inline-flex; align-items: center; gap: .4rem; font-size: .95rem; font-weight: 600; }
-    .chips { display: flex; flex-wrap: wrap; gap: .35rem; }
-    .chips li { padding: .16rem .6rem; border-radius: 999px; background: #E3E7F5; color: var(--ink-2); font-size: .82rem; font-weight: 500; white-space: nowrap; }
-    .t-xai { --c: var(--rose-d); } .t-robust { --c: var(--sky-d); } .t-stats { --c: var(--gold-d); } .t-optim { --c: var(--teal-d); }
-
-    .path-cols { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(2.5rem, 6vw, 5rem); }
-    @media (max-width: 52rem) { .path-cols { grid-template-columns: 1fr; } }
-    .col-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; }
-    .timeline { position: relative; display: grid; gap: 2.25rem; }
-    .timeline::before { content: ""; position: absolute; left: .32rem; top: .5rem; bottom: .5rem; width: 2px; background: var(--rule); }
-    .tl-item { position: relative; padding-left: 1.9rem; }
-    .tl-item::before { content: ""; position: absolute; left: 0; top: .4rem; width: .8rem; height: .8rem; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); }
-    .tl-item.is-current::before { background: var(--clay-d); border-color: var(--clay-d); box-shadow: 0 0 0 4px rgba(232, 151, 95, .3); }
-    .tl-date { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .9rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-    .badge { padding: .05rem .55rem; border-radius: 999px; background: #F9E3D4; color: #7E3A16; font-size: .78rem; font-weight: 700; }
-    .tl-item h4 { margin-top: .3rem; font-size: 1.2rem; line-height: 1.25; font-weight: 700; }
-    .tl-org { margin-top: .2rem; color: var(--ink-2); font-weight: 500; }
-    .tl-points { margin-top: .75rem; display: grid; gap: .45rem; color: var(--ink-2); font-size: .95rem; }
-    .tl-note { margin-top: .5rem; color: var(--muted); font-size: .9rem; }
-    .tl-link { display: inline-flex; align-items: center; gap: .4rem; margin-top: .75rem; font-size: .95rem; font-weight: 600; }
-
-    .skills { border-top: 1px solid var(--rule); }
-    .skill-row { display: grid; grid-template-columns: minmax(12rem, 17rem) minmax(0, 1fr); gap: .75rem 2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
-    .skill-row dt { font-size: 1.1rem; font-weight: 700; }
-    .skill-row dd { margin: 0; }
-    .skill-row .chips li { font-size: .88rem; padding: .25rem .7rem; background: var(--surface); border: 1px solid var(--rule); }
-    @media (max-width: 40rem) { .skill-row { grid-template-columns: 1fr; } }
-
-    .contact { position: relative; z-index: 2; background: var(--night); color: #DCE0F2; }
-    .contact a { color: #fff; }
-    body .contact :focus-visible { outline-color: #fff; }
-    .contact-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
-    @media (max-width: 52rem) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact h2 { font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem); line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; color: #fff; }
-    .contact-intro { margin-top: .9rem; max-width: 34rem; font-family: var(--serif); font-size: 1.2rem; }
-    .contact-email { display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.6rem; font-size: clamp(1.2rem, 1rem + 1.2vw, 1.75rem); font-weight: 600; word-break: break-all; }
-    .contact-links { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin-top: 1.4rem; }
-    .contact-links a { display: inline-flex; align-items: center; gap: .5rem; font-weight: 600; text-decoration: none; }
-    .contact-links a:hover { text-decoration: underline; }
-    .docs h3 { font-size: 1.05rem; color: #fff; margin-bottom: .75rem; }
-    .docs ul { border-top: 1px solid var(--line); }
-    .docs li { border-bottom: 1px solid var(--line); }
-    .docs a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 0; text-decoration: none; }
-    .docs a span { display: block; }
-    .docs a small { display: block; color: var(--mist); font-size: .85rem; margin-top: .1rem; }
-    .docs a:hover span:first-child { text-decoration: underline; }
     .site-foot { position: relative; z-index: 2; background: var(--night); color: var(--mist); font-size: .88rem; border-top: 1px solid var(--line); }
     .site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; padding: 1.4rem 0; }
     .site-foot a { color: var(--star); }
 
+
+    /* ---------- Chapitres interactifs ---------- */
+    .card-wide { width: min(34rem, 100%); }
+    .nav-menu .nav-static { opacity: 1; display: inline-flex; align-items: center; gap: .4rem; padding: .45rem .85rem; border-radius: 999px; background: rgba(244, 238, 226, .1); }
+    .nav-menu .nav-static:hover { background: rgba(244, 238, 226, .2); text-decoration: none; }
+    .hero-hint a { color: var(--star); font-weight: 600; }
+    .k-xai { --c: var(--rose); } .k-robust { --c: var(--sky); } .k-stats { --c: var(--gold); } .k-optim { --c: var(--teal); }
+    .chip-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1.1rem; }
+    .chip-btn {
+      display: inline-flex; align-items: center; gap: .45rem; padding: .38rem .8rem; cursor: pointer;
+      border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--star); font-size: .86rem; font-weight: 600;
+    }
+    .chip-btn .dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--c, var(--star)); }
+    .chip-btn:hover { border-color: var(--c, var(--star)); }
+    .chip-btn[aria-pressed="true"] { background: var(--c, var(--star)); border-color: var(--c, var(--star)); color: var(--night); }
+    .chip-btn[aria-pressed="true"] .dot { background: var(--night); }
+    .proj-list { margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: .35rem; }
+    .proj-list li[hidden] { display: none; }
+    .proj-list button {
+      display: flex; align-items: flex-start; gap: .5rem; width: 100%; height: 100%; text-align: left; cursor: pointer;
+      padding: .5rem .65rem; border-radius: 10px; border: 1px solid var(--line); background: rgba(244, 238, 226, .03);
+      color: var(--star); font-size: .86rem; font-weight: 500; line-height: 1.25;
+    }
+    .proj-list button::before { content: ""; flex: none; width: .55rem; height: .55rem; margin-top: .3rem; border-radius: 50%; background: var(--c); }
+    .proj-list button:hover, .proj-list button:focus-visible, .proj-list button.is-hot { border-color: var(--c); background: rgba(244, 238, 226, .09); }
+    @media (max-width: 30rem) { .proj-list { grid-template-columns: 1fr; } }
+
+    .pdialog {
+      width: min(46rem, calc(100% - 1.5rem)); max-height: calc(100svh - 1.5rem); padding: 0; overflow: auto;
+      border: 1px solid var(--line); border-radius: 22px; background: var(--night-2); color: var(--star);
+    }
+    .pdialog::backdrop { background: rgba(6, 8, 28, .72); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+    .pd-media { background: #fff; }
+    .pd-media img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 0; }
+    .pd-body { padding: 1.3rem clamp(1.1rem, 3vw, 1.8rem) 1.6rem; }
+    .pd-theme { display: inline-flex; align-items: center; gap: .45rem; font-size: .9rem; font-weight: 600; color: var(--c); }
+    .pd-theme::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: currentColor; }
+    .pd-body h3 { margin-top: .35rem; font-size: clamp(1.4rem, 1.1rem + 1.3vw, 1.9rem); line-height: 1.1; font-weight: 800; font-variation-settings: "wdth" 84; }
+    .pd-desc { margin-top: .6rem; font-family: var(--serif); font-size: 1.15rem; color: #E6E2EE; }
+    .pd-result { margin-top: .9rem; padding: .55rem .85rem; border-left: 3px solid var(--c); background: rgba(244, 238, 226, .06); border-radius: 0 8px 8px 0; font-size: .95rem; }
+    .pd-result[hidden] { display: none; }
+    .pd-points { margin-top: .9rem; display: grid; gap: .45rem; font-size: .95rem; color: #DCE0F2; }
+    .pd-points li { position: relative; padding-left: 1.05rem; }
+    .pd-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .45rem; height: .45rem; border-radius: 50%; border: 1.5px solid var(--c); }
+    .pd-points b { color: var(--star); }
+    .pd-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 1rem; }
+    .pd-chips li { padding: .16rem .6rem; border-radius: 999px; background: rgba(244, 238, 226, .1); font-size: .82rem; font-weight: 500; }
+    .pd-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .pd-foot a { display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; }
+    .pd-foot a[hidden] { display: none; }
+    .pd-nav { display: flex; gap: .5rem; }
+    .pd-nav button, .pd-close {
+      cursor: pointer; border: 1px solid var(--line); background: rgba(244, 238, 226, .06); color: var(--star);
+      border-radius: 999px; padding: .45rem .85rem; font-size: .88rem; font-weight: 600;
+    }
+    .pd-nav button:hover, .pd-close:hover { background: rgba(244, 238, 226, .16); }
+    .pd-close { position: absolute; top: .7rem; right: .7rem; background: rgba(14, 18, 54, .85); }
+
+    .skill-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: 1rem; min-height: 4.5rem; align-content: flex-start; }
+    .skill-chips li { padding: .22rem .65rem; border-radius: 999px; border: 1px solid var(--line); background: rgba(244, 238, 226, .05); font-size: .86rem; font-weight: 500; }
+
+    .year-ctl { margin-top: 1.2rem; }
+    .year-ctl .yl { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; font-weight: 600; font-size: .9rem; color: var(--mist); }
+    .year-ctl output { font-size: 1.9rem; line-height: 1; font-weight: 800; color: var(--star); font-variant-numeric: tabular-nums; font-variation-settings: "wdth" 80; }
+    .year-ctl input { width: 100%; margin-top: .6rem; accent-color: var(--clay); cursor: pointer; }
+    .year-scale { display: flex; justify-content: space-between; font-size: .78rem; color: var(--mist); font-variant-numeric: tabular-nums; }
+    .events { margin-top: .9rem; display: grid; gap: .45rem; min-height: 7.5rem; align-content: start; }
+    .events li { padding: .5rem .75rem; border-left: 3px solid var(--c); background: rgba(244, 238, 226, .05); border-radius: 0 8px 8px 0; font-size: .9rem; color: var(--mist); }
+    .events li b { display: block; color: var(--star); font-size: .95rem; font-weight: 600; }
+    .events .ev-gap { border-left-color: var(--line); font-style: italic; }
+
+    .ctiles { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-top: 1.3rem; }
+    .ctile {
+      display: flex; align-items: center; gap: .65rem; padding: .7rem .8rem; border-radius: 12px; text-decoration: none;
+      border: 1px solid var(--line); background: rgba(244, 238, 226, .04); color: var(--star); font-weight: 600; font-size: .92rem; line-height: 1.2;
+    }
+    .ctile small { display: block; font-weight: 500; font-size: .78rem; color: var(--mist); margin-top: .1rem; }
+    .ctile .icon { width: 1.25rem; height: 1.25rem; }
+    .ctile:hover, .ctile:focus-visible { border-color: var(--gold); background: rgba(244, 238, 226, .1); }
+    .ctile.wide { grid-column: 1 / -1; background: var(--star); color: var(--night); border-color: var(--star); }
+    .ctile.wide small { color: var(--ink-2); }
+    .ctile.wide:hover { background: #fff; }
+    .ctile.static { grid-column: 1 / -1; border-style: dashed; }
+    @media (max-width: 26rem) { .ctiles { grid-template-columns: 1fr; } }
+
     @media (prefers-reduced-motion: reduce) {
       body, .aura, #stage, .rail { transition: none !important; }
-      .project-media img { transition: none; }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#projets">Aller directement aux projets</a>
+  <a class="skip-link" href="statique.html">Passer à la version statique</a>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-github" viewbox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></symbol>
@@ -396,6 +382,7 @@
     <symbol id="i-code" viewbox="0 0 16 16"><path d="m5.03 3.97 1.06 1.06L3.12 8l2.97 2.97-1.06 1.06L1 8l4.03-4.03Zm5.94 0L15 8l-4.03 4.03-1.06-1.06L12.88 8 9.91 5.03l1.06-1.06Z"></path></symbol>
     <symbol id="i-play" viewBox="0 0 16 16"><path d="M4 2.5v11a.5.5 0 0 0 .77.42l8.5-5.5a.5.5 0 0 0 0-.84l-8.5-5.5A.5.5 0 0 0 4 2.5Z"/></symbol>
     <symbol id="i-pause" viewBox="0 0 16 16"><path d="M4 2h3v12H4V2Zm5 0h3v12H9V2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 16 16"><path d="M8 0a5.5 5.5 0 0 0-5.5 5.5C2.5 9.6 8 16 8 16s5.5-6.4 5.5-10.5A5.5 5.5 0 0 0 8 0Zm0 7.8a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6Z"/></symbol>
     <symbol id="i-spark" viewBox="0 0 16 16"><path d="M8 0l1.6 5.2L15 7l-5.4 1.8L8 14 6.4 8.8 1 7l5.4-1.8L8 0Z"/></symbol>
   </svg>
 
@@ -410,10 +397,11 @@
       <nav aria-label="Navigation principale">
         <div class="nav-menu" id="nav-menu">
           <a href="#prologue">L’histoire</a>
-          <a href="#projets">Projets</a>
-          <a href="#parcours">Parcours</a>
-          <a href="#contact">Contact</a>
-          <a href="classique.html">Version classique</a>
+          <a href="#ch-labo">Projets</a>
+          <a href="#ch-outils">Compétences</a>
+          <a href="#ch-carte">Parcours</a>
+          <a href="#ch-contact">Contact</a>
+          <a class="nav-static" href="statique.html">Version statique</a>
           <a class="nav-cv" href="cv_Ariel_data.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV</a>
         </div>
       </nav>
@@ -429,12 +417,12 @@
           <div class="card hero-card">
             <p class="hero-who"><strong>Ariel Eddy TIEMTORE</strong>, data scientist et statisticien-démographe</p>
             <h1 id="t-prologue">Chaque point a une histoire.</h1>
-            <p class="story-text">Voici la mienne, racontée par 1 600 points de données qui changent de forme à chaque étape.</p>
+            <p class="story-text">Voici la mienne, racontée par <span data-n>1 600</span> points de données qui changent de forme à chaque étape.</p>
             <div class="hero-actions">
-              <button class="btn btn-play" type="button" data-play><svg aria-hidden="true"><use href="#i-play"/></svg> Regarder l’histoire <small>1 min</small></button>
+              <button class="btn btn-play" type="button" data-play><svg aria-hidden="true"><use href="#i-play"/></svg> Regarder l’histoire <small>1 min 30</small></button>
               <a class="btn btn-ghost" href="#ch-ouaga">Défiler à mon rythme</a>
             </div>
-            <p class="hero-hint">Les points réagissent à votre souris. Un double-clic les fait exploser.</p>
+            <p class="hero-hint">Les points réagissent à votre souris, un double-clic les fait exploser. Pressé ? <a href="statique.html">La version statique</a> va droit au but.</p>
           </div>
         </div>
       </section>
@@ -523,16 +511,87 @@
         </div>
       </section>
 
-      <!-- Épilogue -->
-      <section class="scene epilogue" id="ch-suite" data-scene="fin" data-tint="#F2B544" aria-labelledby="t-suite">
+      <!-- Chapitre 7 : les projets -->
+      <section class="scene c-rose" id="ch-labo" data-scene="labo" data-tint="#FF7096" aria-labelledby="t-labo">
+        <div class="wrap">
+          <article class="card card-wide">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">7</span><span class="chap-where">Le laboratoire</span></p>
+            <h2 id="t-labo">Dix projets, dix constellations</h2>
+            <p class="story-text">Chaque amas de points est un projet. Survolez-le pour le reconnaître, cliquez pour l’ouvrir, ou choisissez-le dans la liste.</p>
+            <div class="chip-row" role="group" aria-label="Filtrer les projets par thème">
+              <button class="chip-btn" type="button" data-theme-filter="all" aria-pressed="true">Tous</button>
+              <button class="chip-btn k-xai" type="button" data-theme-filter="xai" aria-pressed="false"><span class="dot" aria-hidden="true"></span>IA explicable</button>
+              <button class="chip-btn k-robust" type="button" data-theme-filter="robust" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Robustesse et confidentialité</button>
+              <button class="chip-btn k-stats" type="button" data-theme-filter="stats" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Statistique et démographie</button>
+              <button class="chip-btn k-optim" type="button" data-theme-filter="optim" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Optimisation et finance</button>
+            </div>
+            <ul class="proj-list" id="proj-list">
+              <li><button type="button" class="k-robust" data-proj="0">Apprentissage fédéré sécurisé</button></li>
+              <li><button type="button" class="k-robust" data-proj="1">Machine learning robuste : Median of Means et entraînement adversarial</button></li>
+              <li><button type="button" class="k-xai" data-proj="2">Grad-CAM sur ResNet50</button></li>
+              <li><button type="button" class="k-xai" data-proj="3">Integrated Gradients sur DistilBERT</button></li>
+              <li><button type="button" class="k-xai" data-proj="4">SHAP et contrefactuels DiCE</button></li>
+              <li><button type="button" class="k-xai" data-proj="5">Layer-wise Relevance Propagation sur graphes</button></li>
+              <li><button type="button" class="k-stats" data-proj="6">Démographie, épidémiologie et santé publique</button></li>
+              <li><button type="button" class="k-stats" data-proj="7">Statistique bayésienne et inférence MCMC</button></li>
+              <li><button type="button" class="k-optim" data-proj="8">Problèmes inverses : restauration d’images avec TwIST</button></li>
+              <li><button type="button" class="k-optim" data-proj="9">Trading algorithmique multi-modal</button></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 8 : les compétences -->
+      <section class="scene c-teal" id="ch-outils" data-scene="outils" data-tint="#3CC8B4" aria-labelledby="t-outils">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">8</span><span class="chap-where">La boîte à outils</span></p>
+            <h2 id="t-outils">Cinq familles d’outils</h2>
+            <p class="story-text">Toutes les méthodes croisées en chemin. Choisissez une famille : ses outils s’allument et viennent au centre de la constellation.</p>
+            <div class="chip-row" role="group" aria-label="Choisir une famille de compétences">
+              <button class="chip-btn" type="button" data-domain="0" aria-pressed="true" style="--c:var(--rose)"><span class="dot" aria-hidden="true"></span>IA explicable</button>
+              <button class="chip-btn" type="button" data-domain="1" aria-pressed="false" style="--c:var(--teal)"><span class="dot" aria-hidden="true"></span>Machine learning</button>
+              <button class="chip-btn" type="button" data-domain="2" aria-pressed="false" style="--c:var(--grape)"><span class="dot" aria-hidden="true"></span>NLP et LLM</button>
+              <button class="chip-btn" type="button" data-domain="3" aria-pressed="false" style="--c:var(--gold)"><span class="dot" aria-hidden="true"></span>Statistique</button>
+              <button class="chip-btn" type="button" data-domain="4" aria-pressed="false" style="--c:var(--clay)"><span class="dot" aria-hidden="true"></span>Données et outils</button>
+            </div>
+            <ul class="skill-chips" id="skill-chips" aria-live="polite"><li>SHAP</li><li>DiCE</li><li>Grad-CAM</li><li>Integrated Gradients</li><li>LRP et GNN-LRP</li><li>Differential privacy</li><li>Apprentissage fédéré (SCAFFOLD)</li><li>Fairness</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 9 : le parcours -->
+      <section class="scene c-clay" id="ch-carte" data-scene="carte" data-tint="#E8975F" aria-labelledby="t-carte">
+        <div class="wrap">
+          <article class="card">
+            <p class="chap-mark"><span class="chap-num" aria-hidden="true">9</span><span class="chap-where">Le parcours</span></p>
+            <h2 id="t-carte">De Ouagadougou à Orléans</h2>
+            <p class="story-text">Faites glisser les années : le point suit mon parcours sur la carte, et chaque diplôme et chaque poste s’affiche à son moment.</p>
+            <div class="year-ctl">
+              <div class="yl"><label for="year-range">Année</label> <output id="year-out" for="year-range">2026</output></div>
+              <input type="range" id="year-range" min="2018" max="2027.75" step="0.05" value="2026.85" />
+              <div class="year-scale" aria-hidden="true"><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>2026</span></div>
+            </div>
+            <ul class="events" id="events" aria-live="polite"></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Chapitre 10 : contact -->
+      <section class="scene" id="ch-contact" data-scene="fin" data-tint="#F2B544" aria-labelledby="t-suite">
         <div class="wrap">
           <div class="card">
-            <p class="chap-mark c-gold"><span class="chap-num" aria-hidden="true">7</span><span class="chap-where">La suite</span></p>
+            <p class="chap-mark c-gold"><span class="chap-num" aria-hidden="true">10</span><span class="chap-where">La suite</span></p>
             <h2 id="t-suite">Le prochain chapitre s’écrit à plusieurs.</h2>
             <p class="story-text">Je mets la donnée au service de décisions qui comptent : santé, territoires, risques naturels. Si votre équipe a un problème de ce genre, parlons-en.</p>
-            <div class="epilogue-actions">
-              <a class="btn btn-play" href="mailto:wendyamtiemtore@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg> M’écrire</a>
-              <a class="btn btn-ghost" href="#projets">Voir les projets en détail</a>
+            <div class="ctiles">
+              <a class="ctile wide" href="mailto:wendyamtiemtore@gmail.com" data-glyph="@"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>M’écrire<small>wendyamtiemtore@gmail.com</small></span></a>
+              <a class="ctile" href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank" rel="noopener" data-glyph="in"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
+              <a class="ctile" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener" data-glyph="&lt;/&gt;"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a>
+              <a class="ctile" href="cv_Ariel_data.pdf" target="_blank" rel="noopener" data-glyph="CV"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span>CV<small>PDF, une page</small></span></a>
+              <a class="ctile" href="Rapport_de_stage_M1_TIEMTORE.pdf" target="_blank" rel="noopener" data-glyph="M1"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Rapport de Master 1<small>France Travail, 2025</small></span></a>
+              <a class="ctile" href="Rapport_de_stage_L3_TIEMTORE.pdf" target="_blank" rel="noopener" data-glyph="L3"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Rapport de Licence<small>URC Nanoro, 2022</small></span></a>
+              <a class="ctile" href="statique.html" data-glyph="II"><svg class="icon" aria-hidden="true"><use href="#i-pause"/></svg><span>Version statique<small>Tout en une page, sans animation</small></span></a>
             </div>
           </div>
         </div>
@@ -547,328 +606,29 @@
       <span class="rail-bar" aria-hidden="true"><i id="rail-progress"></i></span>
     </div>
 
-    <!-- ================= LE DOSSIER ================= -->
-    <div class="dossier" id="dossier">
-      <section class="section" id="projets" aria-labelledby="projets-titre">
-        <div class="wrap">
-          <header class="section-head">
-            <h2 id="projets-titre">Projets</h2>
-            <p class="section-lede">Le jour se lève sur le détail : dix projets en IA explicable, apprentissage robuste et confidentiel, statistique et optimisation.</p>
-            <a class="aside-link" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Tout le code sur GitHub</a>
-          </header>
-          <div aria-label="Filtrer les projets par thème" class="filters" role="group">
-<button aria-pressed="true" class="filter" data-filter="all" type="button">Tous <span class="n">10</span></button>
-<button aria-pressed="false" class="filter t-xai" data-filter="xai" type="button"><span aria-hidden="true" class="dot"></span>IA explicable <span class="n">4</span></button>
-<button aria-pressed="false" class="filter t-robust" data-filter="robust" type="button"><span aria-hidden="true" class="dot"></span>Robustesse et confidentialité <span class="n">2</span></button>
-<button aria-pressed="false" class="filter t-stats" data-filter="stats" type="button"><span aria-hidden="true" class="dot"></span>Statistique et démographie <span class="n">2</span></button>
-<button aria-pressed="false" class="filter t-optim" data-filter="optim" type="button"><span aria-hidden="true" class="dot"></span>Optimisation et finance <span class="n">2</span></button>
-</div>
-          <div class="projects" id="project-list">
-<article class="project t-robust" data-theme="robust">
-<figure class="project-media">
-<img alt="Schéma d'hôpitaux qui entraînent un modèle commun sans partager leurs données" data-fallback="img/federated-learning.png" decoding="async" height="800" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/federated-learning.webp" width="1200"/>
-</figure>
-<p class="project-theme">Robustesse et confidentialité</p>
-<h3>Apprentissage fédéré sécurisé</h3>
-<p class="project-desc">Diagnostic du cancer du sein par plusieurs hôpitaux simulés qui entraînent un modèle commun sans jamais échanger leurs données brutes.</p>
-<p class="project-result"><strong>92 % → 94 %</strong> d’accuracy en corrigeant le client drift avec SCAFFOLD</p>
-<ul class="project-points">
-<li><b>Differential privacy :</b> protection des données médicales par bruit gaussien</li>
-<li><b>Fairness :</b> mesure et atténuation des biais algorithmiques</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>PyTorch</li><li>Scikit-learn</li></ul>
-<a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/federated-learning.ipynb" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg> Ouvrir le notebook</a>
-</div>
-</article>
-<article class="project t-robust" data-theme="robust">
-<figure class="project-media">
-<img alt="Chiffre MNIST, perturbation adversariale et image perturbée" data-fallback="img/robust_ml.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/robust-ml.webp" width="1200"/>
-</figure>
-<p class="project-theme">Robustesse et confidentialité</p>
-<h3>Machine learning robuste : Median of Means et entraînement adversarial</h3>
-<p class="project-desc">Estimateurs résistants aux valeurs aberrantes et défense d’un réseau de neurones contre les attaques adversariales sur MNIST.</p>
-<p class="project-result"><strong>+65 points</strong> de robustesse grâce à l’adversarial training PGD</p>
-<ul class="project-points">
-<li><b>Statistique robuste :</b> estimateur Median of Means (MoM) face aux outliers</li>
-<li><b>Attaques :</b> FGSM et PGD-40 implémentées pour éprouver le modèle</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>PyTorch</li></ul>
-</div>
-</article>
-<article class="project t-xai" data-theme="xai">
-<figure class="project-media">
-<img alt="Carte de chaleur Grad-CAM superposée à l'image d'entrée d'un ResNet50" data-fallback="img/IA XAI Vision (Grad-CAM).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-gradcam.webp" width="1200"/>
-</figure>
-<p class="project-theme">IA explicable</p>
-<h3>Grad-CAM sur ResNet50</h3>
-<p class="project-desc">Rendre visibles les zones d’une image qui ont pesé dans la décision d’un réseau convolutif profond.</p>
-<ul class="project-points">
-<li><b>Algorithme :</b> cartes de chaleur calculées à partir du gradient des activations</li>
-<li><b>Diagnostic :</b> localisation des zones de l’image qui ont le plus influencé le modèle</li>
-<li><b>Analyse multi-couches :</b> granularité sémantique comparée d’une couche à l’autre</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>PyTorch</li><li>NumPy</li></ul>
-</div>
-</article>
-<article class="project t-xai" data-theme="xai">
-<figure class="project-media">
-<img alt="Attribution par token d'une réponse de DistilBERT sur une question climatique" data-fallback="img/03_BERT_ClimateQA.ipynb.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-integrated-gradients.webp" width="1200"/>
-</figure>
-<p class="project-theme">IA explicable</p>
-<h3>Integrated Gradients sur DistilBERT</h3>
-<p class="project-desc">Expliquer, token par token, les réponses d’un modèle Transformer de question-réponse sur le climat.</p>
-<p class="project-result"><strong>Complétude vérifiée</strong> : écart inférieur à 0,05</p>
-<ul class="project-points">
-<li><b>Attribution :</b> pertinence de chaque token par approximation de l’intégrale du gradient</li>
-<li><b>Lecture du modèle :</b> influence des mots de la question sur la localisation de la réponse</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Hugging Face</li><li>PyTorch</li></ul>
-</div>
-</article>
-<article class="project t-xai" data-theme="xai">
-<figure class="project-media">
-<img alt="Graphique SHAP et tableau de contrefactuels DiCE" data-fallback="img/IA XAI Santé (DiCE Contrefactuels).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-shap-dice.webp" width="1200"/>
-</figure>
-<p class="project-theme">IA explicable</p>
-<h3>SHAP et contrefactuels DiCE</h3>
-<p class="project-desc">Expliquer des modèles tabulaires, survie sur le Titanic et risque de maladie cardiaque, puis proposer des leviers d’action concrets.</p>
-<ul class="project-points">
-<li><b>SHAP :</b> contribution de chaque variable à une prédiction (sexe, classe, âge, variables cliniques)</li>
-<li><b>DiCE :</b> contrefactuels actionnables, ce qu’il faudrait changer pour modifier le diagnostic</li>
-<li><b>Deux questions distinctes :</b> pourquoi cette prédiction, et comment changer la situation</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>XGBoost</li><li>pandas</li></ul>
-</div>
-</article>
-<article class="project t-xai" data-theme="xai">
-<figure class="project-media">
-<img alt="Pertinence GNN-LRP sur les nœuds et arêtes du graphe Karate Club" data-fallback="img/02_GNN_LRP_Graphs.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/xai-gnn-lrp.webp" width="1200"/>
-</figure>
-<p class="project-theme">IA explicable</p>
-<h3>Layer-wise Relevance Propagation sur graphes</h3>
-<p class="project-desc">Adapter la propagation de pertinence (LRP) aux Graph Neural Networks, testée sur le réseau social Karate Club.</p>
-<ul class="project-points">
-<li><b>Décomposition par walks :</b> chemins de messages les plus influents dans le graphe</li>
-<li><b>GNN-LRP :</b> explication par la topologie, au-delà des seules variables</li>
-<li><b>Réseaux denses :</b> LRP-ε et LRP-γ pour le diagnostic du cancer du sein</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>PyTorch</li><li>PyTorch Geometric</li></ul>
-</div>
-</article>
-<article class="project t-stats" data-theme="stats">
-<figure class="project-media">
-<img alt="Carte du Burkina Faso, pyramides des âges et indicateurs de fécondité et de mortalité" data-fallback="img/Démographie &amp; Santé Publique.png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/demographie-sante.webp" width="1200"/>
-</figure>
-<p class="project-theme">Statistique et démographie</p>
-<h3>Démographie, épidémiologie et santé publique</h3>
-<p class="project-desc">Exploitation des Enquêtes démographiques et de santé (EDS) du Burkina Faso et du Mali pour analyser les comportements de santé et la mortalité.</p>
-<ul class="project-points">
-<li><b>Modélisation :</b> analyse multiniveau et régression logistique multinomiale</li>
-<li><b>Démographie :</b> indice synthétique de fécondité, quotients de mortalité (tables types de Coale-Demeny)</li>
-<li><b>Méthode :</b> plans de sondage complexes (pondérations, effets de grappe), suivi-évaluation</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Stata</li><li>SPSS</li><li>R</li></ul>
-</div>
-</article>
-<article class="project t-stats" data-theme="stats">
-<figure class="project-media">
-<img alt="Trace d'une chaîne Metropolis-Hastings et loi a posteriori du paramètre de forme d'une loi de Weibull, sur données simulées" data-fallback="img/bayesian_inference.png" decoding="async" height="675" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/bayesian-mcmc.webp" width="1200"/>
-</figure>
-<p class="project-theme">Statistique et démographie</p>
-<h3>Statistique bayésienne et inférence MCMC</h3>
-<p class="project-desc">Quantifier l’incertitude sur la durée de vie d’un système avec un modèle de Weibull.</p>
-<ul class="project-points">
-<li><b>Algorithme :</b> Metropolis-Hastings implémenté from scratch</li>
-<li><b>Modèle :</b> loi de Weibull et prédiction avec PyMC3</li>
-<li><b>Validation :</b> intervalles de crédibilité à 95 % et convergence des chaînes de Markov</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>SciPy</li><li>PyMC3</li></ul>
-</div>
-</article>
-<article class="project t-optim" data-theme="optim">
-<figure class="project-media">
-<img alt="Image floue et bruitée, courbe de convergence et image restaurée par TwIST" data-fallback="img/Problèmes Inverses (TwIST).png" decoding="async" height="655" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/inverse-problems-twist.webp" width="1200"/>
-</figure>
-<p class="project-theme">Optimisation et finance</p>
-<h3>Problèmes inverses : restauration d’images avec TwIST</h3>
-<p class="project-desc">Déconvolution d’images floues et bruitées, un problème mal posé, par optimisation itérative.</p>
-<ul class="project-points">
-<li><b>Modèle :</b> minimisation de fonctionnelles pénalisées (forward-backward)</li>
-<li><b>TwIST :</b> Two-step Iterative Shrinkage/Thresholding pour accélérer nettement la convergence</li>
-<li><b>DeepInverse :</b> restauration d’images soumises à un bruit gaussien</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>SciPy</li><li>DeepInverse</li></ul>
-</div>
-</article>
-<article class="project t-optim" data-theme="optim">
-<figure class="project-media">
-<img alt="Schéma du pipeline : données de marché, features, Graph Attention Network, stacking, gestion du risque, exécution" data-fallback="img/trading_vix75.png" decoding="async" height="675" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fallback" src="img/web/trading-pipeline.webp" width="1200"/>
-</figure>
-<p class="project-theme">Optimisation et finance</p>
-<h3>Trading algorithmique multi-modal</h3>
-<p class="project-desc">Robot de trading qui combine analyse technique multi-timeframes, deep learning sur graphes et gestion du risque.</p>
-<ul class="project-points">
-<li><b>Deep learning :</b> Graph Attention Networks (GAT) pour l’analyse de marché</li>
-<li><b>Méta-modèle :</b> stacking de XGBoost, gradient boosting et régression linéaire</li>
-<li><b>Fiabilité :</b> backtesting financier et intégration des API Deriv et MT5</li>
-</ul>
-<div class="project-foot">
-<ul class="chips"><li>Python</li><li>pandas</li><li>TensorFlow</li><li>XGBoost</li></ul>
-<a href="https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/trading.ipynb" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-code"></use></svg> Ouvrir le notebook</a>
-</div>
-</article>
-</div>
+    <dialog class="pdialog" id="pdialog" aria-labelledby="pd-title">
+      <button class="pd-close" type="button" data-close>Fermer</button>
+      <figure class="pd-media"><img id="pd-img" src="img/web/federated-learning.webp" alt="" width="1200" height="675" /></figure>
+      <div class="pd-body">
+        <p class="pd-theme" id="pd-theme"></p>
+        <h3 id="pd-title">Projet</h3>
+        <p class="pd-desc" id="pd-desc"></p>
+        <p class="pd-result" id="pd-result"></p>
+        <ul class="pd-points" id="pd-points"></ul>
+        <ul class="pd-chips" id="pd-chips"></ul>
+        <div class="pd-foot">
+          <a id="pd-link" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Ouvrir le notebook</a>
+          <div class="pd-nav"><button type="button" data-step="-1">Projet précédent</button><button type="button" data-step="1">Projet suivant</button></div>
         </div>
-      </section>
-
-      <section class="section" id="parcours" aria-labelledby="parcours-titre">
-        <div class="wrap">
-          <header class="section-head">
-            <h2 id="parcours-titre">Parcours</h2>
-            <p class="section-lede">De la statistique sociale et de la démographie au Burkina Faso à la data science en France, avec la même exigence de rigueur sur la donnée.</p>
-          </header>
-          <div class="path-cols">
-<div>
-<h3 class="col-title">Expérience</h3>
-<ol class="timeline">
-<li class="tl-item is-current">
-<p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-10">oct. 2027</time></span> <span class="badge">En cours</span></p>
-<h4>Data Manager en alternance</h4>
-<p class="tl-org">BRGM, Bureau de recherches géologiques et minières, Orléans</p>
-<ul class="tl-points"><li>Direction des risques, unité Risques sismiques et volcaniques (DRIS/RSV).</li><li><b>Projet CERES :</b> vulnérabilité du bâti au retrait-gonflement des argiles.</li><li><b>Données :</b> relier données d’assurance, bâtiments de l’IGN et OpenStreetMap en une base vérifiée et documentée.</li><li><b>Automatisation :</b> chaînes de traitement en workflows sur la plateforme Vigirisks (Python, PostgreSQL/PostGIS, Docker).</li></ul>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span><time datetime="2026-03">Mars</time> – <time datetime="2026-07">juil. 2026</time></span></p>
-<h4>Stagiaire de recherche en data science, projet INNOGOUV</h4>
-<p class="tl-org">Laboratoire CERAG (Université Grenoble Alpes) et UMR MoISA (INRAE Montpellier)</p>
-<ul class="tl-points">
-<li><b>Modélisation :</b> parcours de performance durable des coopératives viticoles françaises (Data Envelopment Analysis, profils latents).</li>
-<li><b>Data engineering :</b> construction d’une base unique à partir de 4 sources hétérogènes (enquête, comptes sociaux Diane, météo, douanes).</li>
-<li><b>Reproductibilité :</b> pipeline d’analyse complet implémenté deux fois, en Python et en Stata/Mata, pour garantir la robustesse des résultats.</li>
-</ul>
-<p class="tl-note">Stage de fin de Master 2 MIASHS.</p>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span><time datetime="2025-04">Avr.</time> – <time datetime="2025-07">juil. 2025</time></span></p>
-<h4>Data analyst et modélisation statistique</h4>
-<p class="tl-org">France Travail, Direction régionale Auvergne-Rhône-Alpes, Lyon</p>
-<ul class="tl-points">
-<li><b>Pilotage :</b> tableaux de bord Power BI (DAX) conçus, automatisés et déployés en production pour le pilotage territorial.</li>
-<li><b>Segmentation :</b> 297 464 établissements classés (ACP, k-means, algorithme EM) pour cibler les stratégies de prospection.</li>
-<li><b>Cartographie :</b> cartes statistiques multi-indicateurs sous QGIS sur les dynamiques locales de l’emploi.</li>
-</ul>
-<a class="tl-link" href="Rapport_de_stage_M1_TIEMTORE.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg> Lire le rapport de stage (PDF)</a>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span><time datetime="2021-10">Oct. 2021</time> – <time datetime="2022-01">janv. 2022</time></span></p>
-<h4>Analyste statistique, data management</h4>
-<p class="tl-org">Unité de recherche clinique de Nanoro (IRSS), Burkina Faso</p>
-<ul class="tl-points">
-<li><b>Qualité des données :</b> nettoyage et structuration de bases volumineuses pour en garantir l’intégrité.</li>
-<li><b>Analyse :</b> statistiques descriptives et rapports sous R, Stata et Excel.</li>
-</ul>
-<a class="tl-link" href="Rapport_de_stage_L3_TIEMTORE.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg> Lire le rapport de stage (PDF)</a>
-</li>
-</ol>
-</div>
-<div>
-<h3 class="col-title">Formation</h3>
-<ol class="timeline">
-<li class="tl-item is-current">
-<p class="tl-date"><span><time datetime="2026-09">Sept. 2026</time> – <time datetime="2027-12">déc. 2027</time></span> <span class="badge">En cours</span></p>
-<h4>Mastère Spécialisé Manager Expert de Solutions Responsables en Science des Données</h4>
-<p class="tl-org">Grenoble École de Management et Grenoble INP-Ensimag</p>
-<p class="tl-note">En alternance. Titre RNCP de niveau 7.</p>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span>2024 – 2026</span></p>
-<h4>Master MIASHS, data science et intelligence artificielle</h4>
-<p class="tl-org">Université Lumière Lyon 2</p>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span>2022 – 2024</span></p>
-<h4>Master recherche en démographie</h4>
-<p class="tl-org">Université Joseph Ki-Zerbo, Ouagadougou</p>
-</li>
-<li class="tl-item">
-<p class="tl-date"><span>2018 – 2021</span></p>
-<h4>Licence en statistique sociale, mention Bien</h4>
-<p class="tl-org">ISSP, Université Joseph Ki-Zerbo, Ouagadougou</p>
-</li>
-</ol>
-</div>
-</div>
-        </div>
-      </section>
-
-      <section class="section" id="competences" aria-labelledby="competences-titre">
-        <div class="wrap">
-          <header class="section-head">
-            <h2 id="competences-titre">Compétences</h2>
-            <p class="section-lede">Les méthodes et outils utilisés dans l’histoire et dans les projets.</p>
-          </header>
-          <dl class="skills">
-<div class="skill-row">
-<dt>IA explicable et de confiance</dt>
-<dd><ul class="chips"><li>SHAP</li><li>DiCE</li><li>Grad-CAM</li><li>Integrated Gradients</li><li>LRP et GNN-LRP</li><li>Differential privacy</li><li>Apprentissage fédéré (SCAFFOLD)</li><li>Fairness</li></ul></dd>
-</div>
-<div class="skill-row">
-<dt>Machine learning et deep learning</dt>
-<dd><ul class="chips"><li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>XGBoost</li><li>LightGBM</li><li>Random Forest</li><li>Stacking</li><li>CNN</li><li>BiLSTM</li><li>Graph Attention Networks</li><li>VAE et auto-encodeurs</li><li>Attaques et défenses adversariales (FGSM, PGD)</li><li>Median of Means</li></ul></dd>
-</div>
-<div class="skill-row">
-<dt>NLP et LLM</dt>
-<dd><ul class="chips"><li>Hugging Face Transformers</li><li>Fine-tuning</li><li>RAG</li><li>Prompt engineering</li><li>Tokenisation BPE from scratch</li></ul></dd>
-</div>
-<div class="skill-row">
-<dt>Statistique et démographie</dt>
-<dd><ul class="chips"><li>Inférence bayésienne (MCMC, PyMC)</li><li>Data Envelopment Analysis</li><li>Profils latents</li><li>Prédiction conforme</li><li>t-SNE et Isomap</li><li>Régression logistique multinomiale</li><li>Analyse multiniveau</li><li>Plans de sondage complexes</li><li>Fécondité et mortalité</li><li>Suivi-évaluation</li></ul></dd>
-</div>
-<div class="skill-row">
-<dt>Données, outils et gouvernance</dt>
-<dd><ul class="chips"><li>Python (pandas, NumPy, SciPy)</li><li>SQL, PostgreSQL et PostGIS</li><li>R</li><li>Stata et Mata</li><li>SPSS</li><li>Power BI (DAX)</li><li>QGIS</li><li>Docker</li><li>Git</li><li>Pipelines ETL</li><li>RGPD et souveraineté des données</li></ul></dd>
-</div>
-</dl>
-        </div>
-      </section>
-    </div>
-
-    <section class="section contact" id="contact" aria-labelledby="contact-titre">
-      <div class="wrap contact-grid">
-        <div>
-          <h2 id="contact-titre">Contact</h2>
-          <p class="contact-intro">Une opportunité, une collaboration ou une question sur un projet ? Le plus simple est de m’écrire, je réponds rapidement.</p>
-          <a class="contact-email" href="mailto:wendyamtiemtore@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> wendyamtiemtore@gmail.com</a>
-          <ul class="contact-links">
-            <li><a href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn</a></li>
-            <li><a href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></li>
-          </ul>
-        </div>
-        <div class="docs">
-<h3>Documents</h3>
-<ul>
-<li><a href="cv_Ariel_data.pdf" rel="noopener" target="_blank"><span><span>CV</span><small>PDF, une page</small></span><svg aria-hidden="true" class="icon"><use href="#i-download"></use></svg></a></li>
-<li><a href="Rapport_de_stage_M1_TIEMTORE.pdf" rel="noopener" target="_blank"><span><span>Rapport de stage de Master 1</span><small>France Travail, 2025</small></span><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg></a></li>
-<li><a href="Rapport_de_stage_L3_TIEMTORE.pdf" rel="noopener" target="_blank"><span><span>Rapport de stage de Licence</span><small>Unité de recherche clinique de Nanoro, 2022</small></span><svg aria-hidden="true" class="icon"><use href="#i-file"></use></svg></a></li>
-</ul>
-</div>
       </div>
-    </section>
+    </dialog>
+    <noscript><p style="position:relative;z-index:5;padding:1rem;text-align:center"><a href="statique.html">Cette version a besoin de JavaScript : ouvrez la version statique.</a></p></noscript>
   </main>
 
   <footer class="site-foot">
     <div class="wrap">
       <p>© <span id="year">2026</span> Ariel Eddy TIEMTORE</p>
-      <p><a href="classique.html">Version classique du site</a></p>
+      <p><a href="statique.html">Version statique du portfolio</a></p>
       <p><a href="#prologue">Revoir l’histoire</a></p>
     </div>
   </footer>
@@ -882,6 +642,7 @@
     var ctx = canvas.getContext("2d");
     var W = 0, H = 0, DPR = 1;
     var N = window.innerWidth < 960 ? 900 : 1600;
+    var DATA = {"projects":[{"theme":"robust","themeLabel":"Robustesse et confidentialité","title":"Apprentissage fédéré sécurisé","short":"Apprentissage fédéré","desc":"Diagnostic du cancer du sein par plusieurs hôpitaux simulés qui entraînent un modèle commun sans jamais échanger leurs données brutes.","result":"<strong>92 % → 94 %<\/strong> d’accuracy en corrigeant le client drift avec SCAFFOLD","points":["<b>Differential privacy :<\/b> protection des données médicales par bruit gaussien","<b>Fairness :<\/b> mesure et atténuation des biais algorithmiques"],"chips":["Python","PyTorch","Scikit-learn"],"img":"img/web/federated-learning.webp","fb":"img/federated-learning.png","alt":"Schéma d'hôpitaux qui entraînent un modèle commun sans partager leurs données","link":"https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/federated-learning.ipynb"},{"theme":"robust","themeLabel":"Robustesse et confidentialité","title":"Machine learning robuste : Median of Means et entraînement adversarial","short":"MoM et PGD","desc":"Estimateurs résistants aux valeurs aberrantes et défense d’un réseau de neurones contre les attaques adversariales sur MNIST.","result":"<strong>+65 points<\/strong> de robustesse grâce à l’adversarial training PGD","points":["<b>Statistique robuste :<\/b> estimateur Median of Means (MoM) face aux outliers","<b>Attaques :<\/b> FGSM et PGD-40 implémentées pour éprouver le modèle"],"chips":["Python","PyTorch"],"img":"img/web/robust-ml.webp","fb":"img/robust_ml.png","alt":"Chiffre MNIST, perturbation adversariale et image perturbée","link":null},{"theme":"xai","themeLabel":"IA explicable","title":"Grad-CAM sur ResNet50","short":"Grad-CAM","desc":"Rendre visibles les zones d’une image qui ont pesé dans la décision d’un réseau convolutif profond.","result":null,"points":["<b>Algorithme :<\/b> cartes de chaleur calculées à partir du gradient des activations","<b>Diagnostic :<\/b> localisation des zones de l’image qui ont le plus influencé le modèle","<b>Analyse multi-couches :<\/b> granularité sémantique comparée d’une couche à l’autre"],"chips":["PyTorch","NumPy"],"img":"img/web/xai-gradcam.webp","fb":"img/IA XAI Vision (Grad-CAM).png","alt":"Carte de chaleur Grad-CAM superposée à l'image d'entrée d'un ResNet50","link":null},{"theme":"xai","themeLabel":"IA explicable","title":"Integrated Gradients sur DistilBERT","short":"Integrated Gradients","desc":"Expliquer, token par token, les réponses d’un modèle Transformer de question-réponse sur le climat.","result":"<strong>Complétude vérifiée<\/strong> : écart inférieur à 0,05","points":["<b>Attribution :<\/b> pertinence de chaque token par approximation de l’intégrale du gradient","<b>Lecture du modèle :<\/b> influence des mots de la question sur la localisation de la réponse"],"chips":["Hugging Face","PyTorch"],"img":"img/web/xai-integrated-gradients.webp","fb":"img/03_BERT_ClimateQA.ipynb.png","alt":"Attribution par token d'une réponse de DistilBERT sur une question climatique","link":null},{"theme":"xai","themeLabel":"IA explicable","title":"SHAP et contrefactuels DiCE","short":"SHAP et DiCE","desc":"Expliquer des modèles tabulaires, survie sur le Titanic et risque de maladie cardiaque, puis proposer des leviers d’action concrets.","result":null,"points":["<b>SHAP :<\/b> contribution de chaque variable à une prédiction (sexe, classe, âge, variables cliniques)","<b>DiCE :<\/b> contrefactuels actionnables, ce qu’il faudrait changer pour modifier le diagnostic","<b>Deux questions distinctes :<\/b> pourquoi cette prédiction, et comment changer la situation"],"chips":["Python","XGBoost","pandas"],"img":"img/web/xai-shap-dice.webp","fb":"img/IA XAI Santé (DiCE Contrefactuels).png","alt":"Graphique SHAP et tableau de contrefactuels DiCE","link":null},{"theme":"xai","themeLabel":"IA explicable","title":"Layer-wise Relevance Propagation sur graphes","short":"GNN-LRP","desc":"Adapter la propagation de pertinence (LRP) aux Graph Neural Networks, testée sur le réseau social Karate Club.","result":null,"points":["<b>Décomposition par walks :<\/b> chemins de messages les plus influents dans le graphe","<b>GNN-LRP :<\/b> explication par la topologie, au-delà des seules variables","<b>Réseaux denses :<\/b> LRP-ε et LRP-γ pour le diagnostic du cancer du sein"],"chips":["PyTorch","PyTorch Geometric"],"img":"img/web/xai-gnn-lrp.webp","fb":"img/02_GNN_LRP_Graphs.png","alt":"Pertinence GNN-LRP sur les nœuds et arêtes du graphe Karate Club","link":null},{"theme":"stats","themeLabel":"Statistique et démographie","title":"Démographie, épidémiologie et santé publique","short":"Enquêtes EDS","desc":"Exploitation des Enquêtes démographiques et de santé (EDS) du Burkina Faso et du Mali pour analyser les comportements de santé et la mortalité.","result":null,"points":["<b>Modélisation :<\/b> analyse multiniveau et régression logistique multinomiale","<b>Démographie :<\/b> indice synthétique de fécondité, quotients de mortalité (tables types de Coale-Demeny)","<b>Méthode :<\/b> plans de sondage complexes (pondérations, effets de grappe), suivi-évaluation"],"chips":["Stata","SPSS","R"],"img":"img/web/demographie-sante.webp","fb":"img/Démographie & Santé Publique.png","alt":"Carte du Burkina Faso, pyramides des âges et indicateurs de fécondité et de mortalité","link":null},{"theme":"stats","themeLabel":"Statistique et démographie","title":"Statistique bayésienne et inférence MCMC","short":"MCMC","desc":"Quantifier l’incertitude sur la durée de vie d’un système avec un modèle de Weibull.","result":null,"points":["<b>Algorithme :<\/b> Metropolis-Hastings implémenté from scratch","<b>Modèle :<\/b> loi de Weibull et prédiction avec PyMC3","<b>Validation :<\/b> intervalles de crédibilité à 95 % et convergence des chaînes de Markov"],"chips":["Python","SciPy","PyMC3"],"img":"img/web/bayesian-mcmc.webp","fb":"img/bayesian_inference.png","alt":"Trace d'une chaîne Metropolis-Hastings et loi a posteriori du paramètre de forme d'une loi de Weibull, sur données simulées","link":null},{"theme":"optim","themeLabel":"Optimisation et finance","title":"Problèmes inverses : restauration d’images avec TwIST","short":"TwIST","desc":"Déconvolution d’images floues et bruitées, un problème mal posé, par optimisation itérative.","result":null,"points":["<b>Modèle :<\/b> minimisation de fonctionnelles pénalisées (forward-backward)","<b>TwIST :<\/b> Two-step Iterative Shrinkage/Thresholding pour accélérer nettement la convergence","<b>DeepInverse :<\/b> restauration d’images soumises à un bruit gaussien"],"chips":["Python","SciPy","DeepInverse"],"img":"img/web/inverse-problems-twist.webp","fb":"img/Problèmes Inverses (TwIST).png","alt":"Image floue et bruitée, courbe de convergence et image restaurée par TwIST","link":null},{"theme":"optim","themeLabel":"Optimisation et finance","title":"Trading algorithmique multi-modal","short":"Trading","desc":"Robot de trading qui combine analyse technique multi-timeframes, deep learning sur graphes et gestion du risque.","result":null,"points":["<b>Deep learning :<\/b> Graph Attention Networks (GAT) pour l’analyse de marché","<b>Méta-modèle :<\/b> stacking de XGBoost, gradient boosting et régression linéaire","<b>Fiabilité :<\/b> backtesting financier et intégration des API Deriv et MT5"],"chips":["Python","pandas","TensorFlow","XGBoost"],"img":"img/web/trading-pipeline.webp","fb":"img/trading_vix75.png","alt":"Schéma du pipeline : données de marché, features, Graph Attention Network, stacking, gestion du risque, exécution","link":"https://github.com/wendyam-ariel-tiemtore/Ariel-Eddy-Tiemtor-.github.io/blob/main/trading.ipynb"}],"skills":[{"name":"IA explicable et de confiance","short":"IA explicable","items":["SHAP","DiCE","Grad-CAM","Integrated Gradients","LRP et GNN-LRP","Differential privacy","Apprentissage fédéré (SCAFFOLD)","Fairness"]},{"name":"Machine learning et deep learning","short":"Machine learning","items":["PyTorch","TensorFlow","Scikit-learn","XGBoost","LightGBM","Random Forest","Stacking","CNN","BiLSTM","Graph Attention Networks","VAE et auto-encodeurs","Attaques et défenses adversariales (FGSM, PGD)","Median of Means"]},{"name":"NLP et LLM","short":"NLP et LLM","items":["Hugging Face Transformers","Fine-tuning","RAG","Prompt engineering","Tokenisation BPE from scratch"]},{"name":"Statistique et démographie","short":"Statistique","items":["Inférence bayésienne (MCMC, PyMC)","Data Envelopment Analysis","Profils latents","Prédiction conforme","t-SNE et Isomap","Régression logistique multinomiale","Analyse multiniveau","Plans de sondage complexes","Fécondité et mortalité","Suivi-évaluation"]},{"name":"Données, outils et gouvernance","short":"Données et outils","items":["Python (pandas, NumPy, SciPy)","SQL, PostgreSQL et PostGIS","R","Stata et Mata","SPSS","Power BI (DAX)","QGIS","Docker","Git","Pipelines ETL","RGPD et souveraineté des données"]}],"land":[[-10,52,0],[-9,52,0],[-8,52,0],[-5,52,0],[-4,52,0],[-3,52,0],[-2,52,0],[-1,52,0],[0,52,0],[1,52,0],[5,52,0],[6,52,0],[7,52,0],[8,52,0],[9,52,0],[10,52,0],[11,52,0],[12,52,0],[13,52,0],[14,52,0],[15,52,0],[-4,51,0],[-3,51,0],[-2,51,0],[-1,51,0],[0,51,0],[1,51,0],[2,51,2],[3,51,0],[4,51,0],[5,51,0],[6,51,0],[7,51,0],[8,51,0],[9,51,0],[10,51,0],[11,51,0],[12,51,0],[13,51,0],[14,51,0],[15,51,0],[2,50,2],[3,50,2],[4,50,2],[5,50,0],[6,50,0],[7,50,0],[8,50,0],[9,50,0],[10,50,0],[11,50,0],[12,50,0],[13,50,0],[14,50,0],[15,50,0],[-1,49,2],[0,49,2],[1,49,2],[2,49,2],[3,49,2],[4,49,2],[5,49,2],[6,49,2],[7,49,2],[8,49,2],[9,49,0],[10,49,0],[11,49,0],[12,49,0],[13,49,0],[14,49,0],[15,49,0],[-4,48,2],[-3,48,2],[-2,48,2],[-1,48,2],[0,48,2],[1,48,2],[2,48,2],[3,48,2],[4,48,2],[5,48,2],[6,48,2],[7,48,2],[8,48,0],[9,48,0],[10,48,0],[11,48,0],[12,48,0],[13,48,0],[14,48,0],[15,48,0],[-2,47,2],[-1,47,2],[0,47,2],[1,47,2],[2,47,2],[3,47,2],[4,47,2],[5,47,2],[6,47,2],[7,47,0],[8,47,0],[9,47,0],[10,47,0],[11,47,0],[12,47,0],[13,47,0],[14,47,0],[15,47,0],[-1,46,2],[0,46,2],[1,46,2],[2,46,2],[3,46,2],[4,46,2],[5,46,2],[6,46,2],[7,46,0],[8,46,0],[9,46,0],[10,46,0],[11,46,0],[12,46,0],[13,46,0],[14,46,0],[15,46,0],[-1,45,2],[0,45,2],[1,45,2],[2,45,2],[3,45,2],[4,45,2],[5,45,2],[6,45,2],[7,45,0],[8,45,0],[9,45,0],[10,45,0],[11,45,0],[12,45,0],[14,45,0],[15,45,0],[-1,44,2],[0,44,2],[1,44,2],[2,44,2],[3,44,2],[4,44,2],[5,44,2],[6,44,2],[7,44,2],[8,44,0],[11,44,0],[12,44,0],[-9,43,0],[-8,43,0],[-7,43,0],[-6,43,0],[-5,43,0],[-4,43,0],[-3,43,0],[-2,43,0],[-1,43,2],[0,43,2],[1,43,2],[2,43,2],[3,43,2],[11,43,0],[12,43,0],[13,43,0],[-8,42,0],[-7,42,0],[-6,42,0],[-5,42,0],[-4,42,0],[-3,42,0],[-2,42,0],[-1,42,0],[0,42,0],[1,42,0],[2,42,0],[3,42,0],[9,42,2],[12,42,0],[13,42,0],[14,42,0],[-8,41,0],[-7,41,0],[-6,41,0],[-5,41,0],[-4,41,0],[-3,41,0],[-2,41,0],[-1,41,0],[0,41,0],[9,41,0],[14,41,0],[15,41,0],[-8,40,0],[-7,40,0],[-6,40,0],[-5,40,0],[-4,40,0],[-3,40,0],[-2,40,0],[-1,40,0],[0,40,0],[4,40,0],[9,40,0],[-9,39,0],[-8,39,0],[-7,39,0],[-6,39,0],[-5,39,0],[-4,39,0],[-3,39,0],[-2,39,0],[-1,39,0],[-8,38,0],[-7,38,0],[-6,38,0],[-5,38,0],[-4,38,0],[-3,38,0],[-2,38,0],[-1,38,0],[13,38,0],[14,38,0],[15,38,0],[-6,37,0],[-5,37,0],[-4,37,0],[-3,37,0],[-2,37,0],[9,37,0],[10,37,0],[11,37,0],[15,37,0],[1,36,0],[2,36,0],[3,36,0],[4,36,0],[5,36,0],[6,36,0],[7,36,0],[8,36,0],[9,36,0],[10,36,0],[-6,35,0],[-5,35,0],[-4,35,0],[-3,35,0],[-2,35,0],[-1,35,0],[0,35,0],[1,35,0],[2,35,0],[3,35,0],[4,35,0],[5,35,0],[6,35,0],[7,35,0],[8,35,0],[9,35,0],[10,35,0],[-6,34,0],[-5,34,0],[-4,34,0],[-3,34,0],[-2,34,0],[-1,34,0],[0,34,0],[1,34,0],[2,34,0],[3,34,0],[4,34,0],[5,34,0],[6,34,0],[7,34,0],[8,34,0],[9,34,0],[10,34,0],[-8,33,0],[-7,33,0],[-6,33,0],[-5,33,0],[-4,33,0],[-3,33,0],[-2,33,0],[-1,33,0],[0,33,0],[1,33,0],[2,33,0],[3,33,0],[4,33,0],[5,33,0],[6,33,0],[7,33,0],[8,33,0],[9,33,0],[10,33,0],[11,33,0],[12,33,0],[-9,32,0],[-8,32,0],[-7,32,0],[-6,32,0],[-5,32,0],[-4,32,0],[-3,32,0],[-2,32,0],[-1,32,0],[0,32,0],[1,32,0],[2,32,0],[3,32,0],[4,32,0],[5,32,0],[6,32,0],[7,32,0],[8,32,0],[9,32,0],[10,32,0],[11,32,0],[12,32,0],[13,32,0],[14,32,0],[15,32,0],[-9,31,0],[-8,31,0],[-7,31,0],[-6,31,0],[-5,31,0],[-4,31,0],[-3,31,0],[-2,31,0],[-1,31,0],[0,31,0],[1,31,0],[2,31,0],[3,31,0],[4,31,0],[5,31,0],[6,31,0],[7,31,0],[8,31,0],[9,31,0],[10,31,0],[11,31,0],[12,31,0],[13,31,0],[14,31,0],[15,31,0],[-9,30,0],[-8,30,0],[-7,30,0],[-6,30,0],[-5,30,0],[-4,30,0],[-3,30,0],[-2,30,0],[-1,30,0],[0,30,0],[1,30,0],[2,30,0],[3,30,0],[4,30,0],[5,30,0],[6,30,0],[7,30,0],[8,30,0],[9,30,0],[10,30,0],[11,30,0],[12,30,0],[13,30,0],[14,30,0],[15,30,0],[-10,29,0],[-9,29,0],[-8,29,0],[-7,29,0],[-6,29,0],[-5,29,0],[-4,29,0],[-3,29,0],[-2,29,0],[-1,29,0],[0,29,0],[1,29,0],[2,29,0],[3,29,0],[4,29,0],[5,29,0],[6,29,0],[7,29,0],[8,29,0],[9,29,0],[10,29,0],[11,29,0],[12,29,0],[13,29,0],[14,29,0],[15,29,0],[-12,28,0],[-11,28,0],[-10,28,0],[-9,28,0],[-8,28,0],[-7,28,0],[-6,28,0],[-5,28,0],[-4,28,0],[-3,28,0],[-2,28,0],[-1,28,0],[0,28,0],[1,28,0],[2,28,0],[3,28,0],[4,28,0],[5,28,0],[6,28,0],[7,28,0],[8,28,0],[9,28,0],[10,28,0],[11,28,0],[12,28,0],[13,28,0],[14,28,0],[15,28,0],[-13,27,0],[-12,27,0],[-11,27,0],[-10,27,0],[-9,27,0],[-8,27,0],[-7,27,0],[-6,27,0],[-5,27,0],[-4,27,0],[-3,27,0],[-2,27,0],[-1,27,0],[0,27,0],[1,27,0],[2,27,0],[3,27,0],[4,27,0],[5,27,0],[6,27,0],[7,27,0],[8,27,0],[9,27,0],[10,27,0],[11,27,0],[12,27,0],[13,27,0],[14,27,0],[15,27,0],[-14,26,0],[-13,26,0],[-12,26,0],[-11,26,0],[-10,26,0],[-9,26,0],[-8,26,0],[-7,26,0],[-6,26,0],[-5,26,0],[-4,26,0],[-3,26,0],[-2,26,0],[-1,26,0],[0,26,0],[1,26,0],[2,26,0],[3,26,0],[4,26,0],[5,26,0],[6,26,0],[7,26,0],[8,26,0],[9,26,0],[10,26,0],[11,26,0],[12,26,0],[13,26,0],[14,26,0],[15,26,0],[-14,25,0],[-13,25,0],[-12,25,0],[-11,25,0],[-10,25,0],[-9,25,0],[-8,25,0],[-7,25,0],[-6,25,0],[-5,25,0],[-4,25,0],[-3,25,0],[-2,25,0],[-1,25,0],[0,25,0],[1,25,0],[2,25,0],[3,25,0],[4,25,0],[5,25,0],[6,25,0],[7,25,0],[8,25,0],[9,25,0],[10,25,0],[11,25,0],[12,25,0],[13,25,0],[14,25,0],[15,25,0],[-15,24,0],[-14,24,0],[-13,24,0],[-12,24,0],[-11,24,0],[-10,24,0],[-9,24,0],[-8,24,0],[-7,24,0],[-6,24,0],[-5,24,0],[-4,24,0],[-3,24,0],[-2,24,0],[-1,24,0],[0,24,0],[1,24,0],[2,24,0],[3,24,0],[4,24,0],[5,24,0],[6,24,0],[7,24,0],[8,24,0],[9,24,0],[10,24,0],[11,24,0],[12,24,0],[13,24,0],[14,24,0],[15,24,0],[-16,23,0],[-15,23,0],[-14,23,0],[-13,23,0],[-12,23,0],[-11,23,0],[-10,23,0],[-9,23,0],[-8,23,0],[-7,23,0],[-6,23,0],[-5,23,0],[-4,23,0],[-3,23,0],[-2,23,0],[-1,23,0],[0,23,0],[1,23,0],[2,23,0],[3,23,0],[4,23,0],[5,23,0],[6,23,0],[7,23,0],[8,23,0],[9,23,0],[10,23,0],[11,23,0],[12,23,0],[13,23,0],[14,23,0],[15,23,0],[-16,22,0],[-15,22,0],[-14,22,0],[-13,22,0],[-12,22,0],[-11,22,0],[-10,22,0],[-9,22,0],[-8,22,0],[-7,22,0],[-6,22,0],[-5,22,0],[-4,22,0],[-3,22,0],[-2,22,0],[-1,22,0],[0,22,0],[1,22,0],[2,22,0],[3,22,0],[4,22,0],[5,22,0],[6,22,0],[7,22,0],[8,22,0],[9,22,0],[10,22,0],[11,22,0],[12,22,0],[13,22,0],[14,22,0],[15,22,0],[-16,21,0],[-15,21,0],[-14,21,0],[-13,21,0],[-12,21,0],[-11,21,0],[-10,21,0],[-9,21,0],[-8,21,0],[-7,21,0],[-6,21,0],[-5,21,0],[-4,21,0],[-3,21,0],[-2,21,0],[-1,21,0],[0,21,0],[1,21,0],[2,21,0],[3,21,0],[4,21,0],[5,21,0],[6,21,0],[7,21,0],[8,21,0],[9,21,0],[10,21,0],[11,21,0],[12,21,0],[13,21,0],[14,21,0],[15,21,0],[-16,20,0],[-15,20,0],[-14,20,0],[-13,20,0],[-12,20,0],[-11,20,0],[-10,20,0],[-9,20,0],[-8,20,0],[-7,20,0],[-6,20,0],[-5,20,0],[-4,20,0],[-3,20,0],[-2,20,0],[-1,20,0],[0,20,0],[1,20,0],[2,20,0],[3,20,0],[4,20,0],[5,20,0],[6,20,0],[7,20,0],[8,20,0],[9,20,0],[10,20,0],[11,20,0],[12,20,0],[13,20,0],[14,20,0],[15,20,0],[-16,19,0],[-15,19,0],[-14,19,0],[-13,19,0],[-12,19,0],[-11,19,0],[-10,19,0],[-9,19,0],[-8,19,0],[-7,19,0],[-6,19,0],[-5,19,0],[-4,19,0],[-3,19,0],[-2,19,0],[-1,19,0],[0,19,0],[1,19,0],[2,19,0],[3,19,0],[4,19,0],[5,19,0],[6,19,0],[7,19,0],[8,19,0],[9,19,0],[10,19,0],[11,19,0],[12,19,0],[13,19,0],[14,19,0],[15,19,0],[-16,18,0],[-15,18,0],[-14,18,0],[-13,18,0],[-12,18,0],[-11,18,0],[-10,18,0],[-9,18,0],[-8,18,0],[-7,18,0],[-6,18,0],[-5,18,0],[-4,18,0],[-3,18,0],[-2,18,0],[-1,18,0],[0,18,0],[1,18,0],[2,18,0],[3,18,0],[4,18,0],[5,18,0],[6,18,0],[7,18,0],[8,18,0],[9,18,0],[10,18,0],[11,18,0],[12,18,0],[13,18,0],[14,18,0],[15,18,0],[-16,17,0],[-15,17,0],[-14,17,0],[-13,17,0],[-12,17,0],[-11,17,0],[-10,17,0],[-9,17,0],[-8,17,0],[-7,17,0],[-6,17,0],[-5,17,0],[-4,17,0],[-3,17,0],[-2,17,0],[-1,17,0],[0,17,0],[1,17,0],[2,17,0],[3,17,0],[4,17,0],[5,17,0],[6,17,0],[7,17,0],[8,17,0],[9,17,0],[10,17,0],[11,17,0],[12,17,0],[13,17,0],[14,17,0],[15,17,0],[-16,16,0],[-15,16,0],[-14,16,0],[-13,16,0],[-12,16,0],[-11,16,0],[-10,16,0],[-9,16,0],[-8,16,0],[-7,16,0],[-6,16,0],[-5,16,0],[-4,16,0],[-3,16,0],[-2,16,0],[-1,16,0],[0,16,0],[1,16,0],[2,16,0],[3,16,0],[4,16,0],[5,16,0],[6,16,0],[7,16,0],[8,16,0],[9,16,0],[10,16,0],[11,16,0],[12,16,0],[13,16,0],[14,16,0],[15,16,0],[-17,15,0],[-16,15,0],[-15,15,0],[-14,15,0],[-13,15,0],[-12,15,0],[-11,15,0],[-10,15,0],[-9,15,0],[-8,15,0],[-7,15,0],[-6,15,0],[-5,15,0],[-4,15,0],[-3,15,0],[-2,15,0],[-1,15,0],[0,15,0],[1,15,0],[2,15,0],[3,15,0],[4,15,0],[5,15,0],[6,15,0],[7,15,0],[8,15,0],[9,15,0],[10,15,0],[11,15,0],[12,15,0],[13,15,0],[14,15,0],[15,15,0],[-16,14,0],[-15,14,0],[-14,14,0],[-13,14,0],[-12,14,0],[-11,14,0],[-10,14,0],[-9,14,0],[-8,14,0],[-7,14,0],[-6,14,0],[-5,14,0],[-4,14,0],[-3,14,0],[-2,14,1],[-1,14,1],[0,14,1],[1,14,0],[2,14,0],[3,14,0],[4,14,0],[5,14,0],[6,14,0],[7,14,0],[8,14,0],[9,14,0],[10,14,0],[11,14,0],[12,14,0],[13,14,0],[14,14,0],[15,14,0],[-16,13,0],[-15,13,0],[-14,13,0],[-13,13,0],[-12,13,0],[-11,13,0],[-10,13,0],[-9,13,0],[-8,13,0],[-7,13,0],[-6,13,0],[-5,13,0],[-4,13,1],[-3,13,1],[-2,13,1],[-1,13,1],[0,13,1],[1,13,1],[2,13,0],[3,13,0],[4,13,0],[5,13,0],[6,13,0],[7,13,0],[8,13,0],[9,13,0],[10,13,0],[11,13,0],[12,13,0],[13,13,0],[14,13,0],[15,13,0],[-16,12,0],[-15,12,0],[-14,12,0],[-13,12,0],[-12,12,0],[-11,12,0],[-10,12,0],[-9,12,0],[-8,12,0],[-7,12,0],[-6,12,0],[-5,12,0],[-4,12,1],[-3,12,1],[-2,12,1],[-1,12,1],[0,12,1],[1,12,1],[2,12,1],[3,12,0],[4,12,0],[5,12,0],[6,12,0],[7,12,0],[8,12,0],[9,12,0],[10,12,0],[11,12,0],[12,12,0],[13,12,0],[14,12,0],[15,12,0],[-15,11,0],[-14,11,0],[-13,11,0],[-12,11,0],[-11,11,0],[-10,11,0],[-9,11,0],[-8,11,0],[-7,11,0],[-6,11,0],[-5,11,1],[-4,11,1],[-3,11,1],[-2,11,1],[-1,11,0],[0,11,0],[1,11,0],[2,11,0],[3,11,0],[4,11,0],[5,11,0],[6,11,0],[7,11,0],[8,11,0],[9,11,0],[10,11,0],[11,11,0],[12,11,0],[13,11,0],[14,11,0],[15,11,0],[-13,10,0],[-12,10,0],[-11,10,0],[-10,10,0],[-9,10,0],[-8,10,0],[-7,10,0],[-6,10,0],[-5,10,0],[-4,10,1],[-3,10,1],[-2,10,0],[-1,10,0],[0,10,0],[1,10,0],[2,10,0],[3,10,0],[4,10,0],[5,10,0],[6,10,0],[7,10,0],[8,10,0],[9,10,0],[10,10,0],[11,10,0],[12,10,0],[13,10,0],[14,10,0],[15,10,0],[-13,9,0],[-12,9,0],[-11,9,0],[-10,9,0],[-9,9,0],[-8,9,0],[-7,9,0],[-6,9,0],[-5,9,0],[-4,9,0],[-3,9,0],[-2,9,0],[-1,9,0],[0,9,0],[1,9,0],[2,9,0],[3,9,0],[4,9,0],[5,9,0],[6,9,0],[7,9,0],[8,9,0],[9,9,0],[10,9,0],[11,9,0],[12,9,0],[13,9,0],[14,9,0],[15,9,0],[-12,8,0],[-11,8,0],[-10,8,0],[-9,8,0],[-8,8,0],[-7,8,0],[-6,8,0],[-5,8,0],[-4,8,0],[-3,8,0],[-2,8,0],[-1,8,0],[0,8,0],[1,8,0],[2,8,0],[3,8,0],[4,8,0],[5,8,0],[6,8,0],[7,8,0],[8,8,0],[9,8,0],[10,8,0],[11,8,0],[12,8,0],[13,8,0],[14,8,0],[15,8,0],[-11,7,0],[-10,7,0],[-9,7,0],[-8,7,0],[-7,7,0],[-6,7,0],[-5,7,0],[-4,7,0],[-3,7,0],[-2,7,0],[-1,7,0],[0,7,0],[1,7,0],[2,7,0],[3,7,0],[4,7,0],[5,7,0],[6,7,0],[7,7,0],[8,7,0],[9,7,0],[10,7,0],[11,7,0],[12,7,0],[13,7,0],[14,7,0],[15,7,0],[-10,6,0],[-9,6,0],[-8,6,0],[-7,6,0],[-6,6,0],[-5,6,0],[-4,6,0],[-3,6,0],[-2,6,0],[-1,6,0],[0,6,0],[1,6,0],[5,6,0],[6,6,0],[7,6,0],[8,6,0],[9,6,0],[10,6,0],[11,6,0],[12,6,0],[13,6,0],[14,6,0],[15,6,0],[-9,5,0],[-8,5,0],[-7,5,0],[-6,5,0],[-2,5,0],[6,5,0],[7,5,0],[8,5,0],[9,5,0],[10,5,0],[11,5,0],[12,5,0],[13,5,0],[14,5,0],[15,5,0]],"landFr":[[-3.9,51.6,0],[-3.55,51.6,0],[-3.2,51.6,0],[-2.85,51.6,0],[-2.5,51.6,0],[-2.15,51.6,0],[-1.8,51.6,0],[-1.45,51.6,0],[-1.1,51.6,0],[-0.75,51.6,0],[-0.4,51.6,0],[-0.05,51.6,0],[0.3,51.6,0],[0.65,51.6,0],[4.15,51.6,0],[4.5,51.6,0],[4.85,51.6,0],[5.2,51.6,0],[5.55,51.6,0],[5.9,51.6,0],[6.25,51.6,0],[6.6,51.6,0],[6.95,51.6,0],[7.3,51.6,0],[7.65,51.6,0],[8,51.6,0],[8.35,51.6,0],[8.7,51.6,0],[9.05,51.6,0],[9.4,51.6,0],[9.75,51.6,0],[-2.85,51.25,0],[-2.5,51.25,0],[-2.15,51.25,0],[-1.8,51.25,0],[-1.45,51.25,0],[-1.1,51.25,0],[-0.75,51.25,0],[-0.4,51.25,0],[-0.05,51.25,0],[0.3,51.25,0],[0.65,51.25,0],[1,51.25,0],[1.35,51.25,0],[3.1,51.25,0],[3.45,51.25,0],[3.8,51.25,0],[4.15,51.25,0],[4.5,51.25,0],[4.85,51.25,0],[5.2,51.25,0],[5.55,51.25,0],[5.9,51.25,0],[6.25,51.25,0],[6.6,51.25,0],[6.95,51.25,0],[7.3,51.25,0],[7.65,51.25,0],[8,51.25,0],[8.35,51.25,0],[8.7,51.25,0],[9.05,51.25,0],[9.4,51.25,0],[9.75,51.25,0],[-4.25,50.9,0],[-3.9,50.9,0],[-3.55,50.9,0],[-3.2,50.9,0],[-2.85,50.9,0],[-2.5,50.9,0],[-2.15,50.9,0],[-1.8,50.9,0],[-1.45,50.9,0],[-1.1,50.9,0],[-0.75,50.9,0],[-0.4,50.9,0],[-0.05,50.9,0],[0.3,50.9,0],[0.65,50.9,0],[2.05,50.9,2],[2.4,50.9,2],[2.75,50.9,0],[3.1,50.9,0],[3.45,50.9,0],[3.8,50.9,0],[4.15,50.9,0],[4.5,50.9,0],[4.85,50.9,0],[5.2,50.9,0],[5.55,50.9,0],[5.9,50.9,0],[6.25,50.9,0],[6.6,50.9,0],[6.95,50.9,0],[7.3,50.9,0],[7.65,50.9,0],[8,50.9,0],[8.35,50.9,0],[8.7,50.9,0],[9.05,50.9,0],[9.4,50.9,0],[9.75,50.9,0],[-4.6,50.55,0],[-4.25,50.55,0],[-3.9,50.55,0],[-3.55,50.55,0],[1.7,50.55,2],[2.05,50.55,2],[2.4,50.55,2],[2.75,50.55,2],[3.1,50.55,2],[3.45,50.55,0],[3.8,50.55,0],[4.15,50.55,0],[4.5,50.55,0],[4.85,50.55,0],[5.2,50.55,0],[5.55,50.55,0],[5.9,50.55,0],[6.25,50.55,0],[6.6,50.55,0],[6.95,50.55,0],[7.3,50.55,0],[7.65,50.55,0],[8,50.55,0],[8.35,50.55,0],[8.7,50.55,0],[9.05,50.55,0],[9.4,50.55,0],[9.75,50.55,0],[-5.3,50.2,0],[-4.95,50.2,0],[1.7,50.2,2],[2.05,50.2,2],[2.4,50.2,2],[2.75,50.2,2],[3.1,50.2,2],[3.45,50.2,2],[3.8,50.2,2],[4.15,50.2,2],[4.5,50.2,0],[4.85,50.2,0],[5.2,50.2,0],[5.55,50.2,0],[5.9,50.2,0],[6.25,50.2,0],[6.6,50.2,0],[6.95,50.2,0],[7.3,50.2,0],[7.65,50.2,0],[8,50.2,0],[8.35,50.2,0],[8.7,50.2,0],[9.05,50.2,0],[9.4,50.2,0],[9.75,50.2,0],[0.65,49.85,2],[1,49.85,2],[1.35,49.85,2],[1.7,49.85,2],[2.05,49.85,2],[2.4,49.85,2],[2.75,49.85,2],[3.1,49.85,2],[3.45,49.85,2],[3.8,49.85,2],[4.15,49.85,2],[4.5,49.85,2],[4.85,49.85,0],[5.2,49.85,0],[5.55,49.85,0],[5.9,49.85,0],[6.25,49.85,0],[6.6,49.85,0],[6.95,49.85,0],[7.3,49.85,0],[7.65,49.85,0],[8,49.85,0],[8.35,49.85,0],[8.7,49.85,0],[9.05,49.85,0],[9.4,49.85,0],[9.75,49.85,0],[-1.8,49.5,2],[-1.45,49.5,2],[0.3,49.5,2],[0.65,49.5,2],[1,49.5,2],[1.35,49.5,2],[1.7,49.5,2],[2.05,49.5,2],[2.4,49.5,2],[2.75,49.5,2],[3.1,49.5,2],[3.45,49.5,2],[3.8,49.5,2],[4.15,49.5,2],[4.5,49.5,2],[4.85,49.5,2],[5.2,49.5,2],[5.55,49.5,2],[5.9,49.5,0],[6.25,49.5,0],[6.6,49.5,0],[6.95,49.5,0],[7.3,49.5,0],[7.65,49.5,0],[8,49.5,0],[8.35,49.5,0],[8.7,49.5,0],[9.05,49.5,0],[9.4,49.5,0],[9.75,49.5,0],[-1.45,49.15,2],[-1.1,49.15,2],[-0.75,49.15,2],[-0.4,49.15,2],[-0.05,49.15,2],[0.3,49.15,2],[0.65,49.15,2],[1,49.15,2],[1.35,49.15,2],[1.7,49.15,2],[2.05,49.15,2],[2.4,49.15,2],[2.75,49.15,2],[3.1,49.15,2],[3.45,49.15,2],[3.8,49.15,2],[4.15,49.15,2],[4.5,49.15,2],[4.85,49.15,2],[5.2,49.15,2],[5.55,49.15,2],[5.9,49.15,2],[6.25,49.15,2],[6.6,49.15,2],[6.95,49.15,2],[7.3,49.15,0],[7.65,49.15,0],[8,49.15,0],[8.35,49.15,0],[8.7,49.15,0],[9.05,49.15,0],[9.4,49.15,0],[9.75,49.15,0],[-3.2,48.8,2],[-1.45,48.8,2],[-1.1,48.8,2],[-0.75,48.8,2],[-0.4,48.8,2],[-0.05,48.8,2],[0.3,48.8,2],[0.65,48.8,2],[1,48.8,2],[1.35,48.8,2],[1.7,48.8,2],[2.05,48.8,2],[2.4,48.8,2],[2.75,48.8,2],[3.1,48.8,2],[3.45,48.8,2],[3.8,48.8,2],[4.15,48.8,2],[4.5,48.8,2],[4.85,48.8,2],[5.2,48.8,2],[5.55,48.8,2],[5.9,48.8,2],[6.25,48.8,2],[6.6,48.8,2],[6.95,48.8,2],[7.3,48.8,2],[7.65,48.8,2],[8,48.8,2],[8.35,48.8,0],[8.7,48.8,0],[9.05,48.8,0],[9.4,48.8,0],[9.75,48.8,0],[-4.6,48.45,2],[-4.25,48.45,2],[-3.9,48.45,2],[-3.55,48.45,2],[-3.2,48.45,2],[-2.85,48.45,2],[-2.5,48.45,2],[-2.15,48.45,2],[-1.8,48.45,2],[-1.45,48.45,2],[-1.1,48.45,2],[-0.75,48.45,2],[-0.4,48.45,2],[-0.05,48.45,2],[0.3,48.45,2],[0.65,48.45,2],[1,48.45,2],[1.35,48.45,2],[1.7,48.45,2],[2.05,48.45,2],[2.4,48.45,2],[2.75,48.45,2],[3.1,48.45,2],[3.45,48.45,2],[3.8,48.45,2],[4.15,48.45,2],[4.5,48.45,2],[4.85,48.45,2],[5.2,48.45,2],[5.55,48.45,2],[5.9,48.45,2],[6.25,48.45,2],[6.6,48.45,2],[6.95,48.45,2],[7.3,48.45,2],[7.65,48.45,2],[8,48.45,0],[8.35,48.45,0],[8.7,48.45,0],[9.05,48.45,0],[9.4,48.45,0],[9.75,48.45,0],[-4.25,48.1,2],[-3.9,48.1,2],[-3.55,48.1,2],[-3.2,48.1,2],[-2.85,48.1,2],[-2.5,48.1,2],[-2.15,48.1,2],[-1.8,48.1,2],[-1.45,48.1,2],[-1.1,48.1,2],[-0.75,48.1,2],[-0.4,48.1,2],[-0.05,48.1,2],[0.3,48.1,2],[0.65,48.1,2],[1,48.1,2],[1.35,48.1,2],[1.7,48.1,2],[2.05,48.1,2],[2.4,48.1,2],[2.75,48.1,2],[3.1,48.1,2],[3.45,48.1,2],[3.8,48.1,2],[4.15,48.1,2],[4.5,48.1,2],[4.85,48.1,2],[5.2,48.1,2],[5.55,48.1,2],[5.9,48.1,2],[6.25,48.1,2],[6.6,48.1,2],[6.95,48.1,2],[7.3,48.1,2],[7.65,48.1,0],[8,48.1,0],[8.35,48.1,0],[8.7,48.1,0],[9.05,48.1,0],[9.4,48.1,0],[9.75,48.1,0],[-3.2,47.75,2],[-2.85,47.75,2],[-2.5,47.75,2],[-2.15,47.75,2],[-1.8,47.75,2],[-1.45,47.75,2],[-1.1,47.75,2],[-0.75,47.75,2],[-0.4,47.75,2],[-0.05,47.75,2],[0.3,47.75,2],[0.65,47.75,2],[1,47.75,2],[1.35,47.75,2],[1.7,47.75,2],[2.05,47.75,2],[2.4,47.75,2],[2.75,47.75,2],[3.1,47.75,2],[3.45,47.75,2],[3.8,47.75,2],[4.15,47.75,2],[4.5,47.75,2],[4.85,47.75,2],[5.2,47.75,2],[5.55,47.75,2],[5.9,47.75,2],[6.25,47.75,2],[6.6,47.75,2],[6.95,47.75,2],[7.3,47.75,2],[7.65,47.75,0],[8,47.75,0],[8.35,47.75,0],[8.7,47.75,0],[9.05,47.75,0],[9.4,47.75,0],[9.75,47.75,0],[-2.15,47.4,2],[-1.8,47.4,2],[-1.45,47.4,2],[-1.1,47.4,2],[-0.75,47.4,2],[-0.4,47.4,2],[-0.05,47.4,2],[0.3,47.4,2],[0.65,47.4,2],[1,47.4,2],[1.35,47.4,2],[1.7,47.4,2],[2.05,47.4,2],[2.4,47.4,2],[2.75,47.4,2],[3.1,47.4,2],[3.45,47.4,2],[3.8,47.4,2],[4.15,47.4,2],[4.5,47.4,2],[4.85,47.4,2],[5.2,47.4,2],[5.55,47.4,2],[5.9,47.4,2],[6.25,47.4,2],[6.6,47.4,2],[6.95,47.4,0],[7.3,47.4,0],[7.65,47.4,0],[8,47.4,0],[8.35,47.4,0],[8.7,47.4,0],[9.05,47.4,0],[9.4,47.4,0],[9.75,47.4,0],[-1.8,47.05,2],[-1.45,47.05,2],[-1.1,47.05,2],[-0.75,47.05,2],[-0.4,47.05,2],[-0.05,47.05,2],[0.3,47.05,2],[0.65,47.05,2],[1,47.05,2],[1.35,47.05,2],[1.7,47.05,2],[2.05,47.05,2],[2.4,47.05,2],[2.75,47.05,2],[3.1,47.05,2],[3.45,47.05,2],[3.8,47.05,2],[4.15,47.05,2],[4.5,47.05,2],[4.85,47.05,2],[5.2,47.05,2],[5.55,47.05,2],[5.9,47.05,2],[6.25,47.05,2],[6.6,47.05,2],[6.95,47.05,0],[7.3,47.05,0],[7.65,47.05,0],[8,47.05,0],[8.35,47.05,0],[8.7,47.05,0],[9.05,47.05,0],[9.4,47.05,0],[9.75,47.05,0],[-1.8,46.7,2],[-1.45,46.7,2],[-1.1,46.7,2],[-0.75,46.7,2],[-0.4,46.7,2],[-0.05,46.7,2],[0.3,46.7,2],[0.65,46.7,2],[1,46.7,2],[1.35,46.7,2],[1.7,46.7,2],[2.05,46.7,2],[2.4,46.7,2],[2.75,46.7,2],[3.1,46.7,2],[3.45,46.7,2],[3.8,46.7,2],[4.15,46.7,2],[4.5,46.7,2],[4.85,46.7,2],[5.2,46.7,2],[5.55,46.7,2],[5.9,46.7,2],[6.25,46.7,2],[6.6,46.7,0],[6.95,46.7,0],[7.3,46.7,0],[7.65,46.7,0],[8,46.7,0],[8.35,46.7,0],[8.7,46.7,0],[9.05,46.7,0],[9.4,46.7,0],[9.75,46.7,0],[-1.1,46.35,2],[-0.75,46.35,2],[-0.4,46.35,2],[-0.05,46.35,2],[0.3,46.35,2],[0.65,46.35,2],[1,46.35,2],[1.35,46.35,2],[1.7,46.35,2],[2.05,46.35,2],[2.4,46.35,2],[2.75,46.35,2],[3.1,46.35,2],[3.45,46.35,2],[3.8,46.35,2],[4.15,46.35,2],[4.5,46.35,2],[4.85,46.35,2],[5.2,46.35,2],[5.55,46.35,2],[5.9,46.35,2],[6.25,46.35,0],[6.6,46.35,2],[6.95,46.35,0],[7.3,46.35,0],[7.65,46.35,0],[8,46.35,0],[8.35,46.35,0],[8.7,46.35,0],[9.05,46.35,0],[9.4,46.35,0],[9.75,46.35,0],[-1.1,46,2],[-0.75,46,2],[-0.4,46,2],[-0.05,46,2],[0.3,46,2],[0.65,46,2],[1,46,2],[1.35,46,2],[1.7,46,2],[2.05,46,2],[2.4,46,2],[2.75,46,2],[3.1,46,2],[3.45,46,2],[3.8,46,2],[4.15,46,2],[4.5,46,2],[4.85,46,2],[5.2,46,2],[5.55,46,2],[5.9,46,2],[6.25,46,2],[6.6,46,2],[6.95,46,2],[7.3,46,0],[7.65,46,0],[8,46,0],[8.35,46,0],[8.7,46,0],[9.05,46,0],[9.4,46,0],[9.75,46,0],[-0.75,45.65,2],[-0.4,45.65,2],[-0.05,45.65,2],[0.3,45.65,2],[0.65,45.65,2],[1,45.65,2],[1.35,45.65,2],[1.7,45.65,2],[2.05,45.65,2],[2.4,45.65,2],[2.75,45.65,2],[3.1,45.65,2],[3.45,45.65,2],[3.8,45.65,2],[4.15,45.65,2],[4.5,45.65,2],[4.85,45.65,2],[5.2,45.65,2],[5.55,45.65,2],[5.9,45.65,2],[6.25,45.65,2],[6.6,45.65,2],[6.95,45.65,0],[7.3,45.65,0],[7.65,45.65,0],[8,45.65,0],[8.35,45.65,0],[8.7,45.65,0],[9.05,45.65,0],[9.4,45.65,0],[9.75,45.65,0],[-1.1,45.3,2],[-0.4,45.3,2],[-0.05,45.3,2],[0.3,45.3,2],[0.65,45.3,2],[1,45.3,2],[1.35,45.3,2],[1.7,45.3,2],[2.05,45.3,2],[2.4,45.3,2],[2.75,45.3,2],[3.1,45.3,2],[3.45,45.3,2],[3.8,45.3,2],[4.15,45.3,2],[4.5,45.3,2],[4.85,45.3,2],[5.2,45.3,2],[5.55,45.3,2],[5.9,45.3,2],[6.25,45.3,2],[6.6,45.3,2],[6.95,45.3,2],[7.3,45.3,0],[7.65,45.3,0],[8,45.3,0],[8.35,45.3,0],[8.7,45.3,0],[9.05,45.3,0],[9.4,45.3,0],[9.75,45.3,0],[-1.1,44.95,2],[-0.75,44.95,2],[-0.4,44.95,2],[-0.05,44.95,2],[0.3,44.95,2],[0.65,44.95,2],[1,44.95,2],[1.35,44.95,2],[1.7,44.95,2],[2.05,44.95,2],[2.4,44.95,2],[2.75,44.95,2],[3.1,44.95,2],[3.45,44.95,2],[3.8,44.95,2],[4.15,44.95,2],[4.5,44.95,2],[4.85,44.95,2],[5.2,44.95,2],[5.55,44.95,2],[5.9,44.95,2],[6.25,44.95,2],[6.6,44.95,2],[6.95,44.95,0],[7.3,44.95,0],[7.65,44.95,0],[8,44.95,0],[8.35,44.95,0],[8.7,44.95,0],[9.05,44.95,0],[9.4,44.95,0],[9.75,44.95,0],[-1.1,44.6,2],[-0.75,44.6,2],[-0.4,44.6,2],[-0.05,44.6,2],[0.3,44.6,2],[0.65,44.6,2],[1,44.6,2],[1.35,44.6,2],[1.7,44.6,2],[2.05,44.6,2],[2.4,44.6,2],[2.75,44.6,2],[3.1,44.6,2],[3.45,44.6,2],[3.8,44.6,2],[4.15,44.6,2],[4.5,44.6,2],[4.85,44.6,2],[5.2,44.6,2],[5.55,44.6,2],[5.9,44.6,2],[6.25,44.6,2],[6.6,44.6,2],[6.95,44.6,0],[7.3,44.6,0],[7.65,44.6,0],[8,44.6,0],[8.35,44.6,0],[8.7,44.6,0],[9.05,44.6,0],[9.4,44.6,0],[9.75,44.6,0],[-1.1,44.25,2],[-0.75,44.25,2],[-0.4,44.25,2],[-0.05,44.25,2],[0.3,44.25,2],[0.65,44.25,2],[1,44.25,2],[1.35,44.25,2],[1.7,44.25,2],[2.05,44.25,2],[2.4,44.25,2],[2.75,44.25,2],[3.1,44.25,2],[3.45,44.25,2],[3.8,44.25,2],[4.15,44.25,2],[4.5,44.25,2],[4.85,44.25,2],[5.2,44.25,2],[5.55,44.25,2],[5.9,44.25,2],[6.25,44.25,2],[6.6,44.25,2],[6.95,44.25,2],[7.3,44.25,0],[7.65,44.25,0],[8,44.25,0],[8.35,44.25,0],[9.75,44.25,0],[-1.1,43.9,2],[-0.75,43.9,2],[-0.4,43.9,2],[-0.05,43.9,2],[0.3,43.9,2],[0.65,43.9,2],[1,43.9,2],[1.35,43.9,2],[1.7,43.9,2],[2.05,43.9,2],[2.4,43.9,2],[2.75,43.9,2],[3.1,43.9,2],[3.45,43.9,2],[3.8,43.9,2],[4.15,43.9,2],[4.5,43.9,2],[4.85,43.9,2],[5.2,43.9,2],[5.55,43.9,2],[5.9,43.9,2],[6.25,43.9,2],[6.6,43.9,2],[6.95,43.9,2],[7.3,43.9,2],[7.65,43.9,0],[8,43.9,0],[-6,43.55,0],[-5.65,43.55,0],[-1.45,43.55,2],[-1.1,43.55,2],[-0.75,43.55,2],[-0.4,43.55,2],[-0.05,43.55,2],[0.3,43.55,2],[0.65,43.55,2],[1,43.55,2],[1.35,43.55,2],[1.7,43.55,2],[2.05,43.55,2],[2.4,43.55,2],[2.75,43.55,2],[3.1,43.55,2],[3.45,43.55,2],[3.8,43.55,2],[4.15,43.55,2],[4.5,43.55,2],[4.85,43.55,2],[5.2,43.55,2],[5.55,43.55,2],[5.9,43.55,2],[6.25,43.55,2],[6.6,43.55,2],[6.95,43.55,2],[-6,43.2,0],[-5.65,43.2,0],[-5.3,43.2,0],[-4.95,43.2,0],[-4.6,43.2,0],[-4.25,43.2,0],[-3.9,43.2,0],[-3.55,43.2,0],[-3.2,43.2,0],[-2.85,43.2,0],[-2.5,43.2,0],[-2.15,43.2,0],[-1.8,43.2,0],[-1.45,43.2,0],[-1.1,43.2,2],[-0.75,43.2,2],[-0.4,43.2,2],[-0.05,43.2,2],[0.3,43.2,2],[0.65,43.2,2],[1,43.2,2],[1.35,43.2,2],[1.7,43.2,2],[2.05,43.2,2],[2.4,43.2,2],[2.75,43.2,2],[3.1,43.2,2],[5.9,43.2,2],[6.25,43.2,2],[-6,42.85,0],[-5.65,42.85,0],[-5.3,42.85,0],[-4.95,42.85,0],[-4.6,42.85,0],[-4.25,42.85,0],[-3.9,42.85,0],[-3.55,42.85,0],[-3.2,42.85,0],[-2.85,42.85,0],[-2.5,42.85,0],[-2.15,42.85,0],[-1.8,42.85,0],[-1.45,42.85,0],[-1.1,42.85,0],[-0.75,42.85,0],[-0.4,42.85,2],[-0.05,42.85,2],[0.3,42.85,2],[0.65,42.85,2],[1,42.85,2],[1.35,42.85,2],[1.7,42.85,2],[2.05,42.85,2],[2.4,42.85,2],[2.75,42.85,2],[9.4,42.85,2],[-6,42.5,0],[-5.65,42.5,0],[-5.3,42.5,0],[-4.95,42.5,0],[-4.6,42.5,0],[-4.25,42.5,0],[-3.9,42.5,0],[-3.55,42.5,0],[-3.2,42.5,0],[-2.85,42.5,0],[-2.5,42.5,0],[-2.15,42.5,0],[-1.8,42.5,0],[-1.45,42.5,0],[-1.1,42.5,0],[-0.75,42.5,0],[-0.4,42.5,0],[-0.05,42.5,0],[0.3,42.5,0],[0.65,42.5,0],[1,42.5,0],[1.35,42.5,0],[1.7,42.5,0],[2.05,42.5,2],[2.4,42.5,2],[2.75,42.5,2],[3.1,42.5,2],[8.7,42.5,2],[9.05,42.5,2],[9.4,42.5,2],[-6,42.15,0],[-5.65,42.15,0],[-5.3,42.15,0],[-4.95,42.15,0],[-4.6,42.15,0],[-4.25,42.15,0],[-3.9,42.15,0],[-3.55,42.15,0],[-3.2,42.15,0],[-2.85,42.15,0],[-2.5,42.15,0],[-2.15,42.15,0],[-1.8,42.15,0],[-1.45,42.15,0],[-1.1,42.15,0],[-0.75,42.15,0],[-0.4,42.15,0],[-0.05,42.15,0],[0.3,42.15,0],[0.65,42.15,0],[1,42.15,0],[1.35,42.15,0],[1.7,42.15,0],[2.05,42.15,0],[2.4,42.15,0],[2.75,42.15,0],[3.1,42.15,0],[8.7,42.15,2],[9.05,42.15,2],[9.4,42.15,2],[-6,41.8,0],[-5.65,41.8,0],[-5.3,41.8,0],[-4.95,41.8,0],[-4.6,41.8,0],[-4.25,41.8,0],[-3.9,41.8,0],[-3.55,41.8,0],[-3.2,41.8,0],[-2.85,41.8,0],[-2.5,41.8,0],[-2.15,41.8,0],[-1.8,41.8,0],[-1.45,41.8,0],[-1.1,41.8,0],[-0.75,41.8,0],[-0.4,41.8,0],[-0.05,41.8,0],[0.3,41.8,0],[0.65,41.8,0],[1,41.8,0],[1.35,41.8,0],[1.7,41.8,0],[2.05,41.8,0],[2.4,41.8,0],[2.75,41.8,0],[9.05,41.8,2],[-6,41.45,0],[-5.65,41.45,0],[-5.3,41.45,0],[-4.95,41.45,0],[-4.6,41.45,0],[-4.25,41.45,0],[-3.9,41.45,0],[-3.55,41.45,0],[-3.2,41.45,0],[-2.85,41.45,0],[-2.5,41.45,0],[-2.15,41.45,0],[-1.8,41.45,0],[-1.45,41.45,0],[-1.1,41.45,0],[-0.75,41.45,0],[-0.4,41.45,0],[-0.05,41.45,0],[0.3,41.45,0],[0.65,41.45,0],[1,41.45,0],[1.35,41.45,0],[1.7,41.45,0],[2.05,41.45,0],[-6,41.1,0],[-5.65,41.1,0],[-5.3,41.1,0],[-4.95,41.1,0],[-4.6,41.1,0],[-4.25,41.1,0],[-3.9,41.1,0],[-3.55,41.1,0],[-3.2,41.1,0],[-2.85,41.1,0],[-2.5,41.1,0],[-2.15,41.1,0],[-1.8,41.1,0],[-1.45,41.1,0],[-1.1,41.1,0],[-0.75,41.1,0],[-0.4,41.1,0],[-0.05,41.1,0],[0.3,41.1,0],[0.65,41.1,0],[1,41.1,0],[9.05,41.1,0],[9.4,41.1,0]]};
 
     /* ---------- Outils ---------- */
     function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -1443,28 +1204,296 @@
       demo: [[2400, "action"], [6400, "action"]]
     };
 
-    /* Épilogue : une enveloppe */
+    /* Chapitre 7 : dix projets en constellations */
+    var THEMEC = { xai: C.rose, robust: C.sky, stats: C.gold, optim: C.teal };
+    S.labo = {
+      repel: false, noBurst: true, filter: "all", hot: -1, domHot: -1, ptrHot: -1, rot: 0, demoK: -1,
+      enter: function () {
+        var P = DATA.projects.length, per = Math.floor(N * .6 / P), i = 0;
+        this.P = P; this.scale = []; this.domHot = -1; this.hot = -2; this.demoK = -1;
+        for (var k = 0; k < P; k++) {
+          this.scale.push(1);
+          for (var q = 0; q < per; q++, i++) { role[i] = 80; pa[i] = k; pb[i] = clamp(gauss(), -2.4, 2.4); pc[i] = clamp(gauss(), -2.4, 2.4); }
+        }
+        this.n = i; starsFrom(i); this.a = area(); this.r0 = Math.min(this.a.w, this.a.h) * .055;
+        this.tick(sceneTime, 0);
+      },
+      center: function (k) {
+        var a = this.a, ang = this.rot + k / this.P * 6.2832 - 1.5708;
+        return [a.x + a.w / 2 + Math.cos(ang) * a.w * .37, a.y + a.h / 2 + Math.sin(ang) * a.h * .36];
+      },
+      visible: function (k) { return this.filter === "all" || DATA.projects[k].theme === this.filter; },
+      pick: function (x, y) {
+        var best = -1, bd = Math.pow(this.r0 * 2.3, 2);
+        for (var k = 0; k < this.P; k++) {
+          if (!this.visible(k)) continue;
+          var c = this.center(k), dx = c[0] - x, dy = c[1] - y, d = dx * dx + dy * dy;
+          if (d < bd) { bd = d; best = k; }
+        }
+        return best;
+      },
+      tick: function (t, dt) {
+        var hot = this.domHot >= 0 ? this.domHot : this.ptrHot;
+        if (hot !== this.hot) { this.hot = hot; markHot(hot); }
+        if (hot < 0 && !reduce) this.rot += (dt || 16) * .000035;
+        for (var k = 0; k < this.P; k++) { var g = !this.visible(k) ? .35 : k === hot ? 1.9 : 1; this.scale[k] += (g - this.scale[k]) * (reduce ? 1 : .12); }
+        var r0 = this.r0;
+        for (var i = 0; i < this.n; i++) {
+          var k2 = pa[i], c = this.center(k2), sc = this.scale[k2] * r0 * .5, w = t * .00045 * (1 + (i % 5) * .15);
+          var cs = Math.cos(w), sn = Math.sin(w);
+          tx[i] = c[0] + (pb[i] * cs - pc[i] * sn) * sc; ty[i] = c[1] + (pb[i] * sn + pc[i] * cs) * sc;
+          var col = THEMEC[DATA.projects[k2].theme]; tr[i] = col[0]; tg[i] = col[1]; tb[i] = col[2];
+          var vis = this.visible(k2); tal[i] = !vis ? .14 : k2 === hot ? 1 : .72; tsz[i] = k2 === hot ? 2 : 1.5;
+        }
+      },
+      draw: function () {
+        if (!this.a) return;
+        this.ptrHot = pointer.on ? this.pick(pointer.x, pointer.y) : -1;
+        body.style.cursor = this.ptrHot >= 0 ? "pointer" : "";
+        for (var k = 0; k < this.P; k++) {
+          var c = this.center(k), vis = this.visible(k), isHot = k === this.hot, p = DATA.projects[k];
+          var y = c[1] + this.scale[k] * this.r0 * 1.3 + 14;
+          label(p.short, c[0], y, { align: "center", size: isHot ? 14 : 12, weight: isHot ? 700 : 600,
+            color: vis ? (isHot ? "rgba(244,238,226,1)" : "rgba(174,179,214,.9)") : "rgba(174,179,214,.25)" });
+          if (isHot) label(W < 960 ? "Touchez pour ouvrir" : "Cliquez pour ouvrir", c[0], y + 16, { align: "center", size: 11, weight: 500, color: "rgba(244,238,226,.7)" });
+        }
+        label("Survolez un amas, cliquez pour ouvrir le projet", this.a.x, this.a.y - 14);
+      },
+      click: function (x, y) { var k = this.pick(x, y); if (k >= 0) openProject(k); },
+      action: function () { this.demoK = (this.demoK + 1) % this.P; this.domHot = this.demoK; },
+      unhot: function () { this.domHot = -1; },
+      demo: [[700, "action"], [1500, "action"], [2300, "action"], [3100, "action"], [3900, "action"], [4700, "action"], [5500, "action"], [6300, "action"], [7100, "action"], [7900, "action"], [8600, "unhot"]]
+    };
+
+    /* Chapitre 8 : la boîte à outils */
+    var DOMC = [C.rose, C.teal, C.grape, C.gold, C.clay];
+    S.outils = {
+      repel: false, noBurst: true, act: 0, manual: false,
+      enter: function () {
+        var i = 0, D = DATA.skills, small = W < 960, hubN = small ? 10 : 16, per = small ? 4 : 7;
+        for (var d = 0; d < D.length; d++) {
+          for (var q = 0; q < hubN; q++, i++) { role[i] = 85; pa[i] = d; pb[i] = -1; pc[i] = q / hubN; }
+          for (var s2 = 0; s2 < D[d].items.length; s2++) for (var q2 = 0; q2 < per; q2++, i++) { role[i] = 86; pa[i] = d; pb[i] = s2; pc[i] = R() * 6.283; }
+        }
+        this.n = i; starsFrom(i); this.a = area(); this.manual = playing; this.next = 4200;
+        this.tick(sceneTime, 0);
+      },
+      hub: function (d) {
+        var a = this.a;
+        if (d === this.act) return [a.x + a.w / 2, a.y + a.h * .42];
+        var j = (d - this.act + 5) % 5 - 1;
+        return [a.x + a.w * (.125 + j * .25), a.y + a.h * .93];
+      },
+      ring: function () { var a = this.a; return Math.min(a.w * .8, a.h * .78) * .36; },
+      spot: function (d, s2) {
+        var h = this.hub(d), n = DATA.skills[d].items.length, ang = -1.5708 + s2 / n * 6.2832, act = d === this.act;
+        var r = act ? this.ring() : Math.min(this.a.w, this.a.h) * .045;
+        return [h[0] + Math.cos(ang) * r * (act ? 1.22 : 1), h[1] + Math.sin(ang) * r * (act ? .86 : 1), ang];
+      },
+      setAct: function (d) { this.act = d; updateSkills(d); },
+      tick: function (t) {
+        if (!this.manual && t > this.next) { this.setAct((this.act + 1) % DATA.skills.length); this.next = t + 4200; }
+        for (var i = 0; i < this.n; i++) {
+          var d = pa[i], act = d === this.act, col = DOMC[d % DOMC.length];
+          if (role[i] === 85) {
+            var h = this.hub(d), ang = pc[i] * 6.2832 + t * .0006, r = act ? 16 : 8;
+            tx[i] = h[0] + Math.cos(ang) * r; ty[i] = h[1] + Math.sin(ang) * r; tsz[i] = act ? 1.9 : 1.4; tal[i] = act ? .95 : .6;
+          } else {
+            var sp = this.spot(d, pb[i]), j = act ? 4.5 : 2.2, w = pc[i] + t * .0012;
+            tx[i] = sp[0] + Math.cos(w) * j; ty[i] = sp[1] + Math.sin(w * 1.3) * j; tsz[i] = act ? 1.8 : 1.2; tal[i] = act ? .95 : .45;
+          }
+          tr[i] = col[0]; tg[i] = col[1]; tb[i] = col[2];
+        }
+      },
+      draw: function () {
+        var a = this.a; if (!a) return;
+        var hov = -1, D = DATA.skills;
+        for (var d = 0; d < D.length; d++) {
+          var h = this.hub(d), act = d === this.act, col = DOMC[d % DOMC.length], n = D[d].items.length, s2, sp;
+          ctx.strokeStyle = "rgba(" + col.join(",") + "," + (act ? .3 : .14) + ")"; ctx.lineWidth = 1;
+          for (s2 = 0; s2 < n; s2++) { sp = this.spot(d, s2); ctx.beginPath(); ctx.moveTo(h[0], h[1]); ctx.lineTo(sp[0], sp[1]); ctx.stroke(); }
+          if (act) {
+            label(D[d].short, h[0], h[1] + 36, { align: "center", size: 15, weight: 700, color: "rgba(244,238,226,1)" });
+            if (W >= 960) for (s2 = 0; s2 < n; s2++) {
+              sp = this.spot(d, s2); var c = Math.cos(sp[2]), sn = Math.sin(sp[2]);
+              var txt = D[d].items[s2], al = c > .3 ? "left" : c < -.3 ? "right" : "center", lx = sp[0] + c * 12;
+              ctx.font = "500 12px 'Bricolage Grotesque', sans-serif"; var tw = ctx.measureText(txt).width;
+              if (al === "right" && lx - tw < a.x) lx = a.x + tw;
+              if (al === "left" && lx + tw > a.x + a.w) lx = a.x + a.w - tw;
+              if (al === "center") lx = clamp(lx, a.x + tw / 2, a.x + a.w - tw / 2);
+              label(txt, lx, sp[1] + sn * 14 + 4, { align: al, size: 12, weight: 500, color: "rgba(244,238,226,.92)" });
+            }
+          } else {
+            label(D[d].short, h[0], h[1] + 28, { align: "center", size: 11, color: "rgba(174,179,214,.85)" });
+            if (pointer.on && Math.hypot(pointer.x - h[0], pointer.y - h[1]) < 36) hov = d;
+          }
+        }
+        body.style.cursor = hov >= 0 ? "pointer" : "";
+        label("Cliquez une famille en bas pour l’amener au centre", a.x, a.y - 14);
+      },
+      click: function (x, y) {
+        for (var d = 0; d < DATA.skills.length; d++) {
+          if (d === this.act) continue;
+          var h = this.hub(d);
+          if (Math.hypot(x - h[0], y - h[1]) < 36) { this.manual = true; this.setAct(d); return; }
+        }
+      },
+      action: function () { this.setAct((this.act + 1) % DATA.skills.length); },
+      demo: [[1800, "action"], [3600, "action"], [5400, "action"], [7200, "action"]]
+    };
+
+    /* Chapitre 9 : la carte du parcours */
+    var PLACES = {
+      ouaga: [-1.53, 12.37, "Ouagadougou", 1], nanoro: [-2.19, 12.68, "Nanoro", -1],
+      lyon: [4.84, 45.76, "Lyon", 1], grenoble: [5.72, 45.19, "Grenoble", 1],
+      montpellier: [3.88, 43.61, "Montpellier", -1], orleans: [1.91, 47.9, "Orléans", -1]
+    };
+    var FIRST = { ouaga: 2018, nanoro: 2021.75, lyon: 2024.67, grenoble: 2026.17, montpellier: 2026.17, orleans: 2026.7 };
+    var EVENTS = [
+      [2018.75, 2021.5, "gold", "Licence de statistique sociale, mention Bien", "ISSP, Université Joseph Ki-Zerbo", "2018 – 2021"],
+      [2021.75, 2022.08, "gold", "Analyste statistique, data management", "Unité de recherche clinique de Nanoro", "oct. 2021 – janv. 2022"],
+      [2022.0, 2024.5, "gold", "Master recherche en démographie", "Université Joseph Ki-Zerbo, Ouagadougou", "2022 – 2024"],
+      [2024.67, 2026.67, "teal", "Master MIASHS, data science et IA", "Université Lumière Lyon 2", "2024 – 2026"],
+      [2025.25, 2025.58, "teal", "Data analyst et modélisation statistique", "France Travail Auvergne-Rhône-Alpes, Lyon", "avr. – juil. 2025"],
+      [2026.17, 2026.58, "grape", "Stage de recherche, projet INNOGOUV", "CERAG (Grenoble) et UMR MoISA (Montpellier)", "mars – juil. 2026"],
+      [2026.67, 2027.95, "clay", "Mastère Spécialisé science des données responsable", "Grenoble EM et Ensimag", "sept. 2026 – déc. 2027"],
+      [2026.7, 2027.78, "clay", "Data manager en alternance", "BRGM, Direction des risques, Orléans", "sept. 2026 – oct. 2027"]
+    ];
+    var KEYS = [[2018, "ouaga"], [2021.7, "ouaga"], [2021.75, "nanoro"], [2022.05, "nanoro"], [2022.1, "ouaga"], [2024.5, "ouaga"],
+      [2024.67, "lyon"], [2026.08, "lyon"], [2026.17, "grenoble"], [2026.6, "grenoble"], [2026.7, "orleans"], [2028, "orleans"]];
+    var NOW = 2026.85;
+    var VIEWS = {
+      af: { lon0: -17, lon1: 15, lat0: 5, lat1: 52, cos: Math.cos(28 * Math.PI / 180) },
+      fr: { lon0: -6, lon1: 10, lat0: 41, lat1: 51.6, cos: Math.cos(46 * Math.PI / 180) }
+    };
+    var ZOOM_AT = 2024.6;
+    S.carte = {
+      repel: false, noBurst: true, year: NOW, auto: true,
+      enter: function () {
+        var small = W < 960, thin = function (arr) { return small ? arr.filter(function (_, k) { return k % 2 === 0; }) : arr; };
+        this.sets = { af: thin(DATA.land), fr: thin(DATA.landFr) };
+        this.nl = Math.min(Math.max(this.sets.af.length, this.sets.fr.length), N - 60);
+        var i;
+        for (i = 0; i < this.nl; i++) role[i] = 90;
+        for (i = this.nl; i < this.nl + 40; i++) { role[i] = 91; pa[i] = R() * 6.283; pb[i] = R(); }
+        this.n = this.nl + 40; starsFrom(this.n);
+        if (reduce) { this.auto = false; this.year = NOW; } else { this.auto = true; this.t0 = sceneTime; this.year = 2018; }
+        this.mode = this.year >= ZOOM_AT ? "fr" : "af"; this.layout();
+        syncYear(this.year);
+      },
+      layout: function () {
+        var a = this.a = area(), v = VIEWS[this.mode], wu = (v.lon1 - v.lon0) * v.cos, hu = v.lat1 - v.lat0;
+        var k = Math.min(a.w / wu, a.h / hu), mw = wu * k, mh = hu * k;
+        this.g = { x: a.x + (a.w - mw) / 2, y: a.y + (a.h - mh) / 2, w: mw, h: mh, kx: k * v.cos, ky: k, lon0: v.lon0, lat1: v.lat1 };
+        var set = this.sets[this.mode], fr = this.mode === "fr";
+        for (var i = 0; i < this.nl; i++) {
+          var d = set[i % set.length], p = this.proj(d[0], d[1]);
+          if (i < set.length) setT(i, p[0], p[1], d[2] === 1 ? C.gold : d[2] === 2 ? C.sky : C.mist, d[2] ? (fr ? 2 : 1.9) : 1.35, d[2] ? .85 : .3);
+          else setT(i, p[0], p[1], C.mist, 1, 0);
+        }
+      },
+      proj: function (lon, lat) { var g = this.g; return [g.x + (lon - g.lon0) * g.kx, g.y + (g.lat1 - lat) * g.ky]; },
+      pp: function (key) { var p = PLACES[key]; return this.proj(p[0], p[1]); },
+      where: function (y) {
+        for (var q = 1; q < KEYS.length; q++) if (y <= KEYS[q][0]) {
+          var k0 = KEYS[q - 1], k1 = KEYS[q], p0 = this.pp(k0[1]);
+          if (k0[1] === k1[1]) return p0;
+          var p1 = this.pp(k1[1]), f = ease(clamp((y - k0[0]) / (k1[0] - k0[0]), 0, 1));
+          var dx = p1[0] - p0[0], dy = p1[1] - p0[1], L = Math.hypot(dx, dy) || 1, bend = Math.sin(Math.PI * f) * Math.min(L, 900) * .18;
+          return [p0[0] + dx * f + dy / L * bend, p0[1] + dy * f - dx / L * bend];
+        }
+        return this.pp("orleans");
+      },
+      tick: function (t) {
+        if (this.auto) {
+          var f = clamp((t - this.t0) / 7500, 0, 1);
+          this.year = 2018 + (NOW - 2018) * ease(f);
+          if (f >= 1) this.auto = false;
+          syncYear(this.year);
+        }
+        var m = this.year >= ZOOM_AT ? "fr" : "af";
+        if (m !== this.mode) { this.mode = m; this.layout(); }
+        var w = this.where(this.year);
+        for (var i = this.nl; i < this.n; i++) {
+          var ang = pa[i] + t * .002, r = 5 + pb[i] * 9;
+          tx[i] = w[0] + Math.cos(ang) * r; ty[i] = w[1] + Math.sin(ang) * r;
+          setCol(i, pb[i] < .55 ? C.clay : C.star); tsz[i] = 1.7; tal[i] = .95;
+        }
+      },
+      draw: function () {
+        var g = this.g; if (!g) return;
+        var small = W < 960, fr = this.mode === "fr";
+        ctx.save(); ctx.beginPath(); ctx.rect(g.x - 30, g.y - 30, g.w + 60, g.h + 60); ctx.clip();
+        ctx.strokeStyle = "rgba(232,151,95,.8)"; ctx.lineWidth = 2; ctx.beginPath();
+        var first = true;
+        for (var y = 2018; y <= this.year + .001; y += .02) { var p = this.where(Math.min(y, this.year)); if (first) { ctx.moveTo(p[0], p[1]); first = false; } else ctx.lineTo(p[0], p[1]); }
+        ctx.stroke();
+        if (this.year >= 2026.17 && this.year < 2026.62) {
+          var pg = this.pp("grenoble"), pm = this.pp("montpellier");
+          ctx.setLineDash([3, 4]); ctx.strokeStyle = "rgba(181,144,255,.85)"; ctx.lineWidth = 1.5;
+          ctx.beginPath(); ctx.moveTo(pg[0], pg[1]); ctx.lineTo(pm[0], pm[1]); ctx.stroke(); ctx.setLineDash([]);
+        }
+        for (var key in PLACES) {
+          if (this.year < FIRST[key]) continue;
+          var pt = this.pp(key), pl = PLACES[key];
+          if (pt[1] > g.y + g.h + 10 || pt[1] < g.y - 10) continue;
+          var dy = fr ? 0 : key === "grenoble" ? (small ? 12 : 14) : key === "lyon" ? -5 : key === "orleans" ? -4 : 0;
+          ctx.strokeStyle = "rgba(244,238,226,.9)"; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(pt[0], pt[1], fr ? 5.5 : 4.5, 0, 6.283); ctx.stroke();
+          label(pl[2], pt[0] + pl[3] * (fr ? 11 : 9), pt[1] + 4 + dy, { align: pl[3] > 0 ? "left" : "right", size: small ? 11 : fr ? 13 : 12, color: "rgba(244,238,226,.95)" });
+        }
+        ctx.restore();
+        label(String(Math.floor(this.year)), g.x - (small ? 0 : 8), g.y + (small ? 18 : 30), { size: small ? 22 : 38, weight: 800, color: "rgba(244,238,226,.9)" });
+        if (fr) {
+          label("France", this.proj(2.4, 46.4)[0], this.proj(2.4, 46.4)[1], { align: "center", size: small ? 11 : 13, weight: 700, color: "rgba(130,180,255,.95)" });
+          label("Ouagadougou est à environ 3 800 km au sud", g.x + g.w / 2, g.y + g.h + (small ? 14 : 22), { align: "center", size: small ? 10 : 12, color: "rgba(242,181,68,.95)" });
+        } else {
+          label("Burkina Faso", this.pp("ouaga")[0], this.pp("ouaga")[1] + 24, { align: "center", size: small ? 10 : 11, color: "rgba(242,181,68,.95)" });
+          label("France", this.proj(-.5, 46.2)[0], this.proj(-.5, 46.2)[1], { align: "right", size: small ? 10 : 11, color: "rgba(130,180,255,.95)" });
+        }
+      },
+      action: function () { this.auto = true; this.t0 = sceneTime; }
+    };
+
+    /* Chapitre 10 : l'enveloppe qui devient symbole */
     S.fin = {
+      glyph: null, cache: {}, di: -1,
       enter: function () {
         var a = area(), w = Math.min(a.w * .62, a.h * 1.1), h = w * .62, x0 = a.x + (a.w - w) / 2, y0 = a.y + (a.h - h) / 2;
         var segs = [[x0, y0, x0 + w, y0], [x0 + w, y0, x0 + w, y0 + h], [x0 + w, y0 + h, x0, y0 + h], [x0, y0 + h, x0, y0], [x0, y0, x0 + w / 2, y0 + h * .56], [x0 + w / 2, y0 + h * .56, x0 + w, y0]];
         var P = Math.round(N * .42), tot = 0, lens = segs.map(function (s) { var l = Math.hypot(s[2] - s[0], s[3] - s[1]); tot += l; return l; });
         for (var i = 0; i < P; i++) {
-          var d = (i / P) * tot, k = 0; while (d > lens[k]) { d -= lens[k]; k++; }
-          var s = segs[k], f = d / lens[k];
-          role[i] = 70; pa[i] = R() * 6.28;
+          var d = (i / P) * tot, k = 0; while (d > lens[k] && k < lens.length - 1) { d -= lens[k]; k++; }
+          var s = segs[k], f = Math.min(1, d / lens[k]);
+          role[i] = 70; pa[i] = R() * 6.28; pc[i] = k > 3 ? 1 : 0;
           setT(i, s[0] + (s[2] - s[0]) * f + gauss() * .8, s[1] + (s[3] - s[1]) * f + gauss() * .8, k > 3 ? C.gold : C.star, 1.6, .9);
         }
         var M = Math.round(N * .12);
         for (var j = P; j < P + M; j++) { role[j] = 71; pa[j] = R() * 6.283; pb[j] = .55 + R() * .25; pc[j] = .4 + R(); setT(j, x0 + w / 2, y0 + h / 2, R() < .5 ? C.gold : C.rose, 1.4, .7); }
-        this.c = [x0 + w / 2, y0 + h / 2, w]; this.n = P + M; starsFrom(P + M);
+        this.c = [x0 + w / 2, y0 + h / 2, w]; this.n = P + M; this.cnt = P; this.glyph = null; this.cache = {}; this.di = -1;
+        starsFrom(P + M);
+      },
+      setGlyph: function (g) {
+        this.glyph = g || null;
+        if (g && !this.cache[g]) {
+          var a = area();
+          this.cache[g] = sampleText(g, { x: a.x + a.w * .1, y: a.y + a.h * .12, w: a.w * .8, h: a.h * .76 }, this.cnt);
+        }
       },
       tick: function (t) {
-        for (var i = 0; i < this.n; i++) if (role[i] === 71) {
-          var ang = pa[i] + t * .0003 * pc[i], r = this.c[2] * pb[i];
-          tx[i] = this.c[0] + Math.cos(ang) * r; ty[i] = this.c[1] + Math.sin(ang) * r * .55;
-        } else { tx[i] = bx[i] + Math.sin(t * .0012 + pa[i]) * 1.2; }
-      }
+        var pts = this.glyph ? this.cache[this.glyph] : null, j = 0;
+        for (var i = 0; i < this.n; i++) {
+          if (role[i] === 71) {
+            var ang = pa[i] + t * .0003 * pc[i], r = this.c[2] * pb[i];
+            tx[i] = this.c[0] + Math.cos(ang) * r; ty[i] = this.c[1] + Math.sin(ang) * r * .55;
+          } else {
+            if (pts && pts.length) { var p = pts[j % pts.length]; tx[i] = p[0] + Math.sin(t * .0012 + pa[i]) * 1.1; ty[i] = p[1]; setCol(i, j % 6 ? C.gold : C.star); }
+            else { tx[i] = bx[i] + Math.sin(t * .0012 + pa[i]) * 1.2; ty[i] = by[i]; setCol(i, pc[i] ? C.gold : C.star); }
+            j++;
+          }
+        }
+      },
+      action: function () { var G = ["@", "in", "</>", "CV", null]; this.di = (this.di + 1) % G.length; this.setGlyph(G[this.di]); },
+      demo: [[1000, "action"], [2200, "action"], [3400, "action"], [4600, "action"], [5800, "action"]]
     };
 
     /* =========================================================
@@ -1483,7 +1512,7 @@
 
     function go(name) {
       if (name === curName || !S[name]) return;
-      curName = name; cur = S[name]; sceneTime = 0;
+      curName = name; cur = S[name]; sceneTime = 0; body.style.cursor = "";
       var b = actionBtns[name];
       if (b) b.querySelector("span").textContent = b._base;
       cur.enter();
@@ -1496,17 +1525,17 @@
       if (!running) return;
       var dt = last ? Math.min(48, now - last) : 16; last = now;
       sceneTime += dt;
-      if (demoQueue.length && sceneTime > demoQueue[0][0]) { demoQueue.shift(); runAction(curName); }
+      if (demoQueue.length && sceneTime > demoQueue[0][0]) { var dq = demoQueue.shift(); if (dq[1] === "action") runAction(curName); else if (cur[dq[1]]) cur[dq[1]](); }
       if (cur && cur.tick) cur.tick(sceneTime, dt);
 
-      var damp = .8, rad = W < 960 ? 60 : 95, rad2 = rad * rad, i;
+      var damp = .8, rad = W < 960 ? 60 : 95, rad2 = rad * rad, i, repel = pointer.on && !(cur && cur.repel === false);
       for (i = 0; i < N; i++) {
         if (role[i] === STAR) { tal[i] = pb[i] * (.55 + .45 * Math.sin(now * .0016 + pa[i])); }
         if (reduce) { px[i] = tx[i]; py[i] = ty[i]; }
         else {
           vx[i] = (vx[i] + (tx[i] - px[i]) * kk[i]) * damp;
           vy[i] = (vy[i] + (ty[i] - py[i]) * kk[i]) * damp;
-          if (pointer.on) {
+          if (repel) {
             var dx = px[i] - pointer.x, dy = py[i] - pointer.y, d2 = dx * dx + dy * dy;
             if (d2 < rad2 && d2 > .01) { var d = Math.sqrt(d2), f = (1 - d / rad) * 2.2; vx[i] += dx / d * f; vy[i] += dy / d * f; }
           }
@@ -1540,8 +1569,13 @@
     window.addEventListener("pointermove", function (e) { if (e.pointerType === "touch") return; pointer.x = e.clientX; pointer.y = e.clientY; pointer.on = true; }, { passive: true });
     document.addEventListener("mouseout", function (e) { if (!e.relatedTarget) pointer.on = false; });
     window.addEventListener("blur", function () { pointer.on = false; });
+    document.getElementById("histoire").addEventListener("click", function (e) {
+      if (e.target.closest("button, a, input, label, .card")) return;
+      if (cur && cur.click) cur.click(e.clientX, e.clientY);
+    });
     document.getElementById("histoire").addEventListener("dblclick", function (e) {
-      if (e.target.closest("button, a")) return;
+      if (e.target.closest("button, a, input, label")) return;
+      if (cur && cur.noBurst) return;
       if (window.getSelection) window.getSelection().removeAllRanges();
       for (var i = 0; i < N; i++) {
         var dx = px[i] - e.clientX, dy = py[i] - e.clientY, d = Math.sqrt(dx * dx + dy * dy) + 1, f = 14 + Math.random() * 22;
@@ -1565,8 +1599,8 @@
     /* ---------- Scènes pilotées par le défilement ---------- */
     var scenes = Array.prototype.slice.call(document.querySelectorAll(".scene"));
     var dotsBox = document.getElementById("rail-dots");
-    var names = ["Ouverture", "Ouagadougou", "Lyon", "La boîte noire", "Les hôpitaux", "Les coopératives", "Le BRGM", "La suite"];
-    var colors = ["#B590FF", "#F2B544", "#3CC8B4", "#FF7096", "#82B4FF", "#B590FF", "#E8975F", "#F2B544"];
+    var names = ["Ouverture", "Ouagadougou", "Lyon", "La boîte noire", "Les hôpitaux", "Les coopératives", "Le BRGM", "Les projets", "Les compétences", "Le parcours", "Contact"];
+    var colors = ["#B590FF", "#F2B544", "#3CC8B4", "#FF7096", "#82B4FF", "#B590FF", "#E8975F", "#FF7096", "#3CC8B4", "#E8975F", "#F2B544"];
     var dots = scenes.map(function (sc, k) {
       var b = document.createElement("button");
       b.type = "button"; b.className = "rail-dot"; b.style.setProperty("--c", colors[k]);
@@ -1591,20 +1625,6 @@
       }, { rootMargin: "-50% 0px -50% 0px" });
       scenes.forEach(function (s) { io.observe(s); });
 
-      var dossier = document.getElementById("dossier");
-      var io2 = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          var dawn = en.isIntersecting || en.boundingClientRect.top < 0;
-          body.classList.toggle("dawn", dawn);
-          storyOn = !dawn;
-          if (dawn) stop(); else if (!document.hidden) start();
-        });
-      }, { rootMargin: "0px 0px -12% 0px" });
-      io2.observe(dossier);
-      var navTick = 0;
-      var checkNav = function () { navTick = 0; body.classList.toggle("day", dossier.getBoundingClientRect().top <= 64 + window.innerHeight * .15); };
-      window.addEventListener("scroll", function () { if (!navTick) navTick = requestAnimationFrame(checkNav); }, { passive: true });
-      checkNav();
     }
     document.addEventListener("visibilitychange", function () { if (document.hidden) stop(); else if (storyOn) start(); });
 
@@ -1615,7 +1635,7 @@
 
     /* ---------- Mode film ---------- */
     var playing = false, playTimer = 0, demoQueue = [], playStart = 0, playTotal = 0, playIdx = 0, progressRaf = 0;
-    var durations = [4200, 8800, 8800, 8800, 8800, 8800, 9600, 4800];
+    var durations = [4200, 8800, 8800, 8800, 8800, 8800, 9600, 9000, 9000, 9000, 6500];
     var progressEl = document.getElementById("rail-progress");
     function playFrom(k) {
       playing = true; body.classList.add("is-playing"); playIdx = k;
@@ -1626,7 +1646,7 @@
     }
     function stepPlay() {
       if (!playing) return;
-      if (playIdx >= scenes.length) { stopPlay(); document.getElementById("projets").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); return; }
+      if (playIdx >= scenes.length) { stopPlay(); return; }
       var k = playIdx;
       if (currentIdx === k) { curName = ""; activate(k); }
       else scrollToScene(k);
@@ -1661,15 +1681,100 @@
     menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
 
-    /* ---------- Filtres de projets ---------- */
-    var fbtns = document.querySelectorAll(".filter"), projects = document.querySelectorAll("#project-list .project");
-    fbtns.forEach(function (btn) {
+    /* ---------- Projets : liste, filtres et fiche détaillée ---------- */
+    var plist = Array.prototype.slice.call(document.querySelectorAll("#proj-list button"));
+    function markHot(k) { plist.forEach(function (b) { b.classList.toggle("is-hot", +b.getAttribute("data-proj") === k); }); }
+    plist.forEach(function (b) {
+      var k = +b.getAttribute("data-proj");
+      b.addEventListener("mouseenter", function () { S.labo.domHot = k; });
+      b.addEventListener("mouseleave", function () { if (!dlg.open) S.labo.domHot = -1; });
+      b.addEventListener("focus", function () { S.labo.domHot = k; });
+      b.addEventListener("blur", function () { if (!dlg.open) S.labo.domHot = -1; });
+      b.addEventListener("click", function () { openProject(k); });
+    });
+    var tbtns = document.querySelectorAll("[data-theme-filter]");
+    tbtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        var f = btn.getAttribute("data-filter");
-        fbtns.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
-        projects.forEach(function (p) { p.hidden = f !== "all" && p.getAttribute("data-theme") !== f; });
+        var f = btn.getAttribute("data-theme-filter"); S.labo.filter = f;
+        tbtns.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+        plist.forEach(function (b) { b.parentNode.hidden = f !== "all" && DATA.projects[+b.getAttribute("data-proj")].theme !== f; });
       });
     });
+
+    var dlg = document.getElementById("pdialog"), dlgK = 0;
+    var THEMEVAR = { xai: "rose", robust: "sky", stats: "gold", optim: "teal" };
+    function byId(id) { return document.getElementById(id); }
+    function fillList(ul, items, asHtml) {
+      ul.innerHTML = "";
+      items.forEach(function (it) { var li = document.createElement("li"); if (asHtml) li.innerHTML = it; else li.textContent = it; ul.appendChild(li); });
+    }
+    function openProject(k) {
+      var p = DATA.projects[k]; dlgK = k; stopPlay();
+      dlg.style.setProperty("--c", "var(--" + THEMEVAR[p.theme] + ")");
+      var img = byId("pd-img");
+      img.onerror = function () { img.onerror = null; img.src = p.fb; };
+      img.src = p.img; img.alt = p.alt;
+      byId("pd-theme").textContent = p.themeLabel;
+      byId("pd-title").textContent = p.title;
+      byId("pd-desc").textContent = p.desc;
+      var r = byId("pd-result"); r.hidden = !p.result; r.innerHTML = p.result || "";
+      fillList(byId("pd-points"), p.points, true);
+      fillList(byId("pd-chips"), p.chips, false);
+      var l = byId("pd-link"); l.hidden = !p.link; if (p.link) l.href = p.link;
+      if (!dlg.open) { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); }
+      S.labo.domHot = k;
+    }
+    dlg.addEventListener("close", function () { S.labo.domHot = -1; });
+    dlg.querySelector("[data-close]").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.querySelectorAll("[data-step]").forEach(function (b) {
+      b.addEventListener("click", function () { var n = DATA.projects.length; openProject((dlgK + (+b.getAttribute("data-step")) + n) % n); });
+    });
+
+    /* ---------- Compétences ---------- */
+    var dbtns = document.querySelectorAll("[data-domain]"), schips = document.getElementById("skill-chips");
+    function updateSkills(d) {
+      dbtns.forEach(function (b) { b.setAttribute("aria-pressed", +b.getAttribute("data-domain") === d ? "true" : "false"); });
+      fillList(schips, DATA.skills[d].items, false);
+    }
+    dbtns.forEach(function (b) {
+      b.addEventListener("click", function () { S.outils.manual = true; S.outils.setAct(+b.getAttribute("data-domain")); });
+    });
+
+    /* ---------- Parcours : curseur des années ---------- */
+    var yr = document.getElementById("year-range"), yout = document.getElementById("year-out"), evBox = document.getElementById("events"), lastEv = null;
+    function renderEvents(y) {
+      var act = EVENTS.filter(function (e) { return y >= e[0] && y <= e[1]; });
+      var key = act.map(function (e) { return e[3]; }).join("|");
+      if (key === lastEv) return; lastEv = key;
+      evBox.innerHTML = "";
+      if (!act.length) { var g = document.createElement("li"); g.className = "ev-gap"; g.textContent = "Entre deux étapes : on fait ses valises."; evBox.appendChild(g); return; }
+      act.forEach(function (e) {
+        var li = document.createElement("li"), b = document.createElement("b");
+        li.style.setProperty("--c", "var(--" + e[2] + ")");
+        b.textContent = e[3]; li.appendChild(b); li.appendChild(document.createTextNode(e[4] + ", " + e[5]));
+        evBox.appendChild(li);
+      });
+    }
+    function syncYear(y) {
+      if (document.activeElement !== yr) yr.value = y.toFixed(2);
+      yout.textContent = Math.floor(y);
+      yr.setAttribute("aria-valuetext", String(Math.floor(y)));
+      renderEvents(y);
+    }
+    yr.addEventListener("input", function () { S.carte.auto = false; S.carte.year = +yr.value; syncYear(S.carte.year); });
+    syncYear(+yr.value);
+
+    /* ---------- Contact : les tuiles changent la forme des points ---------- */
+    var glyphT = 0;
+    document.querySelectorAll("[data-glyph]").forEach(function (el) {
+      var on = function () { clearTimeout(glyphT); if (curName === "fin") S.fin.setGlyph(el.getAttribute("data-glyph")); };
+      var off = function () { clearTimeout(glyphT); glyphT = setTimeout(function () { if (curName === "fin") S.fin.setGlyph(null); }, 500); };
+      el.addEventListener("mouseenter", on); el.addEventListener("focus", on);
+      el.addEventListener("mouseleave", off); el.addEventListener("blur", off);
+    });
+    document.querySelectorAll("[data-n]").forEach(function (e) { e.textContent = N.toLocaleString("fr-FR"); });
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
     /* ---------- Démarrage : big bang puis prénom ---------- */
