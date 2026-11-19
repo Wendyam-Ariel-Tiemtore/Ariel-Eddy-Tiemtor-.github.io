@@ -367,6 +367,92 @@
     @media (prefers-reduced-motion: reduce) {
       body, .aura, #stage, .rail { transition: none !important; }
     }
+    /* annexe:css:debut */
+    .ax-head { max-width: 46rem; }
+    .ax-kicker { font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--ax-accent); }
+    .ax-head h2 { margin-top: .5rem; font-size: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem); line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; letter-spacing: -.015em; text-wrap: balance; }
+    .ax-lede { margin-top: 1rem; font-family: var(--serif); font-size: 1.15rem; color: var(--ax-ink-2); }
+    .ax-stats { display: flex; flex-wrap: wrap; gap: .8rem 2.2rem; margin-top: 1.6rem; color: var(--ax-muted); font-size: .9rem; }
+    .ax-stats b { display: block; font-size: 2rem; line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; color: var(--ax-ink); font-variant-numeric: tabular-nums; }
+    .ax-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.2rem; }
+    .ax-filter { display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .9rem; cursor: pointer; border: 1.5px solid var(--ax-rule); border-radius: 999px; background: var(--ax-card); color: var(--ax-ink-2); font-weight: 500; font-size: .9rem; }
+    .ax-filter:hover { border-color: var(--ax-ink-2); }
+    .ax-filter[aria-pressed="true"] { background: var(--ax-ink); border-color: var(--ax-ink); color: var(--ax-on-ink); }
+    .ax-filter .n { opacity: .65; font-variant-numeric: tabular-nums; }
+    .ax-filter .dot { width: .6rem; height: .6rem; border-radius: 50%; background: var(--c); }
+    .ax-f-stats { --c: var(--ax-gold); } .ax-f-finance { --c: var(--ax-teal); } .ax-f-afrique { --c: var(--ax-clay); } .ax-f-viz { --c: var(--ax-sky); }
+    .ax-gold { --c: var(--ax-gold); } .ax-teal { --c: var(--ax-teal); } .ax-clay { --c: var(--ax-clay); }
+    .ax-rose { --c: var(--ax-rose); } .ax-sky { --c: var(--ax-sky); } .ax-grape { --c: var(--ax-grape); }
+    .ax-sub { margin: 2.6rem 0 1.2rem; font-size: 1.35rem; font-weight: 700; }
+    .ax-sub[hidden], .ax-grid[hidden], .ax-studies[hidden] { display: none; }
+    .ax-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.1rem, 2.5vw, 1.75rem); }
+    @media (max-width: 52rem) { .ax-grid { grid-template-columns: 1fr; } }
+    .ax-card, .ax-study { border: 1px solid var(--ax-rule); border-radius: 18px; background: var(--ax-card); color: var(--ax-ink); }
+    .ax-card { display: flex; flex-direction: column; overflow: hidden; }
+    .ax-card[hidden], .ax-study[hidden] { display: none; }
+    .ax-media { margin: 0; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--ax-rule); background: #0E1236; }
+    .ax-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+    .ax-mock { display: flex; flex-direction: column; justify-content: center; gap: 1rem; padding: clamp(1.2rem, 4vw, 2.2rem); color: #F4EEE2;
+      background: radial-gradient(80% 90% at 85% 10%, color-mix(in srgb, var(--c) 34%, transparent), transparent 70%), linear-gradient(160deg, #171C4D, #0E1236); }
+    @media (max-width: 34rem) { .ax-mock { aspect-ratio: auto; } }
+    .ax-mock-paris { --c: #B590FF; } .ax-mock-yaaba { --c: #F2B544; }
+    .ax-mock-k { font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #AEB3D6; }
+    .ax-bars { display: grid; gap: .9rem; }
+    .ax-bar { display: grid; grid-template-columns: 5.2rem minmax(0, 1fr); align-items: center; gap: .2rem .9rem; }
+    .ax-bar-v { font-size: 1.7rem; font-weight: 800; font-variation-settings: "wdth" 80; font-variant-numeric: tabular-nums; }
+    .ax-bar-f { height: .8rem; border-radius: 999px; background: linear-gradient(90deg, var(--c) var(--w), rgba(244, 238, 226, .12) var(--w)); }
+    .ax-bar-l { grid-column: 2; font-size: .85rem; color: #AEB3D6; }
+    .ax-bar.is-close .ax-bar-f { background: linear-gradient(90deg, #AEB3D6 var(--w), rgba(244, 238, 226, .12) var(--w)); }
+    .ax-mock-s { font-family: var(--serif); font-size: 1rem; color: #E6E2EE; }
+    .ax-eps { display: grid; gap: .35rem; font-family: var(--serif); font-size: 1.12rem; font-style: italic; }
+    .ax-eps li::before { content: "✦ "; color: var(--c); font-style: normal; }
+    .ax-eps li:last-child { color: #AEB3D6; font-size: .98rem; }
+    .ax-eps li:last-child::before { content: ""; }
+    .ax-body { display: flex; flex-direction: column; flex: 1; padding: 1.2rem clamp(1.1rem, 2.5vw, 1.5rem) 1.35rem; }
+    .ax-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .9rem; font-size: .82rem; color: var(--ax-muted); }
+    .ax-tag { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; color: var(--c); }
+    .ax-tag::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: currentColor; }
+    .ax-card h4, .ax-study h4 { margin-top: .4rem; font-size: 1.4rem; line-height: 1.15; font-weight: 750; font-variation-settings: "wdth" 88; }
+    .ax-pitch { margin-top: .5rem; font-family: var(--serif); font-size: 1.08rem; line-height: 1.5; color: var(--ax-ink-2); }
+    .ax-key { margin-top: .85rem; padding: .6rem .85rem; border-left: 3px solid var(--c); background: var(--ax-tint); border-radius: 0 8px 8px 0; font-size: .94rem; color: var(--ax-ink-2); }
+    .ax-key b { color: var(--ax-ink); font-weight: 650; }
+    .ax-more { margin-top: .9rem; }
+    .ax-more summary { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; list-style: none; font-weight: 650; font-size: .94rem; color: var(--ax-ink); border-radius: 6px; }
+    .ax-more summary::-webkit-details-marker { display: none; }
+    .ax-more summary::before { content: "+"; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%; border: 1.5px solid var(--c); color: var(--c); font-weight: 700; line-height: 1; }
+    .ax-more[open] summary::before { content: "−"; }
+    .ax-more summary:hover { text-decoration: underline; }
+    .ax-dl { display: grid; gap: .7rem; margin-top: .8rem; padding-top: .8rem; border-top: 1px solid var(--ax-rule); font-size: .94rem; }
+    .ax-dl dt { font-weight: 700; color: var(--ax-ink); }
+    .ax-dl dd { margin: .15rem 0 0; color: var(--ax-ink-2); }
+    .ax-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem; margin-top: auto; padding-top: 1.1rem; }
+    .ax-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .ax-chips li { padding: .16rem .6rem; border-radius: 999px; background: var(--ax-chip); color: var(--ax-ink-2); font-size: .8rem; font-weight: 500; white-space: nowrap; }
+    .ax-link { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; font-size: .9rem; color: var(--ax-ink); }
+    .ax-studies { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.5rem); }
+    @media (max-width: 64rem) { .ax-studies { grid-template-columns: 1fr; } }
+    .ax-study { display: flex; flex-direction: column; padding: 1.2rem clamp(1.1rem, 2.5vw, 1.4rem) 1.3rem; border-top: 4px solid var(--c); }
+    .ax-points { display: grid; gap: .45rem; margin: .9rem 0 1rem; font-size: .93rem; color: var(--ax-ink-2); }
+    .ax-points li { position: relative; padding-left: 1.05rem; }
+    .ax-points li::before { content: ""; position: absolute; left: 0; top: .62em; width: .45rem; height: .45rem; border-radius: 50%; border: 1.5px solid var(--c); }
+    .ax-study .ax-chips { margin-top: auto; }
+    .ax-note { margin-top: 2.2rem; max-width: 46rem; font-size: .93rem; color: var(--ax-muted); }
+    .ax-note a { color: var(--ax-ink); }
+    /* annexe:css:fin */
+    /* annexe:theme:debut */
+    .annexe {
+      position: relative; z-index: 5; padding: clamp(4rem, 9vw, 7rem) 0; background: var(--night); border-top: 1px solid var(--line);
+      --ax-card: var(--night-2); --ax-rule: var(--line); --ax-ink: var(--star); --ax-ink-2: #DCE0F2; --ax-muted: var(--mist);
+      --ax-on-ink: var(--night); --ax-tint: rgba(244, 238, 226, .06); --ax-chip: rgba(244, 238, 226, .1); --ax-accent: var(--rose);
+      --ax-gold: var(--gold); --ax-teal: var(--teal); --ax-clay: var(--clay); --ax-rose: var(--rose); --ax-sky: var(--sky); --ax-grape: var(--grape);
+    }
+    .annexe :focus-visible { outline-color: var(--star); }
+    .rail { transition: opacity .4s, transform .4s; }
+    body.in-annexe .site-nav { background: rgba(14, 18, 54, .94); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+    body.in-annexe .rail { opacity: 0; pointer-events: none; transform: translate(-50%, 1rem); }
+    @media (max-width: 60rem) { body.in-annexe .rail { transform: translateY(1rem); } }
+    .labo-more { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.1rem; font-weight: 600; font-size: .95rem; color: var(--star); }
+    /* annexe:theme:fin */
   </style>
 </head>
 
@@ -401,6 +487,7 @@
           <a href="#ch-outils">Compétences</a>
           <a href="#ch-carte">Parcours</a>
           <a href="#ch-contact">Contact</a>
+          <!-- annexe:lien --><a href="#annexe">Annexe</a><!-- /annexe:lien -->
           <a class="nav-static" href="statique.html">Version statique</a>
           <a class="nav-cv" href="cv_Ariel_data.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV</a>
         </div>
@@ -537,6 +624,7 @@
               <li><button type="button" class="k-optim" data-proj="8">Problèmes inverses : restauration d’images avec TwIST</button></li>
               <li><button type="button" class="k-optim" data-proj="9">Trading algorithmique multi-modal</button></li>
             </ul>
+            <!-- annexe:lien --><a class="labo-more" href="#annexe"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> En annexe : mes applications et mes études</a><!-- /annexe:lien -->
           </article>
         </div>
       </section>
@@ -588,6 +676,7 @@
               <a class="ctile wide" href="mailto:wendyamtiemtore@gmail.com" data-glyph="@"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>M’écrire<small>wendyamtiemtore@gmail.com</small></span></a>
               <a class="ctile" href="https://linkedin.com/in/ariel-eddy-tiemtore" target="_blank" rel="noopener" data-glyph="in"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
               <a class="ctile" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener" data-glyph="&lt;/&gt;"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span>GitHub</span></a>
+              <!-- annexe:lien --><a class="ctile" href="#annexe" data-glyph="app"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><span>Annexe<small>Applications et études</small></span></a><!-- /annexe:lien -->
               <a class="ctile" href="cv_Ariel_data.pdf" target="_blank" rel="noopener" data-glyph="CV"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span>CV<small>PDF, une page</small></span></a>
               <a class="ctile" href="Rapport_de_stage_M1_TIEMTORE.pdf" target="_blank" rel="noopener" data-glyph="M1"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Rapport de Master 1<small>France Travail, 2025</small></span></a>
               <a class="ctile" href="Rapport_de_stage_L3_TIEMTORE.pdf" target="_blank" rel="noopener" data-glyph="L3"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg><span>Rapport de Licence<small>URC Nanoro, 2022</small></span></a>
@@ -597,6 +686,147 @@
         </div>
       </section>
     </div>
+
+    <!-- annexe:debut -->
+    <section class="annexe" id="annexe" aria-labelledby="annexe-titre">
+      <div class="wrap">
+        <header class="ax-head">
+          <p class="ax-kicker">Annexe</p>
+          <h2 id="annexe-titre">L’atelier : applications et études personnelles</h2>
+          <p class="ax-lede">En dehors des cours et de l’alternance, je construis des applications complètes, du calcul statistique à la mise en ligne sécurisée, et je mène des études dont le protocole est fixé avant le premier calcul. Les résultats négatifs y sont publiés comme les autres.</p>
+          <ul class="ax-stats">
+            <li><b>7</b> applications et tableaux de bord</li>
+            <li><b>55 000+</b> lignes de code</li>
+            <li><b>500+</b> tests automatisés</li>
+            <li><b>3</b> études détaillées</li>
+          </ul>
+        </header>
+        <div class="ax-filters" role="group" aria-label="Filtrer l’annexe par thème">
+<button class="ax-filter" type="button" data-ax-filter="all" aria-pressed="true">Tout <span class="n">11</span></button>
+<button class="ax-filter ax-f-stats" type="button" data-ax-filter="stats" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Statistique et IA <span class="n">8</span></button>
+<button class="ax-filter ax-f-finance" type="button" data-ax-filter="finance" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Finance <span class="n">3</span></button>
+<button class="ax-filter ax-f-afrique" type="button" data-ax-filter="afrique" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Afrique et société <span class="n">4</span></button>
+<button class="ax-filter ax-f-viz" type="button" data-ax-filter="viz" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Visualisation <span class="n">1</span></button>
+        </div>
+        <h3 class="ax-sub">Applications</h3>
+        <div class="ax-grid">
+<article class="ax-card ax-gold" id="app-analyste" data-cats="stats">
+<figure class="ax-media"><img src="img/web/annexe/analyste.webp" alt="L’atelier d’Analyste académique : tableau croisé et test du khi-deux sur un jeu de données public" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Statistique et IA</span><span>v2.0.0</span><span>≈ 22 000 lignes de Python</span><span>150 tests</span></p>
+<h4>Analyste académique</h4>
+<p class="ax-pitch">Un logiciel d’analyse statistique local, dans l’esprit de SPSS, qui va jusqu’au document rédigé : mémoire, rapport d’étude, article ou thèse professionnelle.</p>
+<p class="ax-key"><b>Aucun chiffre inventé :</b> un paragraphe rédigé par un modèle de langage est rejeté s’il cite un nombre ou une référence absents des calculs.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Ce que fait l’application</dt><dd>Elle ouvre un fichier CSV, Excel, SPSS, Stata, SAS, KoboToolbox ou une archive de l’EDS, propose 23 analyses et graphiques à la demande dans un atelier (vue des données, des variables, visualiseur de résultats), puis produit le document Word complet, le classeur Excel des tableaux, une présentation PowerPoint et un script reproductible en Python, R, Stata, SPSS ou SAS.</dd><dt>Méthodes</dt><dd>Choix automatique du test et de la taille d’effet, correction de Benjamini-Hochberg ; régressions linéaire (erreurs HC3), logistique, multinomiale, ordonnée, de Poisson et binomiale négative ; modèles multi-niveaux ; ACP, ACM et classification de Ward ; survie (Kaplan-Meier, Cox) ; analyse thématique d’entretiens.</dd><dt>Fiabilité</dt><dd>Bilan chiffré à chaque document : bootstrap, méthode de Firth en cas de séparation, imputation multiple comparée aux cas complets, témoin d’apprentissage automatique en validation croisée par grappes. Les modèles sont vérifiés sur des données simulées dont on connaît les paramètres.</dd><dt>Sécurité</dt><dd>Fonctionne sans internet ; données chiffrées sur le disque (AES-256-GCM), comptes Argon2id, politique de contenu stricte, conteneur non privilégié, versions signées avec Sigstore.</dd><dt>En situation réelle</dt><dd>Un mémoire complet sur l’EDS du Burkina Faso 2021 a été produit avec l’outil (voir les études ci-dessous).</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Python 3.13</li><li>FastAPI</li><li>statsmodels</li><li>scikit-learn</li><li>lifelines</li><li>Docker</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Analyste%20académique"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-teal" id="app-brvm" data-cats="finance stats">
+<figure class="ax-media"><img src="img/web/annexe/brvm.webp" alt="Tableau de bord du Portefeuille BRVM : lignes détenues et bordereau d’ordres du trimestre" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Finance</span><span>v2.9.0</span><span>≈ 8 000 lignes de Python</span><span>179 tests</span></p>
+<h4>Portefeuille BRVM</h4>
+<p class="ax-pitch">Gérer un portefeuille d’actions de la Bourse régionale des valeurs mobilières une fois par mois : quoi acheter ou vendre, en quelle quantité, à quel prix limite et pour quels frais.</p>
+<p class="ax-key"><b>Une méthode testée honnêtement :</b> choisie sur 2011-2018 et testée une seule fois sur 2019-2026, elle fait autant que le marché, pas mieux. L’application le dit.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Ce que fait l’application</dt><dd>Bordereau d’ordres mensuel et revue trimestrielle (quantités entières, prix limites, frais de la SGI) ; suivi du compte avec un rendement qui tient compte de la date de chaque apport, comparaison au marché et dividendes attendus ; alertes Telegram ou e-mail ; plusieurs comptes sur invitation.</dd><dt>Données</dt><dd>Cours relevés chaque soir de bourse et contrôlés avant d’entrer, dividendes lus dans les avis officiels, divisions d’actions repérées ; collecte automatisée par GitHub Actions.</dd><dt>Ce que disent les tests</dt><dd>Sur les 48 titres de la cote, aucune méthode de sélection ne se démontre meilleure ; huit signaux testés avec des règles écrites avant le calcul, aucun ne bat cinq titres tirés au hasard. Ce qui marche : un filtre de tendance à dix mois réduit la pire baisse dans 30 simulations sur 30, et garder un titre jusqu’au 20<sup>e</sup> rang divise les frais par trois.</dd><dt>Sécurité</dt><dd>Mots de passe scrypt, second facteur pour l’administrateur, comptes isolés, journal d’administration ; attaques du serveur, recherche de secrets et audit des dépendances relancés à chaque modification.</dd><dt>Cadre</dt><dd>Outil d’aide à la décision, pas un conseil en investissement.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Python</li><li>pandas</li><li>statsmodels</li><li>pdfplumber</li><li>GitHub Actions</li><li>Docker</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Portefeuille%20BRVM"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-clay" id="app-etal" data-cats="afrique stats">
+<figure class="ax-media"><img src="img/web/annexe/etal.webp" alt="Étal : page d’accueil et boutique de démonstration fictive affichée sur un téléphone" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Afrique et société</span><span>v0.1</span><span>Node.js</span><span>48 tests dont une suite d’attaques</span></p>
+<h4>Étal</h4>
+<p class="ax-pitch">Une boutique en ligne en une phrase pour les petits commerçants du Burkina Faso : ils décrivent ce qu’ils vendent, à l’écrit ou à la voix, et l’IA prépare leur page.</p>
+<p class="ax-key"><b>Pensée pour le terrain :</b> les clients commandent sur WhatsApp et paient par mobile money. L’argent va directement au commerçant, Étal ne touche à aucun paiement.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Parcours</dt><dd>Le commerçant active son compte par invitation, dicte sa boutique, corrige produits et prix (les prix proposés par l’IA restent « à vérifier » tant qu’il ne les a pas validés), publie, puis suit ses visites et ses commandes sur 30 jours.</dd><dt>IA sous contrôle</dt><dd>Réponse du modèle validée champ par champ, plafond d’usage par commerçant et plafond de dépense global ; sans clé d’API, tout fonctionne en saisie manuelle.</dd><dt>Sécurité</dt><dd>Connexion par empreinte (clés d’accès WebAuthn), administrateur avec TOTP et codes de secours, journal scellé, politique de contenu stricte, liens interdits dans les boutiques, aucune dépendance de développement.</dd><dt>Mise en ligne</dt><dd>Conteneur Docker durci, publié par Cloudflare Tunnel, sans louer de serveur.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Node.js 22</li><li>SQLite</li><li>WebAuthn</li><li>Argon2</li><li>API Claude</li><li>Docker</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Étal"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-rose" id="app-wasitan" data-cats="afrique">
+<figure class="ax-media"><img src="img/web/annexe/wasitan.webp" alt="Écran titre de Wasitàn : un cavalier et un baobab au coucher du soleil" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Afrique et société</span><span>v2.0.0</span><span>≈ 13 000 lignes de TypeScript</span><span>74 tests</span><span>licence MIT</span></p>
+<h4>Wasitàn</h4>
+<p class="ax-pitch">Un jeu pour découvrir l’histoire de l’Afrique de l’Ouest : 16 pays, 321 histoires en scènes cinématiques, et pour tourner chaque page, une partie d’un jeu de société traditionnel du pays.</p>
+<p class="ax-key"><b>Sept jeux des anciens :</b> waré, awalé, yoté, wali, dara, achi et zamma, contre une IA qui se renforce d’histoire en histoire.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Le jeu</dt><dd>Chaque pays raconte 20 histoires (21 pour le Burkina Faso) ; l’adversaire devient plus fort à chaque page ; partie libre contre la machine ou à deux, sauvegarde par pays.</dd><dt>L’IA des plateaux</dt><dd>Recherche alpha-bêta générique avec approfondissement itératif limité dans le temps, minimax pour les jeux de semailles ; moteurs testés (conservation des graines, fins de partie, IA plus forte que le hasard).</dd><dt>Le rendu</dt><dd>Plateaux 3D en temps réel (Three.js), scènes peintes en Canvas 2D (contre-jour, brume, pirogues, caravanes), musique générative au balafon, au djembé et au bendré.</dd><dt>Rigueur historique</dt><dd>Sources citées (Ki-Zerbo, Histoire générale de l’Afrique de l’UNESCO…) ; les traditions orales sont présentées comme telles.</dd><dt>Administration</dt><dd>Édition des textes et des illustrations sans toucher au code, protégée par mot de passe, TOTP et codes de secours ; conteneur durci.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>TypeScript</li><li>Vite</li><li>Three.js</li><li>Canvas 2D</li><li>Web Audio</li><li>Docker</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Wasitàn"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-sky" id="app-sya" data-cats="afrique stats">
+<figure class="ax-media"><img src="img/web/annexe/sya-sugu.webp" alt="Sya Sugu sur ordinateur et sur téléphone : annonces d’exemple de motos, téléphones et pagnes" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Afrique et société</span><span>≈ 8 000 lignes</span><span>56 tests dont plus de 40 attaques</span></p>
+<h4>Sya Sugu</h4>
+<p class="ax-pitch">Un site de petites annonces dans l’esprit de leboncoin, pensé pour Bobo-Dioulasso : motos, parcelles, bétail, pagnes Faso Dan Fani, emplois et services.</p>
+<p class="ax-key"><b>Conçu contre les arnaques :</b> la messagerie prévient quand un message parle de code mobile money ou d’avance, et chaque annonce est relue avec des signaux automatiques.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Pour les vendeurs</dt><dd>Photos réduites dans le téléphone avant l’envoi (moins de données, position GPS effacée), note de qualité de chaque photo avec un conseil, vidéo courte réencodée par le serveur (H.264 720p, sans métadonnées).</dd><dt>Recherche</dt><dd>En langage courant (« moto pas chère vers Sarfalao moins de 400 000 ») : par l’IA si elle est activée, sinon par des règles locales qui connaissent les quartiers, les marques et les montants (« 25 mille », « 150k »).</dd><dt>Modération</dt><dd>Relecture avec signaux (prix anormal, terrain sans document, compte récent, tournure d’arnaque), numéros vérifiés par l’équipe ; une conversation n’est lue que si elle a été signalée.</dd><dt>Sobriété</dt><dd>Pages rendues par le serveur, lisibles sans JavaScript et économes en données mobiles ; inscription par numéro, sans SMS ni courriel.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Node.js 22</li><li>SQLite</li><li>ffmpeg</li><li>WebAuthn</li><li>API Claude</li><li>Caddy</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Sya%20Sugu"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-grape" id="app-paris" data-cats="stats">
+<div class="ax-media ax-mock ax-mock-paris" role="img" aria-label="Taux de handicaps gagnés : 56,4 % à la ligne d’ouverture, 49,3 % à la ligne de clôture, sur 11 546 matchs NBA"><p class="ax-mock-k">Meilleure règle NBA, 11 546 matchs</p><div class="ax-bars"><div class="ax-bar"><span class="ax-bar-v">56,4 %</span><span class="ax-bar-f" style="--w:56.4%"></span><span class="ax-bar-l">à la ligne d’ouverture</span></div><div class="ax-bar is-close"><span class="ax-bar-v">49,3 %</span><span class="ax-bar-f" style="--w:49.3%"></span><span class="ax-bar-l">à la ligne de clôture</span></div></div><p class="ax-mock-s">Seuil de rentabilité vers 52,4 % : l’avantage disparaît une fois l’information intégrée.</p></div>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Statistique et IA</span><span>≈ 1 800 lignes de Python</span><span>30 tests</span></p>
+<h4>Paris sportifs : battre la cote de clôture ?</h4>
+<p class="ax-pitch">Une étude, puis un automate qui vérifie pari par pari si une règle statistique bat vraiment le marché des paris sportifs, sans jamais parier à la place de l’utilisateur.</p>
+<p class="ax-key"><b>Le marché apprend vite :</b> sur 11 546 matchs NBA, la meilleure règle gagne 56,4 % des handicaps à la ligne d’ouverture, mais 49,3 % à la clôture.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>L’étude</dt><dd>Absences de joueurs clés (Game Score), lignes d’ouverture et de clôture de 2011 à 2022 ; règles de football testées sur 299 segments, dont un seul a tenu.</dd><dt>L’automate</dt><dd>Toutes les 30 minutes (GitHub Actions) : rapport de blessures NBA, cotes, contrôle que la ligne n’a pas déjà bougé, alerte Telegram, règlement des paris et mesure du CLV, le gain par rapport à la ligne de clôture.</dd><dt>Règle de prudence</dt><dd>Une règle reste « sur papier » tant qu’elle n’a pas battu la clôture en moyenne sur une centaine de paris.</dd><dt>Cadre</dt><dd>L’application ne place aucun pari et rappelle le cadre de l’ANJ ainsi que Joueurs Info Service.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Python</li><li>pandas</li><li>GitHub Actions</li><li>The Odds API</li><li>Telegram</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Paris%20sportifs%20:%20battre%20la%20cote%20de%20clôture%20?"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Code privé, démo sur demande</a></div>
+</div>
+</article>
+<article class="ax-card ax-sky" id="app-vols" data-cats="viz">
+<figure class="ax-media"><img src="img/web/annexe/vols.webp" alt="Carte des aéroports américains colorés selon leur part de vols en retard en 2024" width="1200" height="750" loading="lazy" decoding="async" /></figure>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Visualisation</span><span>Projet d’équipe</span><span>Master Big Data</span><span>2019-2025</span></p>
+<h4>Retards des vols aux États-Unis et en Europe</h4>
+<p class="ax-pitch">Un tableau de bord D3.js en cinq questions : les retards augmentent-ils, pourquoi, où, combien coûtent-ils, et comment le réseau aérien évolue-t-il ?</p>
+<p class="ax-key"><b>45,8 millions de vols américains</b> et les relevés mensuels des aéroports européens, agrégés en une base de 823 000 lignes lue directement par le navigateur.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Données</dt><dd>Bureau of Transportation Statistics, EUROCONTROL, OurAirports ; coûts en euros de chaque année (coût d’une minute publié par Airlines for America ou EUROCONTROL, taux de change de la BCE, inflation Eurostat).</dd><dt>Des calculs justes à tout filtre</dt><dd>La base stocke des sommes et non des moyennes : chaque indicateur additionne puis divise, quel que soit le filtre (pays, aéroport, compagnie).</dd><dt>Interaction</dt><dd>Filtres croisés, clic sur un aéroport pour filtrer toute la page, réseau animé mois par mois (carte ou graphe de forces), méthode de calcul et canaux visuels (Mackinlay) expliqués pour chaque indicateur.</dd><dt>Équipe</dt><dd>Projet du bloc Visualisation de l’information, réalisé à cinq.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Python</li><li>pandas</li><li>D3.js 7</li><li>TopoJSON</li></ul><a class="ax-link" href="https://github.com/Reneig/Redard-des-vols" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Voir le code</a></div>
+</div>
+</article>
+<article class="ax-card ax-gold" id="app-yaaba" data-cats="afrique">
+<div class="ax-media ax-mock ax-mock-yaaba" role="img" aria-label="Quelques titres des épisodes de la saison 1"><p class="ax-mock-k">Saison 1 · 16 épisodes · 16 pays</p><ul class="ax-eps"><li>Yennenga, la princesse cavalière</li><li>Soundiata, le petit lion qui se leva</li><li>La première kora</li><li>Ganvié, le village sur l’eau</li><li>Le kente appris d’une araignée</li><li>… et onze autres contes</li></ul></div>
+<div class="ax-body">
+<p class="ax-meta"><span class="ax-tag">Afrique et société</span><span>Série en écriture</span><span>Saison 1</span></p>
+<h4>Les contes de Yaaba</h4>
+<p class="ax-pitch">Une série de dessins animés pour les 2-7 ans : chaque épisode raconte une histoire d’un pays d’Afrique de l’Ouest et la fait chanter, sur des chansons entièrement originales.</p>
+<p class="ax-key"><b>Saison 1 écrite :</b> 16 épisodes, un par pays. La fabrication des vidéos est la prochaine étape.</p>
+<details class="ax-more"><summary>Voir le détail</summary><dl class="ax-dl"><dt>Écriture</dt><dd>Contes, paroles, découpage en images et textes de publication générés à partir d’une seule source par un script Python, pour garder la série cohérente.</dd><dt>Personnages</dt><dd>Yaaba la conteuse, Poko, Raogo et Kalao le petit calao, décrits toujours avec les mêmes mots pour que les outils d’image leur gardent le même visage.</dd><dt>Règles de la série</dt><dd>Une histoire, une idée, un refrain ; rien qui fasse peur ; les traditions orales sont annoncées comme telles, et la rubrique « C’est vrai, ça ? » donne le fait réel.</dd></dl></details>
+<div class="ax-foot"><ul class="ax-chips"><li>Python</li><li>Écriture</li><li>Production</li></ul><a class="ax-link" href="mailto:wendyamtiemtore@gmail.com?subject=Portfolio%20:%20Les%20contes%20de%20Yaaba"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Scénarios sur demande</a></div>
+</div>
+</article>
+        </div>
+        <h3 class="ax-sub">Études</h3>
+        <div class="ax-studies">
+<article class="ax-study ax-gold" data-cats="stats">
+<p class="ax-meta"><span class="ax-tag">Démographie</span></p>
+<h4>Migration et naissances au Burkina Faso</h4>
+<p class="ax-pitch">Mémoire sur les transitions vers les naissances de rang 1 à 3 selon le motif de migration (EDS 2021), qui transpose une étude française récente (Delaporte, Kulu et Ibbetson, 2025).</p>
+<ul class="ax-points"><li>17 434 femmes, 264 561 personnes-années ; modèles logistiques en temps discret par rang, erreurs robustes à la grappe.</li><li>Forêts aléatoires évaluées sur des grappes jamais vues : AUC de 0,895 contre 0,894 pour la logistique au rang 1. Le machine learning n’apporte rien de plus ici, et c’est un résultat.</li><li>Migrantes pour mariage : rapport de cotes de 1,54 au rang 1, recalculé de façon indépendante ; âge médian à la première naissance reconstitué (20,1 ans) identique à la valeur publiée par l’INSD.</li></ul>
+<ul class="ax-chips"><li>EDS</li><li>Survie en temps discret</li><li>Forêts aléatoires</li></ul>
+</article>
+<article class="ax-study ax-teal" data-cats="finance stats">
+<p class="ax-meta"><span class="ax-tag">Finance quantitative</span></p>
+<h4>Qu’est-ce qui rapporte vraiment ?</h4>
+<p class="ax-pitch">Étude préenregistrée sur les grandes classes d’actifs : actions, obligations, matières premières, immobilier, or et crypto-actifs.</p>
+<ul class="ax-points"><li>50 tests confirmatoires, protocole horodaté avant tout calcul, correction de Holm ; chaque facteur n’est jugé qu’après la date de son article.</li><li>Trois résultats passent : la prime des actions, le momentum et le faible bêta hors États-Unis. Seize modèles de prévision par apprentissage automatique sont nuls ou négatifs.</li><li>Reproduction réussie sur une machine vierge.</li></ul>
+<ul class="ax-chips"><li>Fama-French</li><li>AQR</li><li>Holm</li><li>Boosting</li></ul>
+</article>
+<article class="ax-study ax-clay" data-cats="finance stats">
+<p class="ax-meta"><span class="ax-tag">Économétrie</span></p>
+<h4>Politique, pétrole et Bourse</h4>
+<p class="ax-pitch">Les chocs politiques et pétroliers permettent-ils d’anticiper la Bourse ? Huit hypothèses tirées de la littérature : risque géopolitique, incertitude économique, élections, prix du pétrole.</p>
+<ul class="ax-points"><li>Protocole figé et signé (empreinte SHA-256) avant le calcul ; développement jusqu’en 2009, test 2010-2026 ouvert une seule fois.</li><li>Aucune hypothèse ne passe (p de Holm ≥ 0,36, 69 élections étudiées). Aucune application de signaux n’a donc été construite.</li></ul>
+<ul class="ax-chips"><li>GPR</li><li>EPU</li><li>FRED</li><li>Reproductibilité</li></ul>
+</article>
+        </div>
+        <p class="ax-note">Les dépôts de ces applications sont privés : le code, une démonstration ou un accès d’essai sont disponibles sur demande, à <a href="mailto:wendyamtiemtore@gmail.com">wendyamtiemtore@gmail.com</a>. Les données des captures sont fictives ou publiques.</p>
+      </div>
+    </section>
+    <!-- annexe:fin -->
 
     <div class="rail" id="rail" role="group" aria-label="Lecture de l’histoire">
       <button class="rail-play" type="button" data-play aria-label="Regarder l’histoire comme un film">
@@ -1777,6 +2007,19 @@
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    /* annexe:hook:debut */
+    (function () {
+      var ax = document.getElementById("annexe"), story = document.getElementById("histoire");
+      if (!ax || !story || !("IntersectionObserver" in window)) return;
+      new IntersectionObserver(function (en) {
+        document.body.classList.toggle("in-annexe", en[0].isIntersecting);
+      }, { rootMargin: "0px 0px -45% 0px" }).observe(ax);
+      new IntersectionObserver(function (en) {
+        storyOn = en[0].isIntersecting;
+        if (storyOn) { if (!document.hidden && W > 0) start(); } else { if (playing) stopPlay(); stop(); }
+      }).observe(story);
+    })();
+    /* annexe:hook:fin */
     /* ---------- Démarrage : big bang puis prénom ---------- */
     function boot() {
       resize();
@@ -1798,6 +2041,30 @@
       console.log("Vous lisez le code ? On a sûrement des choses à se dire : wendyamtiemtore@gmail.com");
     } catch (e) {}
   })();
+  </script>
+  <script>
+  /* annexe:js:debut */
+  (function () {
+    "use strict";
+    var root = document.getElementById("annexe");
+    if (!root) return;
+    var btns = Array.prototype.slice.call(root.querySelectorAll("[data-ax-filter]"));
+    var items = Array.prototype.slice.call(root.querySelectorAll(".ax-card, .ax-study"));
+    function apply(f) {
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-ax-filter") === f ? "true" : "false"); });
+      items.forEach(function (el) { el.hidden = f !== "all" && (" " + el.getAttribute("data-cats") + " ").indexOf(" " + f + " ") < 0; });
+      root.querySelectorAll(".ax-sub").forEach(function (h) {
+        var box = h.nextElementSibling, any = box && box.querySelector(".ax-card:not([hidden]), .ax-study:not([hidden])");
+        h.hidden = !any; if (box) box.hidden = !any;
+      });
+    }
+    btns.forEach(function (b) { b.addEventListener("click", function () { apply(b.getAttribute("data-ax-filter")); }); });
+    if (location.hash && location.hash.indexOf("#app-") === 0) {
+      var t = document.getElementById(location.hash.slice(1)), d = t && t.querySelector("details");
+      if (d) d.open = true;
+    }
+  })();
+  /* annexe:js:fin */
   </script>
 </body>
 </html>
