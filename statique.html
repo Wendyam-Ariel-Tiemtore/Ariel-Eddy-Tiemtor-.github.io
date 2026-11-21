@@ -182,6 +182,14 @@
     .ax-lede { margin-top: 1rem; font-family: var(--serif); font-size: 1.15rem; color: var(--ax-ink-2); }
     .ax-stats { display: flex; flex-wrap: wrap; gap: .8rem 2.2rem; margin-top: 1.6rem; color: var(--ax-muted); font-size: .9rem; }
     .ax-stats b { display: block; font-size: 2rem; line-height: 1; font-weight: 800; font-variation-settings: "wdth" 80; color: var(--ax-ink); font-variant-numeric: tabular-nums; }
+    @media (min-width: 60.01rem) and (max-width: 74rem) { .nav-menu a[href="catalogue.html"] { display: none; } }
+    .ax-cat { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; margin-top: 2rem; padding: 1.2rem clamp(1rem, 3vw, 1.6rem); border: 1.5px solid var(--ax-ink); border-radius: 18px; background: var(--ax-card); }
+    .ax-cat-body { flex: 1 1 26rem; }
+    .ax-cat-title { font-size: 1.2rem; font-weight: 750; color: var(--ax-ink); }
+    .ax-cat-text { margin-top: .3rem; font-size: .95rem; color: var(--ax-ink-2); }
+    .ax-cat-links { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.1rem; }
+    .ax-cat-links a { display: inline-flex; align-items: center; gap: .4rem; font-weight: 600; font-size: .93rem; color: var(--ax-ink); }
+    .ax-cat-links .ax-cat-btn { padding: .6rem 1.1rem; border-radius: 999px; background: var(--ax-ink); color: var(--ax-on-ink); text-decoration: none; }
     .ax-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.2rem; }
     .ax-filter { display: inline-flex; align-items: center; gap: .45rem; padding: .45rem .9rem; cursor: pointer; border: 1.5px solid var(--ax-rule); border-radius: 999px; background: var(--ax-card); color: var(--ax-ink-2); font-weight: 500; font-size: .9rem; }
     .ax-filter:hover { border-color: var(--ax-ink-2); }
@@ -279,6 +287,7 @@
           <a href="#parcours">Parcours</a>
           <a href="#competences">Compétences</a>
           <!-- annexe:lien --><a href="#annexe">Annexe</a><!-- /annexe:lien -->
+          <!-- annexe:lien --><a href="catalogue.html">Catalogue</a><!-- /annexe:lien -->
           <a href="#contact">Contact</a>
           <a class="nav-live" href="./"><svg class="spark" aria-hidden="true"><use href="#i-spark"/></svg> Version animée</a>
           <a class="nav-cv" href="cv_Ariel_data.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> CV</a>
@@ -315,7 +324,7 @@
       <div class="wrap">
         <header class="section-head">
           <h2 id="projets-titre">Projets</h2>
-          <p class="section-lede">Dix projets en IA explicable, apprentissage robuste et confidentiel, statistique et optimisation.<!-- annexe:lien --> Mes applications et études personnelles sont détaillées <a href="#annexe">en annexe</a>.<!-- /annexe:lien --></p>
+          <p class="section-lede">Dix projets en IA explicable, apprentissage robuste et confidentiel, statistique et optimisation.<!-- annexe:lien --> Mes applications et études personnelles sont détaillées <a href="#annexe">en annexe</a>, et tous mes projets dans <a href="catalogue.html">le catalogue complet</a>.<!-- /annexe:lien --></p>
           <a class="aside-link" href="https://github.com/wendyam-ariel-tiemtore" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg> Tout le code sur GitHub</a>
         </header>
         <div aria-label="Filtrer les projets par thème" class="filters" role="group">
@@ -617,6 +626,17 @@
             <li><b>3</b> études détaillées</li>
           </ul>
         </header>
+        <div class="ax-cat">
+          <div class="ax-cat-body">
+            <p class="ax-cat-title">Tous mes projets sont au catalogue</p>
+            <p class="ax-cat-text">64 projets en cours ou terminés, dans 24 domaines : expériences, recherche, applications, études et travaux de master. Chacun a sa fiche et son lien de contact ; 11 renvoient à leur code.</p>
+          </div>
+          <p class="ax-cat-links">
+            <a class="ax-cat-btn" href="catalogue.html"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg> Ouvrir le catalogue</a>
+            <a href="catalogue.html?code=1"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Projets avec code</a>
+            <a href="catalogue-projets-tiemtore.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg> PDF</a>
+          </p>
+        </div>
         <div class="ax-filters" role="group" aria-label="Filtrer l’annexe par thème">
 <button class="ax-filter" type="button" data-ax-filter="all" aria-pressed="true">Tout <span class="n">11</span></button>
 <button class="ax-filter ax-f-stats" type="button" data-ax-filter="stats" aria-pressed="false"><span class="dot" aria-hidden="true"></span>Statistique et IA <span class="n">8</span></button>
@@ -739,7 +759,7 @@
 <ul class="ax-chips"><li>GPR</li><li>EPU</li><li>FRED</li><li>Reproductibilité</li></ul>
 </article>
         </div>
-        <p class="ax-note">Les dépôts de ces applications sont privés : le code, une démonstration ou un accès d’essai sont disponibles sur demande, à <a href="mailto:wendyamtiemtore@gmail.com">wendyamtiemtore@gmail.com</a>. Les données des captures sont fictives ou publiques.</p>
+        <p class="ax-note">Les dépôts de ces applications sont privés : le code, une démonstration ou un accès d’essai sont disponibles sur demande, à <a href="mailto:wendyamtiemtore@gmail.com">wendyamtiemtore@gmail.com</a>. Les données des captures sont fictives ou publiques. Le code public (notebooks, scripts Stata et SPSS) est relié depuis <a href="catalogue.html?code=1">le catalogue</a>.</p>
       </div>
     </section>
     <!-- annexe:fin -->
