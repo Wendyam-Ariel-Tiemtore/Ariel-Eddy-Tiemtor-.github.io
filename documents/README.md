@@ -29,3 +29,4 @@ Les travaux de groupe sont publiés avec le nom de tous leurs auteurs. Les donn�
 
 - [Rapport de stage de Licence](../Rapport_de_stage_L3_TIEMTORE.pdf) : observatoire de population de Nanoro.
 - [Rapport de stage de Master 1](../Rapport_de_stage_M1_TIEMTORE.pdf) : France Travail Auvergne-Rhône-Alpes.
+- [Rapport de stage de Master 2](../Rapport_final_master2.pdf) : projet INNOGOUV, CERAG (Université Grenoble Alpes) et UMR MoISA (INRAE).
