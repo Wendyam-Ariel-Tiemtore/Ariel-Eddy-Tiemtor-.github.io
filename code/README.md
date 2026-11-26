@@ -10,6 +10,7 @@ Les données ne sont pas incluses : elles appartiennent à leurs producteurs (DH
 |---|---|---|
 | [`analyse-survie-essai-therapeutique/`](analyse-survie-essai-therapeutique/devoir_analyse_survie.do) | Survie et récidive dans un essai à deux bras (cobalt ou iridium) : Kaplan-Meier, log-rank, modèle de Cox, test des risques proportionnels, modèle de Weibull. Master de démographie, ISSP (2024). | Stata |
 | [`tests-t-eds-burkina-2010/`](tests-t-eds-burkina-2010/tests_t_eds_bf2010.sps) | Tests t pondérés sur l'EDS Burkina Faso 2010 (fichier Femmes) : recodages en indicatrices, comparaisons régionales. Master de démographie, ISSP. | SPSS |
+| [`robust-ml/`](robust-ml/robust_ml_dm_projet.ipynb) | Machine learning robuste : estimateur Median of Means, attaques FGSM et PGD-40 sur MNIST, entraînement adversarial (PGD-AT). Master 2 MIASHS, Lyon 2 (2026). | Python |
 | [`tokeniseur-bpe/`](tokeniseur-bpe/tokeniseur_bpe.ipynb) | Tokeniseur BPE entraîné avec `tokenizers`, comparé à `split`, NLTK et spaCy. Projet en binôme, Master 2 MIASHS, Lyon 2 (2025). | Python |
 
 ## À la racine du dépôt
@@ -29,3 +30,7 @@ Les données ne sont pas incluses : elles appartiennent à leurs producteurs (DH
 - [Ce portfolio](https://github.com/Wendyam-Ariel-Tiemtore/Ariel-Eddy-Tiemtor-.github.io).
 
 Les applications (Analyste académique, Portefeuille BRVM, Étal, Wasitàn, Sya Sugu…) sont dans des dépôts privés : démonstration sur demande à wendyamtiemtore@gmail.com. Les travaux menés en entreprise ne sont pas publiés.
+
+## Documents
+
+Rapports, protocoles et devoirs (PDF) : voir [`documents/`](../documents/).
